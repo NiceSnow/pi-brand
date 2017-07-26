@@ -11,6 +11,8 @@
 		2D23548E1F289AED00A93726 /* MenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D23548C1F289AED00A93726 /* MenuTableViewCell.xib */; };
 		2D2354921F289EDA00A93726 /* MenuTableViewCell2.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D2354901F289EDA00A93726 /* MenuTableViewCell2.m */; };
 		2D2354931F289EDA00A93726 /* MenuTableViewCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D2354911F289EDA00A93726 /* MenuTableViewCell2.xib */; };
+		603217061F28E9B1002FD61C /* UIView+ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 603217051F28E9B1002FD61C /* UIView+ViewController.m */; };
+		6032170A1F28ED97002FD61C /* ChildViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 603217091F28ED97002FD61C /* ChildViewController.m */; };
 		60EF76EF1F27931D005E3A6E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 60EF76EE1F27931D005E3A6E /* main.m */; };
 		60EF76F21F27931D005E3A6E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 60EF76F11F27931D005E3A6E /* AppDelegate.m */; };
 		60EF76F51F27931D005E3A6E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60EF76F41F27931D005E3A6E /* ViewController.m */; };
@@ -26,6 +28,7 @@
 		60EF77341F279D77005E3A6E /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60EF772F1F279D77005E3A6E /* BaseNavigationController.m */; };
 		60EF77351F279D77005E3A6E /* BaseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60EF77311F279D77005E3A6E /* BaseTabBarController.m */; };
 		60EF77361F279D77005E3A6E /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60EF77331F279D77005E3A6E /* BaseViewController.m */; };
+		60EF77411F28E340005E3A6E /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60EF77401F28E340005E3A6E /* WebViewController.m */; };
 		B07A01F0967781E9A1B7AA41 /* libPods-HARMAY_PI_BRAND.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9256868CD00094289173861A /* libPods-HARMAY_PI_BRAND.a */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +59,10 @@
 		2D2354901F289EDA00A93726 /* MenuTableViewCell2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuTableViewCell2.m; sourceTree = "<group>"; };
 		2D2354911F289EDA00A93726 /* MenuTableViewCell2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuTableViewCell2.xib; sourceTree = "<group>"; };
 		354F6A3AE6C4098B6C798064 /* Pods-HARMAY_PI_BRAND.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HARMAY_PI_BRAND.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HARMAY_PI_BRAND/Pods-HARMAY_PI_BRAND.debug.xcconfig"; sourceTree = "<group>"; };
+		603217041F28E9B1002FD61C /* UIView+ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ViewController.h"; sourceTree = "<group>"; };
+		603217051F28E9B1002FD61C /* UIView+ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ViewController.m"; sourceTree = "<group>"; };
+		603217081F28ED97002FD61C /* ChildViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChildViewController.h; sourceTree = "<group>"; };
+		603217091F28ED97002FD61C /* ChildViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChildViewController.m; sourceTree = "<group>"; };
 		60EF76EA1F27931D005E3A6E /* HARMAY_PI_BRAND.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HARMAY_PI_BRAND.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60EF76EE1F27931D005E3A6E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		60EF76F01F27931D005E3A6E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -85,6 +92,8 @@
 		60EF77321F279D77005E3A6E /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		60EF77331F279D77005E3A6E /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		60EF77371F279DAB005E3A6E /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		60EF773F1F28E340005E3A6E /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		60EF77401F28E340005E3A6E /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		9256868CD00094289173861A /* libPods-HARMAY_PI_BRAND.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HARMAY_PI_BRAND.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -122,6 +131,24 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		603217031F28E9B1002FD61C /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				603217041F28E9B1002FD61C /* UIView+ViewController.h */,
+				603217051F28E9B1002FD61C /* UIView+ViewController.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		603217071F28ED49002FD61C /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				603217081F28ED97002FD61C /* ChildViewController.h */,
+				603217091F28ED97002FD61C /* ChildViewController.m */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
 		60EF76E11F27931C005E3A6E = {
 			isa = PBXGroup;
 			children = (
@@ -147,6 +174,8 @@
 		60EF76EC1F27931D005E3A6E /* HARMAY_PI_BRAND */ = {
 			isa = PBXGroup;
 			children = (
+				603217071F28ED49002FD61C /* Tools */,
+				603217031F28E9B1002FD61C /* Category */,
 				60EF772D1F279D77005E3A6E /* BaseClass */,
 				60EF77201F279BC8005E3A6E /* ViewController */,
 				60EF76F01F27931D005E3A6E /* AppDelegate.h */,
@@ -193,6 +222,7 @@
 		60EF77201F279BC8005E3A6E /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				60EF773E1F28E336005E3A6E /* WebView */,
 				60EF77211F279C14005E3A6E /* MainView */,
 				60EF77221F279C14005E3A6E /* MenuView */,
 			);
@@ -236,6 +266,15 @@
 				60EF77331F279D77005E3A6E /* BaseViewController.m */,
 			);
 			path = BaseClass;
+			sourceTree = "<group>";
+		};
+		60EF773E1F28E336005E3A6E /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				60EF773F1F28E340005E3A6E /* WebViewController.h */,
+				60EF77401F28E340005E3A6E /* WebViewController.m */,
+			);
+			path = WebView;
 			sourceTree = "<group>";
 		};
 		A1E5EF40C13CB28ADF635EC9 /* Pods */ = {
@@ -436,13 +475,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				60EF76F51F27931D005E3A6E /* ViewController.m in Sources */,
+				6032170A1F28ED97002FD61C /* ChildViewController.m in Sources */,
 				60EF77361F279D77005E3A6E /* BaseViewController.m in Sources */,
+				60EF77411F28E340005E3A6E /* WebViewController.m in Sources */,
 				60EF77351F279D77005E3A6E /* BaseTabBarController.m in Sources */,
 				60EF76F21F27931D005E3A6E /* AppDelegate.m in Sources */,
 				60EF77341F279D77005E3A6E /* BaseNavigationController.m in Sources */,
 				60EF76EF1F27931D005E3A6E /* main.m in Sources */,
 				60EF77261F279C2E005E3A6E /* MainViewController.m in Sources */,
 				2D23548D1F289AED00A93726 /* MenuTableViewCell.m in Sources */,
+				603217061F28E9B1002FD61C /* UIView+ViewController.m in Sources */,
 				60EF772B1F279C3F005E3A6E /* MenuViewController.m in Sources */,
 				2D2354921F289EDA00A93726 /* MenuTableViewCell2.m in Sources */,
 			);

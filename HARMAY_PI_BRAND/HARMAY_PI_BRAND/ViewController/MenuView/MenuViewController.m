@@ -9,6 +9,8 @@
 #import "MenuViewController.h"
 #import "MenuTableViewCell.h"
 #import "MenuTableViewCell2.h"
+#import "WebViewController.h"
+
 
 @interface MenuViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property(nonatomic,strong) UITableView* tableView;
@@ -17,6 +19,7 @@
 @end
 
 @implementation MenuViewController
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -34,10 +37,23 @@
 
 
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.row == 5) {
+        MenuTableViewCell2* cell = [MenuTableViewCell2 createCellWithTableView:tableView];
+        cell.backgroundColor = [UIColor clearColor];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        return cell;
+    }
     MenuTableViewCell* cell = [MenuTableViewCell createCellWithTableView:tableView];
     cell.backgroundColor = [UIColor clearColor];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    MainViewController* manVC = [ChildViewController instance].MainVC;
+    manVC.titString = [NSString stringWithFormat:@"点击了地 %ld cell",indexPath.row];
+    [self.sideMenuViewController setContentViewController:[ChildViewController instance].MainNavgation animated:YES];
+    [self.sideMenuViewController hideMenuViewController];
 }
 
 -(UIView *)headerView{

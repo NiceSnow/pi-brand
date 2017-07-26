@@ -21,9 +21,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    BaseNavigationController *navigationController = [[BaseNavigationController alloc] initWithRootViewController:[[MainViewController alloc] init]];
     MenuViewController *leftMenuViewController = [[MenuViewController alloc] init];
-    RESideMenu *sideMenuViewController = [[RESideMenu alloc] initWithContentViewController:navigationController
+    RESideMenu *sideMenuViewController = [[RESideMenu alloc] initWithContentViewController:[ChildViewController instance].MainNavgation
                                                                     leftMenuViewController:leftMenuViewController
                                                                    rightMenuViewController:nil];
     sideMenuViewController.backgroundImage = [UIImage imageNamed:@"Stars"];

@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface MenuTableViewCell2 : UITableViewCell
-
++ (instancetype)createCellWithTableView:(UITableView *)tableView;
 @end

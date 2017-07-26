@@ -7,13 +7,17 @@
 //
 
 #import "MainViewController.h"
-#import "RESideMenu.h"
 
 @interface MainViewController ()
 @property (nonatomic, strong) UIView* titleView;
 @end
 
 @implementation MainViewController
+
+
+-(void)setTitString:(NSString *)titString{
+    DebugLog(@"%@",titString);
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
