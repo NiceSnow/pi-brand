@@ -10,7 +10,7 @@
 #import "RESideMenu.h"
 
 @interface MainViewController ()
-
+@property (nonatomic, strong) UIView* titleView;
 @end
 
 @implementation MainViewController
@@ -18,12 +18,39 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     UIButton* leftBtn = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 45, 45)];
-    leftBtn.backgroundColor = [UIColor greenColor];
+    [leftBtn setImage:[UIImage imageNamed:@"icon_nav"] forState:normal];
     [leftBtn addTarget:self action:@selector(presentLeftMenuViewController:) forControlEvents:UIControlEventTouchUpInside];
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:leftBtn];
+    
+    UIButton* rightBtn = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 45, 45)];
+    [rightBtn setImage:[UIImage imageNamed:@"icon_product"] forState:normal];
+    [rightBtn addTarget:self action:@selector(search:) forControlEvents:UIControlEventTouchUpInside];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:rightBtn];
+    
+    self.navigationItem.titleView = self.titleView;
+    
     // Do any additional setup after loading the view from its nib.
 }
 
+-(void)search:(UIButton*)btn{
+    
+}
+
+-(UIView *)titleView{
+    if (!_titleView) {
+        _titleView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 127, 16)];
+        UIImageView* imageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"main_logo"]];
+        [_titleView addSubview:imageView];
+        [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.center.equalTo(_titleView);
+            make.height.equalTo(@16);
+            make.width.equalTo(@127);
+        }];
+        
+        _titleView.alpha = 0;
+    }
+    return _titleView;
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

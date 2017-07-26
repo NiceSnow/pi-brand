@@ -28,7 +28,7 @@
                                                                    rightMenuViewController:nil];
     sideMenuViewController.backgroundImage = [UIImage imageNamed:@"Stars"];
     sideMenuViewController.menuPreferredStatusBarStyle = 1;
-    sideMenuViewController.contentViewInPortraitOffsetCenterX = 100;
+    sideMenuViewController.contentViewInPortraitOffsetCenterX = 50;
     sideMenuViewController.contentViewShadowColor = [UIColor blackColor];
     sideMenuViewController.contentViewShadowOffset = CGSizeMake(0, 0);
     sideMenuViewController.contentViewShadowOpacity = 0.6;

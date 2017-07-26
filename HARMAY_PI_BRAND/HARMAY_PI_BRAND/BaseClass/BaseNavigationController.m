@@ -24,7 +24,7 @@
     [navBar setShadowImage:[[UIImage alloc] init]];
     
     navBar.tintColor = [UIColor greenColor];
-    [navBar setBarTintColor:[UIColor redColor]];
+    [navBar setBarTintColor:[UIColor whiteColor]];
     
     [navBar setTitleTextAttributes:@{
                                      NSForegroundColorAttributeName : [UIColor greenColor],

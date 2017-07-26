@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D23548D1F289AED00A93726 /* MenuTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D23548B1F289AED00A93726 /* MenuTableViewCell.m */; };
+		2D23548E1F289AED00A93726 /* MenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D23548C1F289AED00A93726 /* MenuTableViewCell.xib */; };
+		2D2354921F289EDA00A93726 /* MenuTableViewCell2.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D2354901F289EDA00A93726 /* MenuTableViewCell2.m */; };
+		2D2354931F289EDA00A93726 /* MenuTableViewCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D2354911F289EDA00A93726 /* MenuTableViewCell2.xib */; };
 		60EF76EF1F27931D005E3A6E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 60EF76EE1F27931D005E3A6E /* main.m */; };
 		60EF76F21F27931D005E3A6E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 60EF76F11F27931D005E3A6E /* AppDelegate.m */; };
 		60EF76F51F27931D005E3A6E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60EF76F41F27931D005E3A6E /* ViewController.m */; };
@@ -44,6 +48,13 @@
 
 /* Begin PBXFileReference section */
 		2A57B0F5FE8BB46D3DD57982 /* Pods-HARMAY_PI_BRAND.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HARMAY_PI_BRAND.release.xcconfig"; path = "Pods/Target Support Files/Pods-HARMAY_PI_BRAND/Pods-HARMAY_PI_BRAND.release.xcconfig"; sourceTree = "<group>"; };
+		2D2354811F2890A700A93726 /* DefineClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefineClass.h; sourceTree = "<group>"; };
+		2D23548A1F289AED00A93726 /* MenuTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuTableViewCell.h; sourceTree = "<group>"; };
+		2D23548B1F289AED00A93726 /* MenuTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuTableViewCell.m; sourceTree = "<group>"; };
+		2D23548C1F289AED00A93726 /* MenuTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuTableViewCell.xib; sourceTree = "<group>"; };
+		2D23548F1F289EDA00A93726 /* MenuTableViewCell2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuTableViewCell2.h; sourceTree = "<group>"; };
+		2D2354901F289EDA00A93726 /* MenuTableViewCell2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuTableViewCell2.m; sourceTree = "<group>"; };
+		2D2354911F289EDA00A93726 /* MenuTableViewCell2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuTableViewCell2.xib; sourceTree = "<group>"; };
 		354F6A3AE6C4098B6C798064 /* Pods-HARMAY_PI_BRAND.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HARMAY_PI_BRAND.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HARMAY_PI_BRAND/Pods-HARMAY_PI_BRAND.debug.xcconfig"; sourceTree = "<group>"; };
 		60EF76EA1F27931D005E3A6E /* HARMAY_PI_BRAND.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HARMAY_PI_BRAND.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60EF76EE1F27931D005E3A6E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -142,6 +153,7 @@
 				60EF76F11F27931D005E3A6E /* AppDelegate.m */,
 				60EF76F31F27931D005E3A6E /* ViewController.h */,
 				60EF76F41F27931D005E3A6E /* ViewController.m */,
+				2D2354811F2890A700A93726 /* DefineClass.h */,
 				60EF76F61F27931D005E3A6E /* Main.storyboard */,
 				60EF76F91F27931D005E3A6E /* Assets.xcassets */,
 				60EF76FB1F27931D005E3A6E /* LaunchScreen.storyboard */,
@@ -203,6 +215,12 @@
 				60EF77281F279C3F005E3A6E /* MenuViewController.h */,
 				60EF77291F279C3F005E3A6E /* MenuViewController.m */,
 				60EF772A1F279C3F005E3A6E /* MenuViewController.xib */,
+				2D23548A1F289AED00A93726 /* MenuTableViewCell.h */,
+				2D23548B1F289AED00A93726 /* MenuTableViewCell.m */,
+				2D23548C1F289AED00A93726 /* MenuTableViewCell.xib */,
+				2D23548F1F289EDA00A93726 /* MenuTableViewCell2.h */,
+				2D2354901F289EDA00A93726 /* MenuTableViewCell2.m */,
+				2D2354911F289EDA00A93726 /* MenuTableViewCell2.xib */,
 			);
 			path = MenuView;
 			sourceTree = "<group>";
@@ -338,6 +356,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D23548E1F289AED00A93726 /* MenuTableViewCell.xib in Resources */,
+				2D2354931F289EDA00A93726 /* MenuTableViewCell2.xib in Resources */,
 				60EF76FD1F27931D005E3A6E /* LaunchScreen.storyboard in Resources */,
 				60EF76FA1F27931D005E3A6E /* Assets.xcassets in Resources */,
 				60EF772C1F279C3F005E3A6E /* MenuViewController.xib in Resources */,
@@ -422,7 +442,9 @@
 				60EF77341F279D77005E3A6E /* BaseNavigationController.m in Sources */,
 				60EF76EF1F27931D005E3A6E /* main.m in Sources */,
 				60EF77261F279C2E005E3A6E /* MainViewController.m in Sources */,
+				2D23548D1F289AED00A93726 /* MenuTableViewCell.m in Sources */,
 				60EF772B1F279C3F005E3A6E /* MenuViewController.m in Sources */,
+				2D2354921F289EDA00A93726 /* MenuTableViewCell2.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
