@@ -1,0 +1,682 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		60EF76EF1F27931D005E3A6E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 60EF76EE1F27931D005E3A6E /* main.m */; };
+		60EF76F21F27931D005E3A6E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 60EF76F11F27931D005E3A6E /* AppDelegate.m */; };
+		60EF76F51F27931D005E3A6E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60EF76F41F27931D005E3A6E /* ViewController.m */; };
+		60EF76F81F27931D005E3A6E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60EF76F61F27931D005E3A6E /* Main.storyboard */; };
+		60EF76FA1F27931D005E3A6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60EF76F91F27931D005E3A6E /* Assets.xcassets */; };
+		60EF76FD1F27931D005E3A6E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60EF76FB1F27931D005E3A6E /* LaunchScreen.storyboard */; };
+		60EF77081F27931D005E3A6E /* HARMAY_PI_BRANDTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 60EF77071F27931D005E3A6E /* HARMAY_PI_BRANDTests.m */; };
+		60EF77131F27931D005E3A6E /* HARMAY_PI_BRANDUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 60EF77121F27931D005E3A6E /* HARMAY_PI_BRANDUITests.m */; };
+		60EF77261F279C2E005E3A6E /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60EF77241F279C2E005E3A6E /* MainViewController.m */; };
+		60EF77271F279C2E005E3A6E /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60EF77251F279C2E005E3A6E /* MainViewController.xib */; };
+		60EF772B1F279C3F005E3A6E /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60EF77291F279C3F005E3A6E /* MenuViewController.m */; };
+		60EF772C1F279C3F005E3A6E /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60EF772A1F279C3F005E3A6E /* MenuViewController.xib */; };
+		60EF77341F279D77005E3A6E /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60EF772F1F279D77005E3A6E /* BaseNavigationController.m */; };
+		60EF77351F279D77005E3A6E /* BaseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60EF77311F279D77005E3A6E /* BaseTabBarController.m */; };
+		60EF77361F279D77005E3A6E /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60EF77331F279D77005E3A6E /* BaseViewController.m */; };
+		B07A01F0967781E9A1B7AA41 /* libPods-HARMAY_PI_BRAND.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9256868CD00094289173861A /* libPods-HARMAY_PI_BRAND.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		60EF77041F27931D005E3A6E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 60EF76E21F27931C005E3A6E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 60EF76E91F27931C005E3A6E;
+			remoteInfo = HARMAY_PI_BRAND;
+		};
+		60EF770F1F27931D005E3A6E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 60EF76E21F27931C005E3A6E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 60EF76E91F27931C005E3A6E;
+			remoteInfo = HARMAY_PI_BRAND;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2A57B0F5FE8BB46D3DD57982 /* Pods-HARMAY_PI_BRAND.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HARMAY_PI_BRAND.release.xcconfig"; path = "Pods/Target Support Files/Pods-HARMAY_PI_BRAND/Pods-HARMAY_PI_BRAND.release.xcconfig"; sourceTree = "<group>"; };
+		354F6A3AE6C4098B6C798064 /* Pods-HARMAY_PI_BRAND.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HARMAY_PI_BRAND.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HARMAY_PI_BRAND/Pods-HARMAY_PI_BRAND.debug.xcconfig"; sourceTree = "<group>"; };
+		60EF76EA1F27931D005E3A6E /* HARMAY_PI_BRAND.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HARMAY_PI_BRAND.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		60EF76EE1F27931D005E3A6E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		60EF76F01F27931D005E3A6E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		60EF76F11F27931D005E3A6E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		60EF76F31F27931D005E3A6E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		60EF76F41F27931D005E3A6E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		60EF76F71F27931D005E3A6E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		60EF76F91F27931D005E3A6E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		60EF76FC1F27931D005E3A6E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		60EF76FE1F27931D005E3A6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		60EF77031F27931D005E3A6E /* HARMAY_PI_BRANDTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HARMAY_PI_BRANDTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		60EF77071F27931D005E3A6E /* HARMAY_PI_BRANDTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HARMAY_PI_BRANDTests.m; sourceTree = "<group>"; };
+		60EF77091F27931D005E3A6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		60EF770E1F27931D005E3A6E /* HARMAY_PI_BRANDUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HARMAY_PI_BRANDUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		60EF77121F27931D005E3A6E /* HARMAY_PI_BRANDUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HARMAY_PI_BRANDUITests.m; sourceTree = "<group>"; };
+		60EF77141F27931D005E3A6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		60EF77231F279C2E005E3A6E /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		60EF77241F279C2E005E3A6E /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		60EF77251F279C2E005E3A6E /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		60EF77281F279C3F005E3A6E /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
+		60EF77291F279C3F005E3A6E /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
+		60EF772A1F279C3F005E3A6E /* MenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
+		60EF772E1F279D77005E3A6E /* BaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavigationController.h; sourceTree = "<group>"; };
+		60EF772F1F279D77005E3A6E /* BaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationController.m; sourceTree = "<group>"; };
+		60EF77301F279D77005E3A6E /* BaseTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTabBarController.h; sourceTree = "<group>"; };
+		60EF77311F279D77005E3A6E /* BaseTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTabBarController.m; sourceTree = "<group>"; };
+		60EF77321F279D77005E3A6E /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		60EF77331F279D77005E3A6E /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		60EF77371F279DAB005E3A6E /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		9256868CD00094289173861A /* libPods-HARMAY_PI_BRAND.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HARMAY_PI_BRAND.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		60EF76E71F27931C005E3A6E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B07A01F0967781E9A1B7AA41 /* libPods-HARMAY_PI_BRAND.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		60EF77001F27931D005E3A6E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		60EF770B1F27931D005E3A6E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4DE278866E7998AD4C7DFBE0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9256868CD00094289173861A /* libPods-HARMAY_PI_BRAND.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		60EF76E11F27931C005E3A6E = {
+			isa = PBXGroup;
+			children = (
+				60EF76EC1F27931D005E3A6E /* HARMAY_PI_BRAND */,
+				60EF77061F27931D005E3A6E /* HARMAY_PI_BRANDTests */,
+				60EF77111F27931D005E3A6E /* HARMAY_PI_BRANDUITests */,
+				60EF76EB1F27931D005E3A6E /* Products */,
+				A1E5EF40C13CB28ADF635EC9 /* Pods */,
+				4DE278866E7998AD4C7DFBE0 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		60EF76EB1F27931D005E3A6E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				60EF76EA1F27931D005E3A6E /* HARMAY_PI_BRAND.app */,
+				60EF77031F27931D005E3A6E /* HARMAY_PI_BRANDTests.xctest */,
+				60EF770E1F27931D005E3A6E /* HARMAY_PI_BRANDUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		60EF76EC1F27931D005E3A6E /* HARMAY_PI_BRAND */ = {
+			isa = PBXGroup;
+			children = (
+				60EF772D1F279D77005E3A6E /* BaseClass */,
+				60EF77201F279BC8005E3A6E /* ViewController */,
+				60EF76F01F27931D005E3A6E /* AppDelegate.h */,
+				60EF76F11F27931D005E3A6E /* AppDelegate.m */,
+				60EF76F31F27931D005E3A6E /* ViewController.h */,
+				60EF76F41F27931D005E3A6E /* ViewController.m */,
+				60EF76F61F27931D005E3A6E /* Main.storyboard */,
+				60EF76F91F27931D005E3A6E /* Assets.xcassets */,
+				60EF76FB1F27931D005E3A6E /* LaunchScreen.storyboard */,
+				60EF76FE1F27931D005E3A6E /* Info.plist */,
+				60EF76ED1F27931D005E3A6E /* Supporting Files */,
+			);
+			path = HARMAY_PI_BRAND;
+			sourceTree = "<group>";
+		};
+		60EF76ED1F27931D005E3A6E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				60EF76EE1F27931D005E3A6E /* main.m */,
+				60EF77371F279DAB005E3A6E /* PrefixHeader.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		60EF77061F27931D005E3A6E /* HARMAY_PI_BRANDTests */ = {
+			isa = PBXGroup;
+			children = (
+				60EF77071F27931D005E3A6E /* HARMAY_PI_BRANDTests.m */,
+				60EF77091F27931D005E3A6E /* Info.plist */,
+			);
+			path = HARMAY_PI_BRANDTests;
+			sourceTree = "<group>";
+		};
+		60EF77111F27931D005E3A6E /* HARMAY_PI_BRANDUITests */ = {
+			isa = PBXGroup;
+			children = (
+				60EF77121F27931D005E3A6E /* HARMAY_PI_BRANDUITests.m */,
+				60EF77141F27931D005E3A6E /* Info.plist */,
+			);
+			path = HARMAY_PI_BRANDUITests;
+			sourceTree = "<group>";
+		};
+		60EF77201F279BC8005E3A6E /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				60EF77211F279C14005E3A6E /* MainView */,
+				60EF77221F279C14005E3A6E /* MenuView */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		60EF77211F279C14005E3A6E /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				60EF77231F279C2E005E3A6E /* MainViewController.h */,
+				60EF77241F279C2E005E3A6E /* MainViewController.m */,
+				60EF77251F279C2E005E3A6E /* MainViewController.xib */,
+			);
+			path = MainView;
+			sourceTree = "<group>";
+		};
+		60EF77221F279C14005E3A6E /* MenuView */ = {
+			isa = PBXGroup;
+			children = (
+				60EF77281F279C3F005E3A6E /* MenuViewController.h */,
+				60EF77291F279C3F005E3A6E /* MenuViewController.m */,
+				60EF772A1F279C3F005E3A6E /* MenuViewController.xib */,
+			);
+			path = MenuView;
+			sourceTree = "<group>";
+		};
+		60EF772D1F279D77005E3A6E /* BaseClass */ = {
+			isa = PBXGroup;
+			children = (
+				60EF772E1F279D77005E3A6E /* BaseNavigationController.h */,
+				60EF772F1F279D77005E3A6E /* BaseNavigationController.m */,
+				60EF77301F279D77005E3A6E /* BaseTabBarController.h */,
+				60EF77311F279D77005E3A6E /* BaseTabBarController.m */,
+				60EF77321F279D77005E3A6E /* BaseViewController.h */,
+				60EF77331F279D77005E3A6E /* BaseViewController.m */,
+			);
+			path = BaseClass;
+			sourceTree = "<group>";
+		};
+		A1E5EF40C13CB28ADF635EC9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				354F6A3AE6C4098B6C798064 /* Pods-HARMAY_PI_BRAND.debug.xcconfig */,
+				2A57B0F5FE8BB46D3DD57982 /* Pods-HARMAY_PI_BRAND.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		60EF76E91F27931C005E3A6E /* HARMAY_PI_BRAND */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 60EF77171F27931D005E3A6E /* Build configuration list for PBXNativeTarget "HARMAY_PI_BRAND" */;
+			buildPhases = (
+				75A738CBB9433AFCDDB797B0 /* [CP] Check Pods Manifest.lock */,
+				60EF76E61F27931C005E3A6E /* Sources */,
+				60EF76E71F27931C005E3A6E /* Frameworks */,
+				60EF76E81F27931C005E3A6E /* Resources */,
+				F262301650906AB3279D73A9 /* [CP] Embed Pods Frameworks */,
+				11276F7E09DF1A1007C0A75F /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HARMAY_PI_BRAND;
+			productName = HARMAY_PI_BRAND;
+			productReference = 60EF76EA1F27931D005E3A6E /* HARMAY_PI_BRAND.app */;
+			productType = "com.apple.product-type.application";
+		};
+		60EF77021F27931D005E3A6E /* HARMAY_PI_BRANDTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 60EF771A1F27931D005E3A6E /* Build configuration list for PBXNativeTarget "HARMAY_PI_BRANDTests" */;
+			buildPhases = (
+				60EF76FF1F27931D005E3A6E /* Sources */,
+				60EF77001F27931D005E3A6E /* Frameworks */,
+				60EF77011F27931D005E3A6E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				60EF77051F27931D005E3A6E /* PBXTargetDependency */,
+			);
+			name = HARMAY_PI_BRANDTests;
+			productName = HARMAY_PI_BRANDTests;
+			productReference = 60EF77031F27931D005E3A6E /* HARMAY_PI_BRANDTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		60EF770D1F27931D005E3A6E /* HARMAY_PI_BRANDUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 60EF771D1F27931D005E3A6E /* Build configuration list for PBXNativeTarget "HARMAY_PI_BRANDUITests" */;
+			buildPhases = (
+				60EF770A1F27931D005E3A6E /* Sources */,
+				60EF770B1F27931D005E3A6E /* Frameworks */,
+				60EF770C1F27931D005E3A6E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				60EF77101F27931D005E3A6E /* PBXTargetDependency */,
+			);
+			name = HARMAY_PI_BRANDUITests;
+			productName = HARMAY_PI_BRANDUITests;
+			productReference = 60EF770E1F27931D005E3A6E /* HARMAY_PI_BRANDUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		60EF76E21F27931C005E3A6E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = Madodg;
+				TargetAttributes = {
+					60EF76E91F27931C005E3A6E = {
+						CreatedOnToolsVersion = 8.2;
+						ProvisioningStyle = Automatic;
+					};
+					60EF77021F27931D005E3A6E = {
+						CreatedOnToolsVersion = 8.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 60EF76E91F27931C005E3A6E;
+					};
+					60EF770D1F27931D005E3A6E = {
+						CreatedOnToolsVersion = 8.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 60EF76E91F27931C005E3A6E;
+					};
+				};
+			};
+			buildConfigurationList = 60EF76E51F27931C005E3A6E /* Build configuration list for PBXProject "HARMAY_PI_BRAND" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 60EF76E11F27931C005E3A6E;
+			productRefGroup = 60EF76EB1F27931D005E3A6E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				60EF76E91F27931C005E3A6E /* HARMAY_PI_BRAND */,
+				60EF77021F27931D005E3A6E /* HARMAY_PI_BRANDTests */,
+				60EF770D1F27931D005E3A6E /* HARMAY_PI_BRANDUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		60EF76E81F27931C005E3A6E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				60EF76FD1F27931D005E3A6E /* LaunchScreen.storyboard in Resources */,
+				60EF76FA1F27931D005E3A6E /* Assets.xcassets in Resources */,
+				60EF772C1F279C3F005E3A6E /* MenuViewController.xib in Resources */,
+				60EF76F81F27931D005E3A6E /* Main.storyboard in Resources */,
+				60EF77271F279C2E005E3A6E /* MainViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		60EF77011F27931D005E3A6E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		60EF770C1F27931D005E3A6E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		11276F7E09DF1A1007C0A75F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HARMAY_PI_BRAND/Pods-HARMAY_PI_BRAND-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		75A738CBB9433AFCDDB797B0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F262301650906AB3279D73A9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HARMAY_PI_BRAND/Pods-HARMAY_PI_BRAND-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		60EF76E61F27931C005E3A6E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				60EF76F51F27931D005E3A6E /* ViewController.m in Sources */,
+				60EF77361F279D77005E3A6E /* BaseViewController.m in Sources */,
+				60EF77351F279D77005E3A6E /* BaseTabBarController.m in Sources */,
+				60EF76F21F27931D005E3A6E /* AppDelegate.m in Sources */,
+				60EF77341F279D77005E3A6E /* BaseNavigationController.m in Sources */,
+				60EF76EF1F27931D005E3A6E /* main.m in Sources */,
+				60EF77261F279C2E005E3A6E /* MainViewController.m in Sources */,
+				60EF772B1F279C3F005E3A6E /* MenuViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		60EF76FF1F27931D005E3A6E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				60EF77081F27931D005E3A6E /* HARMAY_PI_BRANDTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		60EF770A1F27931D005E3A6E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				60EF77131F27931D005E3A6E /* HARMAY_PI_BRANDUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		60EF77051F27931D005E3A6E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 60EF76E91F27931C005E3A6E /* HARMAY_PI_BRAND */;
+			targetProxy = 60EF77041F27931D005E3A6E /* PBXContainerItemProxy */;
+		};
+		60EF77101F27931D005E3A6E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 60EF76E91F27931C005E3A6E /* HARMAY_PI_BRAND */;
+			targetProxy = 60EF770F1F27931D005E3A6E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		60EF76F61F27931D005E3A6E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				60EF76F71F27931D005E3A6E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		60EF76FB1F27931D005E3A6E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				60EF76FC1F27931D005E3A6E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		60EF77151F27931D005E3A6E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		60EF77161F27931D005E3A6E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		60EF77181F27931D005E3A6E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 354F6A3AE6C4098B6C798064 /* Pods-HARMAY_PI_BRAND.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/HARMAY_PI_BRAND/PrefixHeader.pch";
+				INFOPLIST_FILE = HARMAY_PI_BRAND/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "pi-brand.HARMAY-PI-BRAND";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		60EF77191F27931D005E3A6E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A57B0F5FE8BB46D3DD57982 /* Pods-HARMAY_PI_BRAND.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/HARMAY_PI_BRAND/PrefixHeader.pch";
+				INFOPLIST_FILE = HARMAY_PI_BRAND/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "pi-brand.HARMAY-PI-BRAND";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		60EF771B1F27931D005E3A6E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = HARMAY_PI_BRANDTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "pi-brand.HARMAY-PI-BRANDTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HARMAY_PI_BRAND.app/HARMAY_PI_BRAND";
+			};
+			name = Debug;
+		};
+		60EF771C1F27931D005E3A6E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = HARMAY_PI_BRANDTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "pi-brand.HARMAY-PI-BRANDTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HARMAY_PI_BRAND.app/HARMAY_PI_BRAND";
+			};
+			name = Release;
+		};
+		60EF771E1F27931D005E3A6E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = HARMAY_PI_BRANDUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "pi-brand.HARMAY-PI-BRANDUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = HARMAY_PI_BRAND;
+			};
+			name = Debug;
+		};
+		60EF771F1F27931D005E3A6E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = HARMAY_PI_BRANDUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "pi-brand.HARMAY-PI-BRANDUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = HARMAY_PI_BRAND;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		60EF76E51F27931C005E3A6E /* Build configuration list for PBXProject "HARMAY_PI_BRAND" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				60EF77151F27931D005E3A6E /* Debug */,
+				60EF77161F27931D005E3A6E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		60EF77171F27931D005E3A6E /* Build configuration list for PBXNativeTarget "HARMAY_PI_BRAND" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				60EF77181F27931D005E3A6E /* Debug */,
+				60EF77191F27931D005E3A6E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		60EF771A1F27931D005E3A6E /* Build configuration list for PBXNativeTarget "HARMAY_PI_BRANDTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				60EF771B1F27931D005E3A6E /* Debug */,
+				60EF771C1F27931D005E3A6E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		60EF771D1F27931D005E3A6E /* Build configuration list for PBXNativeTarget "HARMAY_PI_BRANDUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				60EF771E1F27931D005E3A6E /* Debug */,
+				60EF771F1F27931D005E3A6E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 60EF76E21F27931C005E3A6E /* Project object */;
+}
