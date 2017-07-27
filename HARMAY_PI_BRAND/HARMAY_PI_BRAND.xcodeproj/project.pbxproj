@@ -18,6 +18,13 @@
 		2D2354A31F29867700A93726 /* ProductViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D2354A21F29867700A93726 /* ProductViewController.m */; };
 		2D2354AB1F298ECB00A93726 /* shopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D2354A91F298ECB00A93726 /* shopViewController.m */; };
 		2D2354AC1F298ECB00A93726 /* shopViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D2354AA1F298ECB00A93726 /* shopViewController.xib */; };
+		2D2354B01F29C1E300A93726 /* MainTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D2354AE1F29C1E300A93726 /* MainTableViewCell.m */; };
+		2D2354B11F29C1E300A93726 /* MainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D2354AF1F29C1E300A93726 /* MainTableViewCell.xib */; };
+		2D2354BF1F29D22C00A93726 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D2354BD1F29D22C00A93726 /* SearchViewController.m */; };
+		2D2354C01F29D22C00A93726 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D2354BE1F29D22C00A93726 /* SearchViewController.xib */; };
+		2D2354C41F29D47E00A93726 /* SearchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D2354C21F29D47E00A93726 /* SearchTableViewCell.m */; };
+		2D2354C51F29D47E00A93726 /* SearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D2354C31F29D47E00A93726 /* SearchTableViewCell.xib */; };
+		2D2354C91F29DA9A00A93726 /* HTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D2354C81F29DA9A00A93726 /* HTTPRequest.m */; };
 		603217061F28E9B1002FD61C /* UIView+ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 603217051F28E9B1002FD61C /* UIView+ViewController.m */; };
 		6032170A1F28ED97002FD61C /* ChildViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 603217091F28ED97002FD61C /* ChildViewController.m */; };
 		60EF76EF1F27931D005E3A6E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 60EF76EE1F27931D005E3A6E /* main.m */; };
@@ -80,6 +87,17 @@
 		2D2354A81F298ECB00A93726 /* shopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = shopViewController.h; sourceTree = "<group>"; };
 		2D2354A91F298ECB00A93726 /* shopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = shopViewController.m; sourceTree = "<group>"; };
 		2D2354AA1F298ECB00A93726 /* shopViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = shopViewController.xib; sourceTree = "<group>"; };
+		2D2354AD1F29C1E300A93726 /* MainTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTableViewCell.h; sourceTree = "<group>"; };
+		2D2354AE1F29C1E300A93726 /* MainTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTableViewCell.m; sourceTree = "<group>"; };
+		2D2354AF1F29C1E300A93726 /* MainTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainTableViewCell.xib; sourceTree = "<group>"; };
+		2D2354BC1F29D22C00A93726 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		2D2354BD1F29D22C00A93726 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+		2D2354BE1F29D22C00A93726 /* SearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
+		2D2354C11F29D47E00A93726 /* SearchTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchTableViewCell.h; sourceTree = "<group>"; };
+		2D2354C21F29D47E00A93726 /* SearchTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchTableViewCell.m; sourceTree = "<group>"; };
+		2D2354C31F29D47E00A93726 /* SearchTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchTableViewCell.xib; sourceTree = "<group>"; };
+		2D2354C71F29DA9A00A93726 /* HTTPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPRequest.h; sourceTree = "<group>"; };
+		2D2354C81F29DA9A00A93726 /* HTTPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPRequest.m; sourceTree = "<group>"; };
 		354F6A3AE6C4098B6C798064 /* Pods-HARMAY_PI_BRAND.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HARMAY_PI_BRAND.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HARMAY_PI_BRAND/Pods-HARMAY_PI_BRAND.debug.xcconfig"; sourceTree = "<group>"; };
 		603217041F28E9B1002FD61C /* UIView+ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ViewController.h"; sourceTree = "<group>"; };
 		603217051F28E9B1002FD61C /* UIView+ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ViewController.m"; sourceTree = "<group>"; };
@@ -196,6 +214,28 @@
 			path = shop;
 			sourceTree = "<group>";
 		};
+		2D2354BB1F29D22C00A93726 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				2D2354BC1F29D22C00A93726 /* SearchViewController.h */,
+				2D2354BD1F29D22C00A93726 /* SearchViewController.m */,
+				2D2354BE1F29D22C00A93726 /* SearchViewController.xib */,
+				2D2354C11F29D47E00A93726 /* SearchTableViewCell.h */,
+				2D2354C21F29D47E00A93726 /* SearchTableViewCell.m */,
+				2D2354C31F29D47E00A93726 /* SearchTableViewCell.xib */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		2D2354C61F29DA8A00A93726 /* httpRequest */ = {
+			isa = PBXGroup;
+			children = (
+				2D2354C71F29DA9A00A93726 /* HTTPRequest.h */,
+				2D2354C81F29DA9A00A93726 /* HTTPRequest.m */,
+			);
+			path = httpRequest;
+			sourceTree = "<group>";
+		};
 		4DE278866E7998AD4C7DFBE0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -247,6 +287,7 @@
 		60EF76EC1F27931D005E3A6E /* HARMAY_PI_BRAND */ = {
 			isa = PBXGroup;
 			children = (
+				2D2354C61F29DA8A00A93726 /* httpRequest */,
 				603217071F28ED49002FD61C /* Tools */,
 				603217031F28E9B1002FD61C /* Category */,
 				60EF772D1F279D77005E3A6E /* BaseClass */,
@@ -295,6 +336,7 @@
 		60EF77201F279BC8005E3A6E /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				2D2354BB1F29D22C00A93726 /* Search */,
 				2D2354A41F298CD500A93726 /* shop */,
 				2D2354941F29863C00A93726 /* Company */,
 				2D2354951F29863C00A93726 /* Joinus */,
@@ -312,6 +354,9 @@
 				60EF77231F279C2E005E3A6E /* MainViewController.h */,
 				60EF77241F279C2E005E3A6E /* MainViewController.m */,
 				60EF77251F279C2E005E3A6E /* MainViewController.xib */,
+				2D2354AD1F29C1E300A93726 /* MainTableViewCell.h */,
+				2D2354AE1F29C1E300A93726 /* MainTableViewCell.m */,
+				2D2354AF1F29C1E300A93726 /* MainTableViewCell.xib */,
 			);
 			path = MainView;
 			sourceTree = "<group>";
@@ -475,16 +520,19 @@
 			files = (
 				2D23549B1F29865800A93726 /* CompanyViewController.xib in Resources */,
 				2D23548E1F289AED00A93726 /* MenuTableViewCell.xib in Resources */,
+				2D2354C01F29D22C00A93726 /* SearchViewController.xib in Resources */,
 				2D2354931F289EDA00A93726 /* MenuTableViewCell2.xib in Resources */,
 				2D2354A01F29866900A93726 /* JoinusViewController.xib in Resources */,
 				60EF76FD1F27931D005E3A6E /* LaunchScreen.storyboard in Resources */,
 				927CDED41F29C64300399AA6 /* JoinusViewCellCell.xib in Resources */,
 				60EF76FA1F27931D005E3A6E /* Assets.xcassets in Resources */,
+				2D2354B11F29C1E300A93726 /* MainTableViewCell.xib in Resources */,
 				60EF772C1F279C3F005E3A6E /* MenuViewController.xib in Resources */,
 				60EF76F81F27931D005E3A6E /* Main.storyboard in Resources */,
 				2D2354AC1F298ECB00A93726 /* shopViewController.xib in Resources */,
 				927CDED91F29DF9F00399AA6 /* JoinusViewCell.xib in Resources */,
 				60EF77271F279C2E005E3A6E /* MainViewController.xib in Resources */,
+				2D2354C51F29D47E00A93726 /* SearchTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -563,18 +611,22 @@
 				2D23549A1F29865800A93726 /* CompanyViewController.m in Sources */,
 				60EF77361F279D77005E3A6E /* BaseViewController.m in Sources */,
 				60EF77411F28E340005E3A6E /* WebViewController.m in Sources */,
+				2D2354BF1F29D22C00A93726 /* SearchViewController.m in Sources */,
 				2D2354AB1F298ECB00A93726 /* shopViewController.m in Sources */,
 				2D23549F1F29866900A93726 /* JoinusViewController.m in Sources */,
+				2D2354C41F29D47E00A93726 /* SearchTableViewCell.m in Sources */,
 				60EF77351F279D77005E3A6E /* BaseTabBarController.m in Sources */,
 				60EF76F21F27931D005E3A6E /* AppDelegate.m in Sources */,
 				60EF77341F279D77005E3A6E /* BaseNavigationController.m in Sources */,
 				60EF76EF1F27931D005E3A6E /* main.m in Sources */,
+				2D2354B01F29C1E300A93726 /* MainTableViewCell.m in Sources */,
 				60EF77261F279C2E005E3A6E /* MainViewController.m in Sources */,
 				2D23548D1F289AED00A93726 /* MenuTableViewCell.m in Sources */,
 				927CDED31F29C64300399AA6 /* JoinusViewCellCell.m in Sources */,
 				927CDED81F29DF9F00399AA6 /* JoinusViewCell.m in Sources */,
 				603217061F28E9B1002FD61C /* UIView+ViewController.m in Sources */,
 				60EF772B1F279C3F005E3A6E /* MenuViewController.m in Sources */,
+				2D2354C91F29DA9A00A93726 /* HTTPRequest.m in Sources */,
 				2D2354921F289EDA00A93726 /* MenuTableViewCell2.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

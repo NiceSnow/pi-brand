@@ -7,10 +7,13 @@
 //
 
 #import "MainViewController.h"
+#import "MainTableViewCell.h"
+#import "SearchViewController.h"
 
-@interface MainViewController ()<UIScrollViewDelegate>
+@interface MainViewController ()<UIScrollViewDelegate,UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic, strong) UIView* titleView;
-@property(nonatomic,strong) UIScrollView* scrollView;
+@property (nonatomic, strong) UITableView* tableView;
+@property (nonatomic, strong) UIView* headerView;
 @end
 
 @implementation MainViewController
@@ -34,21 +37,77 @@
     
     self.navigationItem.titleView = self.titleView;
     
-
+    UIImageView* imageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"icon_nav"]];
+    [self.view addSubview:imageView];
+    [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.bottom.left.right.offset(0);
+    }];
+    [self.view addSubview:self.tableView];
+    [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.offset(64);
+        make.bottom.offset(0);
+        make.left.offset(25);
+        make.right.offset(-25);
+    }];
+    [self getdata];
     // Do any additional setup after loading the view from its nib.
 }
 
--(void)addScrollerView{
-    
-    [self.view addSubview:self.scrollView];
-    [self.scrollView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.bottom.left.right.offset(0);
+-(void)getdata{
+    [[HTTPRequest instance]PostRequestWithURL:@"http://www.pi-brand.cn/index.php/home/api/index" Parameter:nil succeed:^(NSURLSessionDataTask *task, id responseObject) {
+        
+    } failed:^(NSURLSessionDataTask *task, NSError *error) {
+        
+    } netWork:^(BOOL netWork) {
+        
     }];
-    
+}
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return 1;
 }
 
--(void)search:(UIButton*)btn{
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 3;
+}
+
+//-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+//    if (indexPath.section == 3) {
+//        return screenWidth/5;
+//    }
+//    return UITableViewAutomaticDimension;
+//}
+
+//-(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
+//    return 25;
+//}
+
+-(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    MainTableViewCell* cell = [MainTableViewCell createCellWithTableView:tableView];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
+    return cell;
+}
+
+-(UITableView *)tableView{
+    if (!_tableView) {
+        
+        _tableView = [[UITableView alloc]initWithFrame:CGRectZero style:UITableViewStyleGrouped];
+        _tableView.separatorColor = [UIColor clearColor];
+        _tableView.backgroundColor = [UIColor clearColor];
+        _tableView.showsVerticalScrollIndicator = NO;
+        _tableView.delegate = self;
+        _tableView.dataSource = self;
+        _tableView.estimatedRowHeight = 5;
+        _tableView.rowHeight = UITableViewAutomaticDimension;
+        _tableView.tableFooterView = [UIView new];
+        _tableView.tableHeaderView = self.headerView;
+    }
+    return _tableView;
+}
+
+
+-(void)search:(UIButton*)btn{
+    [self.navigationController pushViewController:[[SearchViewController alloc]init] animated:NO];
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView;{
@@ -71,17 +130,14 @@
     return _titleView;
 }
 
--(UIScrollView *)scrollView{
-    if (!_scrollView) {
-        _scrollView = [UIScrollView new];
-        _scrollView.showsHorizontalScrollIndicator = NO;
-        _scrollView.scrollEnabled = NO;
-        _scrollView.contentSize = CGSizeMake(screenWidth*3, 0);
-        _scrollView.pagingEnabled = YES;
-        _scrollView.delegate = self;
+-(UIView *)headerView{
+    if (!_headerView) {
+        _headerView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 320, screenHeight/3)];
+        _headerView.backgroundColor = [UIColor clearColor];
     }
-    return _scrollView;
+    return _headerView;
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
