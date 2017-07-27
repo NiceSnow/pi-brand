@@ -36,6 +36,10 @@
 		60EF77351F279D77005E3A6E /* BaseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60EF77311F279D77005E3A6E /* BaseTabBarController.m */; };
 		60EF77361F279D77005E3A6E /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60EF77331F279D77005E3A6E /* BaseViewController.m */; };
 		60EF77411F28E340005E3A6E /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60EF77401F28E340005E3A6E /* WebViewController.m */; };
+		927CDED31F29C64300399AA6 /* JoinusViewCellCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 927CDED11F29C64300399AA6 /* JoinusViewCellCell.m */; };
+		927CDED41F29C64300399AA6 /* JoinusViewCellCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 927CDED21F29C64300399AA6 /* JoinusViewCellCell.xib */; };
+		927CDED81F29DF9F00399AA6 /* JoinusViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 927CDED61F29DF9F00399AA6 /* JoinusViewCell.m */; };
+		927CDED91F29DF9F00399AA6 /* JoinusViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 927CDED71F29DF9F00399AA6 /* JoinusViewCell.xib */; };
 		B07A01F0967781E9A1B7AA41 /* libPods-HARMAY_PI_BRAND.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9256868CD00094289173861A /* libPods-HARMAY_PI_BRAND.a */; };
 /* End PBXBuildFile section */
 
@@ -113,6 +117,12 @@
 		60EF773F1F28E340005E3A6E /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
 		60EF77401F28E340005E3A6E /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		9256868CD00094289173861A /* libPods-HARMAY_PI_BRAND.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HARMAY_PI_BRAND.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		927CDED01F29C64300399AA6 /* JoinusViewCellCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JoinusViewCellCell.h; sourceTree = "<group>"; };
+		927CDED11F29C64300399AA6 /* JoinusViewCellCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JoinusViewCellCell.m; sourceTree = "<group>"; };
+		927CDED21F29C64300399AA6 /* JoinusViewCellCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JoinusViewCellCell.xib; sourceTree = "<group>"; };
+		927CDED51F29DF9F00399AA6 /* JoinusViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JoinusViewCell.h; sourceTree = "<group>"; };
+		927CDED61F29DF9F00399AA6 /* JoinusViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JoinusViewCell.m; sourceTree = "<group>"; };
+		927CDED71F29DF9F00399AA6 /* JoinusViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JoinusViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +167,12 @@
 				2D23549C1F29866900A93726 /* JoinusViewController.h */,
 				2D23549D1F29866900A93726 /* JoinusViewController.m */,
 				2D23549E1F29866900A93726 /* JoinusViewController.xib */,
+				927CDED01F29C64300399AA6 /* JoinusViewCellCell.h */,
+				927CDED11F29C64300399AA6 /* JoinusViewCellCell.m */,
+				927CDED21F29C64300399AA6 /* JoinusViewCellCell.xib */,
+				927CDED51F29DF9F00399AA6 /* JoinusViewCell.h */,
+				927CDED61F29DF9F00399AA6 /* JoinusViewCell.m */,
+				927CDED71F29DF9F00399AA6 /* JoinusViewCell.xib */,
 			);
 			path = Joinus;
 			sourceTree = "<group>";
@@ -417,6 +433,7 @@
 				TargetAttributes = {
 					60EF76E91F27931C005E3A6E = {
 						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = UG6CKH24DA;
 						ProvisioningStyle = Automatic;
 					};
 					60EF77021F27931D005E3A6E = {
@@ -461,10 +478,12 @@
 				2D2354931F289EDA00A93726 /* MenuTableViewCell2.xib in Resources */,
 				2D2354A01F29866900A93726 /* JoinusViewController.xib in Resources */,
 				60EF76FD1F27931D005E3A6E /* LaunchScreen.storyboard in Resources */,
+				927CDED41F29C64300399AA6 /* JoinusViewCellCell.xib in Resources */,
 				60EF76FA1F27931D005E3A6E /* Assets.xcassets in Resources */,
 				60EF772C1F279C3F005E3A6E /* MenuViewController.xib in Resources */,
 				60EF76F81F27931D005E3A6E /* Main.storyboard in Resources */,
 				2D2354AC1F298ECB00A93726 /* shopViewController.xib in Resources */,
+				927CDED91F29DF9F00399AA6 /* JoinusViewCell.xib in Resources */,
 				60EF77271F279C2E005E3A6E /* MainViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -552,6 +571,8 @@
 				60EF76EF1F27931D005E3A6E /* main.m in Sources */,
 				60EF77261F279C2E005E3A6E /* MainViewController.m in Sources */,
 				2D23548D1F289AED00A93726 /* MenuTableViewCell.m in Sources */,
+				927CDED31F29C64300399AA6 /* JoinusViewCellCell.m in Sources */,
+				927CDED81F29DF9F00399AA6 /* JoinusViewCell.m in Sources */,
 				603217061F28E9B1002FD61C /* UIView+ViewController.m in Sources */,
 				60EF772B1F279C3F005E3A6E /* MenuViewController.m in Sources */,
 				2D2354921F289EDA00A93726 /* MenuTableViewCell2.m in Sources */,
@@ -702,6 +723,7 @@
 			baseConfigurationReference = 354F6A3AE6C4098B6C798064 /* Pods-HARMAY_PI_BRAND.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = UG6CKH24DA;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/HARMAY_PI_BRAND/PrefixHeader.pch";
 				INFOPLIST_FILE = HARMAY_PI_BRAND/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -715,6 +737,7 @@
 			baseConfigurationReference = 2A57B0F5FE8BB46D3DD57982 /* Pods-HARMAY_PI_BRAND.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = UG6CKH24DA;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/HARMAY_PI_BRAND/PrefixHeader.pch";
 				INFOPLIST_FILE = HARMAY_PI_BRAND/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

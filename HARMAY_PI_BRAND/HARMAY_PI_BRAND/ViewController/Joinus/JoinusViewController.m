@@ -7,8 +7,12 @@
 //
 
 #import "JoinusViewController.h"
+#import "JoinusViewCellCell.h"
+#import "JoinusViewCell.h"
 
-@interface JoinusViewController ()
+@interface JoinusViewController ()<UITabBarDelegate,UITableViewDataSource>
+
+@property (weak, nonatomic) IBOutlet UITableView *tableview;
 
 @end
 
@@ -16,6 +20,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     UIButton* leftBtn = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 45, 45)];
     [leftBtn setImage:[UIImage imageNamed:@"icon_nav"] forState:normal];
     [leftBtn addTarget:self action:@selector(presentLeftMenuViewController:) forControlEvents:UIControlEventTouchUpInside];
@@ -23,25 +28,35 @@
     
     UIButton* rightBtn = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 45, 45)];
     [rightBtn setImage:[UIImage imageNamed:@"icon_product"] forState:normal];
-    [rightBtn addTarget:self action:@selector(search:) forControlEvents:UIControlEventTouchUpInside];
+    [rightBtn addTarget:self action:@selector(search1:) forControlEvents:UIControlEventTouchUpInside];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:rightBtn];
-    // Do any additional setup after loading the view from its nib.
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
     
-    // Dispose of any resources that can be recreated.
+    self.view.backgroundColor = [UIColor lightGrayColor];
+    UIView * headerView = [UIView new];
+    headerView.backgroundColor = [UIColor clearColor];
+    headerView.frame = CGRectMake(0, 0, screenWidth, screenHeight/3.0);
+    _tableview.tableHeaderView = headerView;
+    _tableview.tableFooterView = [UIView new];
+    _tableview.estimatedRowHeight = 5;
+    _tableview.rowHeight = UITableViewAutomaticDimension;
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)search1:(UIButton *)btn
+{
+    
 }
-*/
-
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.row==0) {
+        JoinusViewCellCell * cell = [JoinusViewCellCell createCellWithTableView:tableView];
+        return cell;
+    }else{
+        JoinusViewCell * cell = [JoinusViewCell createCellWithTableView:tableView];
+        return cell;
+    }
+}
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 2;
+}
 @end
