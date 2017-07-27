@@ -9,11 +9,14 @@
 #import "MainViewController.h"
 #import "MainTableViewCell.h"
 #import "SearchViewController.h"
+#import "mainModle.h"
 
 @interface MainViewController ()<UIScrollViewDelegate,UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic, strong) UIView* titleView;
 @property (nonatomic, strong) UITableView* tableView;
 @property (nonatomic, strong) UIView* headerView;
+@property (nonatomic, strong) UIImageView* backImageView;
+@property (nonatomic, strong) NSMutableArray* dataArray;
 @end
 
 @implementation MainViewController
@@ -37,9 +40,9 @@
     
     self.navigationItem.titleView = self.titleView;
     
-    UIImageView* imageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"icon_nav"]];
-    [self.view addSubview:imageView];
-    [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
+    _backImageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:nil]];
+    [self.view addSubview:_backImageView];
+    [_backImageView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.bottom.left.right.offset(0);
     }];
     [self.view addSubview:self.tableView];
@@ -55,7 +58,18 @@
 
 -(void)getdata{
     [[HTTPRequest instance]PostRequestWithURL:@"http://www.pi-brand.cn/index.php/home/api/index" Parameter:nil succeed:^(NSURLSessionDataTask *task, id responseObject) {
-        
+        BOOL succeed = [[responseObject objectForKey:@"status"]boolValue];
+        if (succeed) {
+            NSDictionary* data = [responseObject objectForKey:@"data"];
+            NSString* urlString = [[data objectForKey:@"back_img"] objectForKey:@"bg_img"];
+            NSString * encodedString = (NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault, (CFStringRef)urlString, nil, nil, kCFStringEncodingUTF8));
+            
+            [_backImageView sd_setImageWithURL:[NSURL URLWithString:encodedString]];
+            [mainModle mj_setupReplacedKeyFromPropertyName:^NSDictionary *{
+                return @{@"ID" : @"id"};
+            }];
+            self.dataArray = (NSMutableArray*)[mainModle mj_objectWithKeyValues:[data objectForKey:@"res"]];
+        }
     } failed:^(NSURLSessionDataTask *task, NSError *error) {
         
     } netWork:^(BOOL netWork) {

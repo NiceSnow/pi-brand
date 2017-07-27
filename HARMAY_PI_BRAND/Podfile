@@ -5,4 +5,5 @@ target 'HARMAY_PI_BRAND’ do
     pod 'IQKeyboardManager', '~> 3.3.4'
     pod 'SDWebImage', '~> 3.7.3'
     pod 'RESideMenu', '~> 4.0.7'
+    pod 'MJExtension', '~> 3.0.3'
 end
