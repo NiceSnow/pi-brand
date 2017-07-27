@@ -8,8 +8,9 @@
 
 #import "MainViewController.h"
 
-@interface MainViewController ()
+@interface MainViewController ()<UIScrollViewDelegate>
 @property (nonatomic, strong) UIView* titleView;
+@property(nonatomic,strong) UIScrollView* scrollView;
 @end
 
 @implementation MainViewController
@@ -33,10 +34,24 @@
     
     self.navigationItem.titleView = self.titleView;
     
+
     // Do any additional setup after loading the view from its nib.
 }
 
+-(void)addScrollerView{
+    
+    [self.view addSubview:self.scrollView];
+    [self.scrollView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.bottom.left.right.offset(0);
+    }];
+    
+}
+
 -(void)search:(UIButton*)btn{
+    
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView;{
     
 }
 
@@ -54,6 +69,18 @@
         _titleView.alpha = 0;
     }
     return _titleView;
+}
+
+-(UIScrollView *)scrollView{
+    if (!_scrollView) {
+        _scrollView = [UIScrollView new];
+        _scrollView.showsHorizontalScrollIndicator = NO;
+        _scrollView.scrollEnabled = NO;
+        _scrollView.contentSize = CGSizeMake(screenWidth*3, 0);
+        _scrollView.pagingEnabled = YES;
+        _scrollView.delegate = self;
+    }
+    return _scrollView;
 }
 
 - (void)didReceiveMemoryWarning {

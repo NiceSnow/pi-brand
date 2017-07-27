@@ -50,9 +50,46 @@
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    MainViewController* manVC = [ChildViewController instance].MainVC;
-    manVC.titString = [NSString stringWithFormat:@"点击了地 %ld cell",indexPath.row];
-    [self.sideMenuViewController setContentViewController:[ChildViewController instance].MainNavgation animated:YES];
+    switch (indexPath.row) {
+        case 0:
+        {
+            MainViewController* manVC = [ChildViewController instance].MainVC;
+            manVC.titString = [NSString stringWithFormat:@"点击了地 %ld cell",indexPath.row];
+            [self.sideMenuViewController setContentViewController:[ChildViewController instance].MainNavgation animated:YES];
+        }
+            break;
+        case 1:
+        {
+            CompanyViewController* companyVC = [ChildViewController instance].companyVC;
+            companyVC.title = [NSString stringWithFormat:@"点击了地 %ld cell",indexPath.row];
+            [self.sideMenuViewController setContentViewController:[ChildViewController instance].companyNavgation animated:YES];
+        }
+            break;
+        case 2:
+        {
+            ProductViewController* productVC = [ChildViewController instance].productVC;
+            productVC.title = [NSString stringWithFormat:@"点击了地 %ld cell",indexPath.row];
+            [self.sideMenuViewController setContentViewController:[ChildViewController instance].productNavgation animated:YES];
+        }
+            break;
+        case 3:
+        {
+            JoinusViewController* joinVC = [ChildViewController instance].joinVC;
+            joinVC.title = [NSString stringWithFormat:@"点击了地 %ld cell",indexPath.row];
+            [self.sideMenuViewController setContentViewController:[ChildViewController instance].joinNavgation animated:YES];
+        }
+            break;
+        case 4:
+        {
+            shopViewController* shopVC = [ChildViewController instance].shopVC;
+            shopVC.title = [NSString stringWithFormat:@"点击了地 %ld cell",indexPath.row];
+            [self.sideMenuViewController setContentViewController:[ChildViewController instance].shopNavgation animated:YES];
+        }
+            break;
+            
+        default:
+            break;
+    }
     [self.sideMenuViewController hideMenuViewController];
 }
 

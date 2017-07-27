@@ -48,4 +48,60 @@
     return _webVC;
 }
 
+-(BaseNavigationController *)joinNavgation{
+    if (!_joinNavgation) {
+        _joinNavgation = [[BaseNavigationController alloc]initWithRootViewController:self.joinVC];
+    }
+    return _joinNavgation;
+}
+
+-(JoinusViewController *)joinVC{
+    if (!_joinVC) {
+        _joinVC = [[JoinusViewController alloc]init];
+    }
+    return _joinVC;
+}
+
+-(BaseNavigationController *)companyNavgation{
+    if (!_companyNavgation) {
+        _companyNavgation = [[BaseNavigationController alloc]initWithRootViewController:self.companyVC];
+    }
+    return _companyNavgation;
+}
+
+-(CompanyViewController *)companyVC{
+    if (!_companyVC) {
+        _companyVC = [[CompanyViewController alloc]init];
+    }
+    return _companyVC;
+}
+
+-(BaseNavigationController *)productNavgation{
+    if (!_productNavgation) {
+        _productNavgation = [[BaseNavigationController alloc]initWithRootViewController:self.productVC];
+    }
+    return _productNavgation;
+}
+
+-(ProductViewController *)productVC{
+    if (!_productVC) {
+        _productVC = [[ProductViewController alloc]init];
+    }
+    return _productVC;
+}
+
+-(BaseNavigationController *)shopNavgation{
+    if (!_shopNavgation) {
+        _shopNavgation = [[BaseNavigationController alloc]initWithRootViewController:self.shopVC];
+    }
+    return _shopNavgation;
+}
+
+-(shopViewController *)shopVC{
+    if (!_shopVC) {
+        _shopVC = [[shopViewController alloc]init];
+    }
+    return _shopVC;
+}
+
 @end
