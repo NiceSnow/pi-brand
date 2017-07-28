@@ -23,6 +23,8 @@
 @property (nonatomic,strong) XLScrollView *contentView;
 @property (nonatomic,weak) UIImageView *header;
 @property (nonatomic,weak) XLSegmentBar *bar;
+@property (nonatomic, strong)UIPageControl* pageControl;
+
 @end
 
 @implementation ProductViewController
@@ -89,6 +91,7 @@
     NSInteger i = offsetX / scrollView.frame.size.width;
     [self selectedIndex:i];
     self.bar.changeIndex = i;
+    _pageControl.currentPage = i;
 }
 #pragma mark - XLSegmentBarDelegate
 - (void)segmentBar:(XLSegmentBar *)segmentBar tapIndex:(NSInteger)index {
@@ -139,12 +142,30 @@
     if (!_header) {
         UIImageView *image = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"test"]];
         image.contentMode = UIViewContentModeScaleAspectFill;
+        image.userInteractionEnabled = YES;
         [self.view addSubview:image];
         _header = image;
+        
+        _pageControl = [UIPageControl new];
+        _pageControl.numberOfPages = self.childViewControllers.count;
+        _pageControl.currentPage = 0;
+//        [_pageControl addTarget:self action:@selector(pageTurn:) forControlEvents:UIControlEventValueChanged];
+        [_pageControl setValue:[UIImage imageNamed:@"11_07SEL"] forKeyPath:@"_currentPageImage"];
+        [_pageControl setValue:[UIImage imageNamed:@"11_07"] forKeyPath:@"_pageImage"];
+        [_header addSubview:_pageControl];
+        [_pageControl mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.centerX.equalTo(_header);
+            make.bottom.mas_equalTo(-5);
+        }];
+        
     }
     return _header;
 }
-
+//- (void)pageTurn:(UIPageControl*)sender
+//{
+//    [self selectedIndex:sender.currentPage];
+//
+//}
 - (XLSegmentBar *)bar {
     if (!_bar) {
         NSArray *titles = [self.childViewControllers valueForKey:@"title"];

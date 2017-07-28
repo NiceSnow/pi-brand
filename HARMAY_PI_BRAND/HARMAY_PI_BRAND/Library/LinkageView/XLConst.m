@@ -14,4 +14,4 @@ CGFloat const navBarH = 64.0f;
 CGFloat const headerImgH = 210.0f;
 
 /** 控制栏高度*/
-CGFloat const barH = 44.0f;
+CGFloat const barH = 0.0f;

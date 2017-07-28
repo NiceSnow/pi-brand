@@ -46,6 +46,14 @@
         make.left.top.mas_equalTo(15);
     }];
     
+    UIImageView * backImageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"03"]];
+    [backView addSubview:backImageView];
+    [backImageView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.equalTo(backView);
+        make.top.equalTo(logoImageView.mas_bottom).offset(25);
+        make.bottom.mas_equalTo(-5);
+    }];
+    
 
     [view addSubview:backView];
     [backView mas_makeConstraints:^(MASConstraintMaker *make) {
