@@ -10,5 +10,6 @@
 
 @interface Product3Cell : UITableViewCell
 + (instancetype)createCellWithTableView:(UITableView *)tableView;
+@property (nonatomic, strong)NSDictionary* dict;
 
 @end

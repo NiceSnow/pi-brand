@@ -22,16 +22,16 @@
                         <rect key="frame" x="10" y="0.0" width="300" height="318.5"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="07" translatesAutoresizingMaskIntoConstraints="NO" id="egp-Kd-SYw">
-                                <rect key="frame" x="-7" y="40" width="314" height="195"/>
+                                <rect key="frame" x="-7" y="40" width="314" height="185.5"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="752" text="FRESH,花心如莲尽享初言" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5eZ-5y-yHg">
-                                <rect key="frame" x="0.0" y="255" width="300" height="19.5"/>
+                                <rect key="frame" x="15" y="245.5" width="270" height="19.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" verticalCompressionResistancePriority="756" text="Fresh是纯净之美，天然卓越的成分，历史悠远的美颜以及现代先进的科学，带来Fresh......" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OMP-o0-92L">
-                                <rect key="frame" x="20" y="284.5" width="260" height="33.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" verticalCompressionResistancePriority="756" text="Fresh是纯净之美，天然卓越的成分，历史悠远的美颜以及现代先进的科学，带来Fresh......" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OMP-o0-92L">
+                                <rect key="frame" x="20" y="275" width="260" height="33.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -42,10 +42,10 @@
                             <constraint firstAttribute="trailing" secondItem="OMP-o0-92L" secondAttribute="trailing" constant="20" id="2w3-tz-f5x"/>
                             <constraint firstItem="egp-Kd-SYw" firstAttribute="top" secondItem="PVH-FJ-x7R" secondAttribute="top" constant="40" id="8Zo-Xs-oN1"/>
                             <constraint firstItem="OMP-o0-92L" firstAttribute="leading" secondItem="PVH-FJ-x7R" secondAttribute="leading" constant="20" id="BlG-Tc-kKr"/>
-                            <constraint firstAttribute="bottom" secondItem="OMP-o0-92L" secondAttribute="bottom" id="CIX-Az-Vg5"/>
-                            <constraint firstAttribute="trailing" secondItem="5eZ-5y-yHg" secondAttribute="trailing" id="KSH-py-F68"/>
+                            <constraint firstAttribute="bottom" secondItem="OMP-o0-92L" secondAttribute="bottom" constant="10" id="CIX-Az-Vg5"/>
+                            <constraint firstAttribute="trailing" secondItem="5eZ-5y-yHg" secondAttribute="trailing" constant="15" id="KSH-py-F68"/>
                             <constraint firstItem="5eZ-5y-yHg" firstAttribute="top" secondItem="egp-Kd-SYw" secondAttribute="bottom" constant="20" id="PHV-y9-58d"/>
-                            <constraint firstItem="5eZ-5y-yHg" firstAttribute="leading" secondItem="PVH-FJ-x7R" secondAttribute="leading" id="W3f-jv-fxR"/>
+                            <constraint firstItem="5eZ-5y-yHg" firstAttribute="leading" secondItem="PVH-FJ-x7R" secondAttribute="leading" constant="15" id="W3f-jv-fxR"/>
                             <constraint firstItem="egp-Kd-SYw" firstAttribute="centerX" secondItem="PVH-FJ-x7R" secondAttribute="centerX" id="YBy-5h-z36"/>
                             <constraint firstItem="OMP-o0-92L" firstAttribute="top" secondItem="5eZ-5y-yHg" secondAttribute="bottom" constant="10" id="f3w-03-5E4"/>
                         </constraints>

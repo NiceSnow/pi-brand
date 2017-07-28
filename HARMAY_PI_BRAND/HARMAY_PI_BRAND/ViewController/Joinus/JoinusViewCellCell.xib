@@ -82,6 +82,14 @@
                 </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <connections>
+                <outlet property="contentLabel" destination="gG8-ef-9JV" id="S2q-kO-uC0"/>
+                <outlet property="desLabel" destination="fD0-xP-nOY" id="PFf-sf-Zhq"/>
+                <outlet property="iconImageView" destination="jGB-Ce-OHu" id="e10-pF-FBl"/>
+                <outlet property="logoImageView" destination="Ov8-1l-7Td" id="tIP-oK-fMs"/>
+                <outlet property="mainImageView" destination="14V-5x-Tuw" id="4cP-iB-fL8"/>
+                <outlet property="titleLabel" destination="LH7-xh-RGy" id="t54-eR-6HD"/>
+            </connections>
             <point key="canvasLocation" x="-23" y="-20"/>
         </tableViewCell>
     </objects>

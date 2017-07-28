@@ -7,7 +7,15 @@
 //
 
 #import "JoinusViewCell.h"
+#import "joinSubModel.h"
 
+@interface JoinusViewCell ()
+@property (weak, nonatomic) IBOutlet UILabel *emailLabel;
+@property (weak, nonatomic) IBOutlet UILabel *workTypelabel;
+@property (weak, nonatomic) IBOutlet UILabel *contentLabel;
+
+
+@end
 @implementation JoinusViewCell
 
 + (instancetype)createCellWithTableView:(UITableView *)tableView
@@ -29,5 +37,22 @@
         self = [[[NSBundle mainBundle]loadNibNamed:@"JoinusViewCell" owner:self options:nil]lastObject];
     }
     return self;
+}
+- (void)setDict:(NSDictionary *)dict
+{
+    _dict = dict;
+    
+    NSAttributedString * attrStr = [[NSAttributedString alloc] initWithData:[dict[@"content"] dataUsingEncoding:NSUnicodeStringEncoding] options:@{ NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType } documentAttributes:nil error:nil];
+    [_contentLabel setAttributedText:attrStr];
+    _workTypelabel.text = dict[@"title"]; 
+}
+- (IBAction)btn1:(UIButton *)sender {
+    if (self.block) {
+        self.block(sender.tag-1000);
+    }
+}
+- (IBAction)calButton:(UIButton *)sender {
+    
+    
 }
 @end

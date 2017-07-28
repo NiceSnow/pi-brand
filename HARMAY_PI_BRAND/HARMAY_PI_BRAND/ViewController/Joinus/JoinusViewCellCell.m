@@ -7,9 +7,19 @@
 //
 
 #import "JoinusViewCellCell.h"
+#import "companyHeaderModel.h"
+#import "joinMainModel.h"
 
 
 @interface JoinusViewCellCell ()
+@property (weak, nonatomic) IBOutlet UIImageView *logoImageView;
+@property (weak, nonatomic) IBOutlet UIImageView *iconImageView;
+@property (weak, nonatomic) IBOutlet UILabel *desLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *mainImageView;
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *contentLabel;
+
+
 
 @end
 @implementation JoinusViewCellCell
@@ -31,7 +41,39 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         self = [[[NSBundle mainBundle]loadNibNamed:@"JoinusViewCellCell" owner:self options:nil]lastObject];
+        [_logoImageView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.width.mas_offset(screenWidth*320/750);
+            make.height.mas_offset((screenWidth*320/750)*40/320);
+        }];
+        
+        [_iconImageView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.width.mas_offset(screenWidth*388/750);
+            make.height.mas_offset((screenWidth*388/750)*165/388);
+        }];
+        
+        [_mainImageView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.width.mas_offset(screenWidth*600/750);
+            make.height.mas_offset((screenWidth*600/750)*407/600);
+        }];
+        
+        
     }
     return self;
+}
+- (void)setDataArray:(NSArray *)dataArray
+{
+    _dataArray = dataArray;
+    
+    companyHeaderModel* model = dataArray[0];
+    
+    joinMainModel* mainModel = dataArray[1];
+    
+    [_logoImageView sd_setImageWithURL:[model.icon safeUrlString]];
+    [_iconImageView sd_setImageWithURL:[model.image safeUrlString]];
+    _desLabel.text = model.title;
+    [_mainImageView sd_setImageWithURL:[mainModel.img safeUrlString]];
+    _titleLabel.text = mainModel.title;
+    _contentLabel.text = mainModel.vice_heading;
+    
 }
 @end

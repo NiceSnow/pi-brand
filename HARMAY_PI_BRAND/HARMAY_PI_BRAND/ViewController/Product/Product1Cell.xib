@@ -27,7 +27,7 @@
                                 <rect key="frame" x="15" y="19" width="16" height="19"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kHD-8X-a7l">
-                                <rect key="frame" x="41" y="0.0" width="286" height="56.5"/>
+                                <rect key="frame" x="41" y="0.0" width="35.5" height="56.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="0.066666666666666666" green="0.066666666666666666" blue="0.066666666666666666" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -46,7 +46,6 @@
                             <constraint firstAttribute="bottom" secondItem="9vH-tV-qCO" secondAttribute="bottom" id="NMJ-Gu-OYn"/>
                             <constraint firstItem="9vH-tV-qCO" firstAttribute="leading" secondItem="Ktv-22-Ite" secondAttribute="leading" constant="-1" id="S10-pG-W1D"/>
                             <constraint firstItem="kHD-8X-a7l" firstAttribute="top" secondItem="7Mk-Yd-v1f" secondAttribute="top" id="Vuh-Tc-4wm"/>
-                            <constraint firstAttribute="trailing" secondItem="kHD-8X-a7l" secondAttribute="trailing" constant="5" id="ZJx-En-HZk"/>
                             <constraint firstItem="kHD-8X-a7l" firstAttribute="leading" secondItem="Ktv-22-Ite" secondAttribute="trailing" constant="10" id="aJq-f3-vtP"/>
                             <constraint firstItem="Ktv-22-Ite" firstAttribute="centerY" secondItem="7Mk-Yd-v1f" secondAttribute="centerY" id="gvR-eH-Y2g"/>
                             <constraint firstItem="Ktv-22-Ite" firstAttribute="leading" secondItem="7Mk-Yd-v1f" secondAttribute="leading" constant="15" id="vBc-CF-Kql"/>

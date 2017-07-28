@@ -38,8 +38,14 @@
             make.width.mas_equalTo(screenWidth-20-40);
             make.height.mas_equalTo((screenWidth-20-40)*405/629);
         }];
+        _contentLabel.numberOfLines = 2;
     }
     return self;
 }
-
+- (void)setDict:(NSDictionary *)dict{
+    _dict = dict;
+    [_backImageView sd_setImageWithURL:[dict[@"img"] safeUrlString]];
+    _titleLabel.text = dict[@"title"];
+    _contentLabel.text =  dict[@"vice_heading"];
+}
 @end

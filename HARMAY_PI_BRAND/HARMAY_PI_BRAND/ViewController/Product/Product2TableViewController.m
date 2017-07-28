@@ -12,6 +12,7 @@
 
 @interface Product2TableViewController ()
 @property (nonatomic, strong)UILabel * titleLabel;
+@property (nonatomic, strong)NSDictionary *dict;
 
 @end
 
@@ -27,7 +28,30 @@
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.tableView.estimatedRowHeight = 5;
     self.tableView.backgroundColor = [UIColor clearColor];
+    [self getdata];
 }
+
+-(void)getdata
+{
+    
+    [[HTTPRequest instance]PostRequestWithURL:@"http://www.pi-brand.cn/index.php/home/api/store_list" Parameter:nil succeed:^(NSURLSessionDataTask *task, id responseObject) {
+        BOOL succeed = [[responseObject objectForKey:@"status"]boolValue];
+        if (succeed) {
+            NSDictionary* data = [responseObject objectForKey:@"data"];
+            NSString* urlString = [[data objectForKey:@"back_img"] objectForKey:@"bg_img"];
+            [[NSNotificationCenter defaultCenter]postNotificationName:kGetImageURLKey object:nil userInfo:@{kGetImageURLKey:urlString}];
+            
+            _dict = data;
+            [self.tableView reloadData];
+            
+        }
+    } failed:^(NSURLSessionDataTask *task, NSError *error) {
+        
+    } netWork:^(BOOL netWork) {
+        
+    }];
+}
+
 -(instancetype)initWithStyle:(UITableViewStyle)style
 {
     return [super initWithStyle:UITableViewStyleGrouped];
@@ -43,14 +67,18 @@
     UIView * backView = [UIView new];
     backView.backgroundColor = [UIColor whiteColor];
     
-    UIImageView * logoImageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"11"]];
+    
+    UIImageView * logoImageView = [[UIImageView alloc]init];
+    [logoImageView sd_setImageWithURL:[_dict[@"head"][@"img"] safeUrlString] placeholderImage:[UIImage imageNamed:@"11"]];
     [backView addSubview:logoImageView];
     [logoImageView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.top.mas_equalTo(15);
+        make.width.mas_offset(screenWidth*320/750);
+        make.height.mas_offset((screenWidth*320/750)*40/320);
     }];
     
     UILabel * titleLabel = [UILabel new];
-    titleLabel.text = @"HARMAY,线上产品体验馆";
+    titleLabel.text = _dict[@"head"][@"title"];
     titleLabel.font = [UIFont boldSystemFontOfSize:16];
     titleLabel.textColor = UICOLOR_RGB_Alpha(0x2a2a2a, 1);
     [backView addSubview:titleLabel];
@@ -110,7 +138,7 @@
     return view;
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 5;
+    return [_dict[@"res"] count];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
@@ -123,9 +151,16 @@
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     Product2Cell *cell = [Product2Cell createCellWithTableView:tableView];
-
+    if (_dict) {
+        cell.dict = _dict[@"res"][indexPath.row];
+    }
     return cell;
 }
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+}
+
 - (void)storeAction
 {
     

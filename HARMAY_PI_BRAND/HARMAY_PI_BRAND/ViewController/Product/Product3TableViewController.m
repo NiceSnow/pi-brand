@@ -11,7 +11,7 @@
 #import "Product3Cell.h"
 
 @interface Product3TableViewController ()
-
+@property (nonatomic, strong)NSDictionary * dict;
 @end
 
 @implementation Product3TableViewController
@@ -24,10 +24,31 @@
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.tableView.estimatedRowHeight = 5;
     self.tableView.backgroundColor = [UIColor clearColor];
+    [self getdata];
 }
 -(instancetype)initWithStyle:(UITableViewStyle)style
 {
     return [super initWithStyle:UITableViewStyleGrouped];
+}
+-(void)getdata
+{
+    
+    [[HTTPRequest instance]PostRequestWithURL:@"http://www.pi-brand.cn/index.php/home/api/product_line" Parameter:nil succeed:^(NSURLSessionDataTask *task, id responseObject) {
+        BOOL succeed = [[responseObject objectForKey:@"status"]boolValue];
+        if (succeed) {
+            NSDictionary* data = [responseObject objectForKey:@"data"];
+            NSString* urlString = [[data objectForKey:@"back_img"] objectForKey:@"bg_img"];
+            [[NSNotificationCenter defaultCenter]postNotificationName:kGetImageURLKey object:nil userInfo:@{kGetImageURLKey:urlString}];
+            
+            _dict = data;
+            [self.tableView reloadData];
+            
+        }
+    } failed:^(NSURLSessionDataTask *task, NSError *error) {
+        
+    } netWork:^(BOOL netWork) {
+        
+    }];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -40,18 +61,26 @@
     UIView * backView = [UIView new];
     backView.backgroundColor = [UIColor whiteColor];
     
-    UIImageView * logoImageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"11"]];
+    UIImageView * logoImageView = [[UIImageView alloc]init];
+    [logoImageView sd_setImageWithURL:[_dict[@"head"][@"icon"] safeUrlString] placeholderImage:[UIImage imageNamed:@"11"]];
+
     [backView addSubview:logoImageView];
     [logoImageView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.top.mas_equalTo(15);
+        make.width.mas_offset(screenWidth*320/750);
+        make.height.mas_offset((screenWidth*320/750)*40/320);
     }];
     
-    UIImageView * backImageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"03"]];
+    UIImageView * backImageView = [[UIImageView alloc]init];
+    [backImageView sd_setImageWithURL:[_dict[@"head"][@"image"] safeUrlString] placeholderImage:[UIImage imageNamed:@"03"]];
+
     [backView addSubview:backImageView];
     [backImageView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.equalTo(backView);
         make.top.equalTo(logoImageView.mas_bottom).offset(25);
         make.bottom.mas_equalTo(-5);
+        make.width.mas_equalTo(screenWidth*380/750);
+//        make.height.mas_equalTo((screenWidth*380/750)*165/380);
     }];
     
 
@@ -64,8 +93,7 @@
     return view;
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 5;
-}
+   return [_dict[@"res"] count];}
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
 {
@@ -77,7 +105,7 @@
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     Product3Cell *cell = [Product3Cell createCellWithTableView:tableView];
-    
+    cell.dict = _dict[@"res"][indexPath.row];
     return cell;
 }
 

@@ -9,6 +9,7 @@
 #import "Product1TableViewController.h"
 #import "UIViewController+XLScroll.h"
 #import "Product1Cell.h"
+#import <MapKit/MapKit.h>
 
 @interface Product1TableViewController ()
 {
@@ -21,6 +22,8 @@
 @property (nonatomic, strong)UIImageView * backImageView;
 @property (nonatomic, strong)UILabel* locationLabel;
 @property (nonatomic, strong)UILabel* nameLabel;
+@property (nonatomic, strong)NSDictionary *dict;
+
 
 @end
 
@@ -37,6 +40,33 @@
 
     self.tableView.separatorStyle = 0;
     self.tableView.estimatedSectionHeaderHeight = 5;
+    [self getdataWithCityID:10000];
+}
+
+
+-(void)getdataWithCityID:(NSInteger)cid
+{
+    NSDictionary * parameter = nil;
+    if (cid != 10000) {
+        parameter = @{@"city_id":@(cid)};
+    }
+    
+    [[HTTPRequest instance]PostRequestWithURL:@"http://www.pi-brand.cn/index.php/home/api/product_city" Parameter:parameter succeed:^(NSURLSessionDataTask *task, id responseObject) {
+        BOOL succeed = [[responseObject objectForKey:@"status"]boolValue];
+        if (succeed) {
+            NSDictionary* data = [responseObject objectForKey:@"data"];
+            NSString* urlString = [[data objectForKey:@"back_img"] objectForKey:@"bg_img"];
+            [[NSNotificationCenter defaultCenter]postNotificationName:kGetImageURLKey object:nil userInfo:@{kGetImageURLKey:urlString}];
+            
+            _dict = data;
+            [self.tableView reloadData];
+            
+        }
+    } failed:^(NSURLSessionDataTask *task, NSError *error) {
+        
+    } netWork:^(BOOL netWork) {
+        
+    }];
 }
 -(instancetype)initWithStyle:(UITableViewStyle)style
 {
@@ -45,7 +75,7 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 3;
+    return [_dict[@"pro"] count];
 }
 
 
@@ -59,20 +89,33 @@
     UIView * backView = [UIView new];
     backView.backgroundColor = [UIColor whiteColor];
     
+    NSArray * proArray = [NSArray array];
+    NSMutableArray * cityArray = [NSMutableArray array];
+    if (_dict) {
+        proArray = _dict[@"pro"];
+        cityArray = [_dict[@"city"] mutableCopy];
+        NSDictionary * tempDic = @{@"id":@"10000",@"city_name":@"全部"};
+        [cityArray insertObject:tempDic atIndex:0];
+    }
     
-    UIImageView * imageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"15"]];
+    UIImageView * imageView = [[UIImageView alloc]init];
+    [imageView sd_setImageWithURL:[proArray[section][@"img"] safeUrlString] placeholderImage:[UIImage imageNamed:@"15"]];
     [backView addSubview:imageView];
     _backImageView = imageView;
     
+    
     if (section == 0) {
-        UIImageView * logoImageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"11"]];
+        UIImageView * logoImageView = [[UIImageView alloc]init];
+        [logoImageView sd_setImageWithURL:[_dict[@"head"][@"icon"] safeUrlString]];
         [backView addSubview:logoImageView];
         [logoImageView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.top.mas_equalTo(15);
+            make.width.mas_offset(screenWidth*320/750);
+            make.height.mas_offset((screenWidth*320/750)*40/320);
         }];
         
         UILabel * titleLabel = [UILabel new];
-        titleLabel.text = @"HARMAY,关于美和美好的生活";
+        titleLabel.text = _dict[@"head"][@"title"];
         titleLabel.font = [UIFont boldSystemFontOfSize:16];
         titleLabel.textColor = UICOLOR_RGB_Alpha(0x2a2a2a, 1);
         [backView addSubview:titleLabel];
@@ -106,20 +149,19 @@
         
         [backView layoutIfNeeded];
         UIButton * lastBtn = [UIButton new];
-        NSArray * titleArray = @[@"全部",@"北京",@"上海",@"香港"];
-        for (NSInteger i = 0; i<titleArray.count; i++) {
+        for (NSInteger i = 0; i<cityArray.count; i++) {
             
             NSInteger index = i % 3;
             NSInteger page = i / 3;
             
             UIButton * btn = [UIButton new];
-            btn.tag = i+100;
+            btn.tag =  [cityArray[i][@"id"] integerValue]+100;
             [btn addTarget:self action:@selector(changeCityAction:) forControlEvents:UIControlEventTouchUpInside];
     
             [btn setBackgroundImage:[UIImage imageNamed:@"4"] forState:normal];
             [btn setBackgroundImage:[UIImage imageNamed:@"3"] forState:UIControlStateSelected];
-            [btn setTitle:titleArray[i] forState:normal];
-            [btn setTitle:titleArray[i] forState:UIControlStateSelected];
+            [btn setTitle:cityArray[i][@"city_name"] forState:normal];
+            [btn setTitle:cityArray[i][@"city_name"] forState:UIControlStateSelected];
             [btn setTitleColor:UICOLOR_RGB_Alpha(0x6b6a6a, 1) forState:normal];
             [btn setTitleColor:UICOLOR_RGB_Alpha(0x6b6a6a, 1) forState:UIControlStateSelected];
             btn.titleLabel.font = [UIFont systemFontOfSize:14];
@@ -153,7 +195,7 @@
     
     
     UILabel * label = [UILabel new];
-    label.text = @"上海";
+    label.text = proArray[section][@"city_name"];
     label.font = [UIFont systemFontOfSize:12];
     label.textAlignment = NSTextAlignmentCenter;
     label.textColor = UICOLOR_RGB_Alpha(0xe52c4e, 1);
@@ -165,7 +207,7 @@
     _locationLabel = label;
     
     UILabel * nameLabel = [UILabel new];
-    nameLabel.text = @"安福路HARMAY";
+    nameLabel.text = proArray[section][@"summary"];
     nameLabel.font = [UIFont systemFontOfSize:12];
     nameLabel.textAlignment = NSTextAlignmentCenter;
     nameLabel.textColor = UICOLOR_RGB_Alpha(0x111111, 1);
@@ -195,9 +237,39 @@
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     Product1Cell *cell = [Product1Cell createCellWithTableView:tableView];
-    cell.imageString = _imageArray[indexPath.row];
-    cell.contentString = _titleArray[indexPath.row];
+    if (_dict) {
+        NSString * content = nil;
+        if (indexPath.row == 0) {
+            content = _dict[@"pro"][indexPath.section][@"address"];
+        }else if (indexPath.row == 1){
+            content = [NSString stringWithFormat:@"商铺电话：%@",_dict[@"pro"][indexPath.section][@"tel"]];
+        }else if (indexPath.row == 2){
+            content = [NSString stringWithFormat:@"营业时间：%@",_dict[@"pro"][indexPath.section][@"business_hours"]];
+        }
+        cell.contentString = content;
+        
+    }
+    cell.imageString = self.imageArray[indexPath.row];
     return cell;
+}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+
+    if (indexPath.row == 0) {
+        CLLocationCoordinate2D loc = CLLocationCoordinate2DMake([_dict[@"pro"][indexPath.section][@"latitude"] floatValue], [_dict[@"pro"][indexPath.section][@"longitude"] floatValue]);
+        MKMapItem *currentLocation = [MKMapItem mapItemForCurrentLocation];
+        MKMapItem *toLocation = [[MKMapItem alloc] initWithPlacemark:[[MKPlacemark alloc] initWithCoordinate:loc addressDictionary:nil]];
+        [MKMapItem openMapsWithItems:@[currentLocation, toLocation]
+                       launchOptions:@{MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving,
+                                       MKLaunchOptionsShowsTrafficKey: [NSNumber numberWithBool:YES]}];
+        
+    }else if(indexPath.row == 1){
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"tel:%@",_dict[@"pro"][indexPath.section][@"tel"]]]];
+    }else if (indexPath.row ==2){
+        
+    }
+    
+    
 }
 - (void)shareAction
 {
@@ -209,5 +281,6 @@
     tempButton.selected = NO;
     btn.selected = YES;
     tempButton = btn;
+    [self getdataWithCityID:btn.tag-100];
 }
 @end

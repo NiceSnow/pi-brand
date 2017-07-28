@@ -10,4 +10,7 @@
 
 @interface JoinusViewCellCell : UITableViewCell
 + (instancetype)createCellWithTableView:(UITableView *)tableView;
+
+@property (nonatomic, strong)NSArray* dataArray;
+
 @end
