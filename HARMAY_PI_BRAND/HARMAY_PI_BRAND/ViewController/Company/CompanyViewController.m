@@ -18,18 +18,36 @@
 @end
 
 @implementation CompanyViewController
-
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
+-(void)setLeftCount:(NSInteger)leftCount{
     UIButton* leftBtn = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 35, 35)];
     [leftBtn setImage:[UIImage imageNamed:@"icon_nav"] forState:normal];
     [leftBtn addTarget:self action:@selector(presentLeftMenuViewController:) forControlEvents:UIControlEventTouchUpInside];
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:leftBtn];
+    UIButton* leftBtn2 = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 35, 35)];
+    leftBtn2.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
+    [leftBtn2 setImage:[UIImage imageNamed:@"back"] forState:normal];
+    [leftBtn2 addTarget:self action:@selector(leftPress) forControlEvents:UIControlEventTouchUpInside];
+    
+    if (leftCount == 1) {
+        self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:leftBtn];
+    }else{
+        self.navigationItem.leftBarButtonItems = @[[[UIBarButtonItem alloc]initWithCustomView:leftBtn],[[UIBarButtonItem alloc]initWithCustomView:leftBtn2]];
+    }
+}
+
+-(void)leftPress{
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+-(void)search{
+    
+}
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
     
     UIButton* rightBtn = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 35, 35)];
     [rightBtn setImage:[UIImage imageNamed:@"icon_product"] forState:normal];
-    [rightBtn addTarget:self action:@selector(search:) forControlEvents:UIControlEventTouchUpInside];
+    [rightBtn addTarget:self action:@selector(search) forControlEvents:UIControlEventTouchUpInside];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:rightBtn];
     
     _backImageView = [UIImageView new];
