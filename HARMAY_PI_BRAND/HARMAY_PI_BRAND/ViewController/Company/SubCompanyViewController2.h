@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "companyHeaderModel.h"
+#import "subModel2.h"
 
 @interface SubCompanyViewController2 : UITableViewController
-
+@property (nonatomic, strong) companyHeaderModel* headModel;
+@property (nonatomic, strong) NSArray<subModel2*>* res;
 @end

@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "companyContentModel.h"
 
 @interface companyContentTableViewCell : UITableViewCell
 + (instancetype)createCellWithTableView:(UITableView *)tableView;
+-(void)addDataWith:(companyContentModel*)headerModle;
 @end

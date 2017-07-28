@@ -11,13 +11,22 @@
 @interface companyContentTableViewCell ()
 @property (weak, nonatomic) IBOutlet UILabel *maintitle;
 @property (weak, nonatomic) IBOutlet UILabel *secTitle;
-@property (weak, nonatomic) IBOutlet UIWebView *webView;
 
 @end
 
 @implementation companyContentTableViewCell
 - (IBAction)share:(UIButton *)sender {
 }
+
+-(void)addDataWith:(companyContentModel*)headerModle;{
+    if (!headerModle) {
+        return;
+    }
+    self.maintitle.text = headerModle.title;
+    self.secTitle.text = headerModle.vice_heading;
+    
+}
+
 
 + (instancetype)createCellWithTableView:(UITableView *)tableView
 {

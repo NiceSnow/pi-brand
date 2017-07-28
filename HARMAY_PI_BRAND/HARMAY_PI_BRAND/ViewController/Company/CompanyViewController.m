@@ -9,6 +9,7 @@
 #import "CompanyViewController.h"
 #import "companyHeaderModel.h"
 #import "companyContentModel.h"
+#import "subModel2.h"
 #import "XLScrollView.h"
 #import "XLSegmentBar.h"
 #import "XLConst.h"
@@ -27,9 +28,11 @@
 @property (nonatomic, strong)UIPageControl* pageControl;
 
 @property (nonatomic, strong) NSMutableArray* dataArray;
+@property (nonatomic, strong) NSMutableArray* imageArray;
 @property (nonatomic, strong) UIImageView* backImageView;
-@property (nonatomic, strong) companyHeaderModel* headerModel;
-@property (nonatomic, strong) companyContentModel* contentModel;
+
+@property (nonatomic, strong) SubCompanyViewController1* sub1;
+@property (nonatomic, strong) SubCompanyViewController2* sub2;
 @end
 
 @implementation CompanyViewController
@@ -64,8 +67,6 @@
     [rightBtn setImage:[UIImage imageNamed:@"icon_product"] forState:normal];
     [rightBtn addTarget:self action:@selector(search) forControlEvents:UIControlEventTouchUpInside];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:rightBtn];
-    
-    [self getdata];
 
     self.automaticallyAdjustsScrollViewInsets = NO;
     [self addChilds];
@@ -85,15 +86,16 @@
         make.top.bottom.left.right.offset(0);
     }];
 
-
+    [self getdata];
+    [self getdata2];
     
 }
 
 #pragma mark - private
 /** 添加子控制器*/
 - (void)addChilds {
-    [self addChildWithVC:[SubCompanyViewController1 new] title:@"第一"];
-    [self addChildWithVC:[SubCompanyViewController2 new] title:@"第二"];
+    [self addChildWithVC:self.sub1 title:@"第一"];
+    [self addChildWithVC:self.sub2 title:@"第二"];
 }
 - (void)addChildWithVC:(UITableViewController *)vc title:(NSString *)title {
     vc.title = title;
@@ -108,6 +110,9 @@
     }
     [self.contentView setContentOffset:CGPointMake(index * self.contentView.frame.size.width, 0) animated:NO];
     _currentIndex = index;
+    if (self.imageArray.count>=2) {
+        [_backImageView sd_setImageWithURL:self.imageArray[index]];
+    }
 }
 
 #pragma mark - UIScrollViewDelegate
@@ -208,17 +213,34 @@
             NSDictionary* data = [responseObject objectForKey:@"data"];
             NSString* urlString = [[data objectForKey:@"back_img"] objectForKey:@"bg_img"];
             [_backImageView sd_setImageWithURL:[urlString safeUrlString]];
-            
-            self.headerModel = [companyHeaderModel mj_objectWithKeyValues:[data objectForKey:@"head"]];
+            [self.imageArray addObject:[urlString safeUrlString]];
+            self.sub1.headModel = [companyHeaderModel mj_objectWithKeyValues:[data objectForKey:@"head"]];
             [companyContentModel mj_setupReplacedKeyFromPropertyName:^NSDictionary *{
                 return @{@"ID" : @"id"};
             }];
-            self.contentModel = [companyContentModel mj_objectWithKeyValues:[data objectForKey:@"res"]];
+            self.sub1.contentModel = [companyContentModel mj_objectWithKeyValues:[data objectForKey:@"res"]];
+
+        }
+    } failed:^(NSURLSessionDataTask *task, NSError *error) {
+        
+    } netWork:^(BOOL netWork) {
+        
+    }];
+}
+
+-(void)getdata2{
+    [[HTTPRequest instance]PostRequestWithURL:@"http://www.pi-brand.cn/index.php/home/api/activity" Parameter:nil succeed:^(NSURLSessionDataTask *task, id responseObject) {
+        BOOL succeed = [[responseObject objectForKey:@"status"]boolValue];
+        if (succeed) {
+            NSDictionary* data = [responseObject objectForKey:@"data"];
+            NSString* urlString = [[data objectForKey:@"back_img"] objectForKey:@"bg_img"];
+            [self.imageArray addObject:[urlString safeUrlString]];
+            self.sub2.headModel = [companyHeaderModel mj_objectWithKeyValues:[data objectForKey:@"head"]];
+            [subModel2 mj_setupReplacedKeyFromPropertyName:^NSDictionary *{
+                return @{@"ID" : @"id"};
+            }];
+            self.sub2.res = [companyContentModel mj_objectArrayWithKeyValuesArray:[data objectForKey:@"res"]];
             
-            self.dataArray = (NSMutableArray*)[companyContentModel mj_objectArrayWithKeyValuesArray:[data objectForKey:@"res"]];
-//            if (self.dataArray.count) {
-//                [self.tableView reloadData];
-//            }
         }
     } failed:^(NSURLSessionDataTask *task, NSError *error) {
         
@@ -230,6 +252,27 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(SubCompanyViewController1 *)sub1{
+    if (!_sub1) {
+        _sub1 = [SubCompanyViewController1 new];
+    }
+    return _sub1;
+}
+
+-(SubCompanyViewController2 *)sub2{
+    if (!_sub2) {
+        _sub2 = [SubCompanyViewController2 new];
+    }
+    return _sub2;
+}
+
+-(NSMutableArray *)imageArray{
+    if (!_imageArray) {
+        _imageArray = [NSMutableArray new];
+    }
+    return _imageArray;
 }
 
 /*

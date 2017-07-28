@@ -18,6 +18,11 @@
 
 @implementation CompanyHeaderTableViewCell
 
+-(void)addDataWith:(companyHeaderModel*)headerModle;{
+    [self.img sd_setImageWithURL:[headerModle.image safeUrlString] placeholderImage:nil];
+    self.secTitle.text = headerModle.title;
+}
+
 + (instancetype)createCellWithTableView:(UITableView *)tableView
 {
     static NSString * iden = @"CompanyHeaderTableViewCell";

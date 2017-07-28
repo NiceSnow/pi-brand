@@ -47,7 +47,8 @@
     }];
     [self.view addSubview:self.tableView];
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.width.mas_equalTo(screenWidth*9/10);
+        make.left.offset(10);
+        make.right.offset(-10);
         make.top.offset(64);
         make.bottom.offset(0);
         make.centerX.equalTo(self.view);
@@ -166,7 +167,7 @@
 
 -(UIView *)headerView{
     if (!_headerView) {
-        _headerView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 320, screenHeight/3)];
+        _headerView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 320, 210)];
         _headerView.backgroundColor = [UIColor clearColor];
     }
     return _headerView;

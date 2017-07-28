@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "companyHeaderModel.h"
 
 @interface CompanyHeaderTableViewCell : UITableViewCell
 + (instancetype)createCellWithTableView:(UITableView *)tableView;
+-(void)addDataWith:(companyHeaderModel*)headerModle;
 @end

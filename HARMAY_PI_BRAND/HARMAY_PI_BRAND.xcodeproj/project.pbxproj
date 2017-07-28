@@ -12,7 +12,6 @@
 		2D2354921F289EDA00A93726 /* MenuTableViewCell2.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D2354901F289EDA00A93726 /* MenuTableViewCell2.m */; };
 		2D2354931F289EDA00A93726 /* MenuTableViewCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D2354911F289EDA00A93726 /* MenuTableViewCell2.xib */; };
 		2D23549A1F29865800A93726 /* CompanyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D2354981F29865800A93726 /* CompanyViewController.m */; };
-		2D23549B1F29865800A93726 /* CompanyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D2354991F29865800A93726 /* CompanyViewController.xib */; };
 		2D23549F1F29866900A93726 /* JoinusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D23549D1F29866900A93726 /* JoinusViewController.m */; };
 		2D2354A01F29866900A93726 /* JoinusViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D23549E1F29866900A93726 /* JoinusViewController.xib */; };
 		2D2354A31F29867700A93726 /* ProductViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D2354A21F29867700A93726 /* ProductViewController.m */; };
@@ -43,6 +42,7 @@
 		2D599F0B1F2B02CB00A9EF32 /* joinMainModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D599F0A1F2B02CB00A9EF32 /* joinMainModel.m */; };
 		2D599F0E1F2B05DC00A9EF32 /* joinSubModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D599F0D1F2B05DC00A9EF32 /* joinSubModel.m */; };
 		2D599F121F2B14F200A9EF32 /* searchModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D599F111F2B14F200A9EF32 /* searchModel.m */; };
+		2D599F151F2B4D5B00A9EF32 /* subModel2.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D599F141F2B4D5B00A9EF32 /* subModel2.m */; };
 		603217061F28E9B1002FD61C /* UIView+ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 603217051F28E9B1002FD61C /* UIView+ViewController.m */; };
 		6032170A1F28ED97002FD61C /* ChildViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 603217091F28ED97002FD61C /* ChildViewController.m */; };
 		60EF76EF1F27931D005E3A6E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 60EF76EE1F27931D005E3A6E /* main.m */; };
@@ -112,7 +112,6 @@
 		2D2354911F289EDA00A93726 /* MenuTableViewCell2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuTableViewCell2.xib; sourceTree = "<group>"; };
 		2D2354971F29865800A93726 /* CompanyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompanyViewController.h; sourceTree = "<group>"; };
 		2D2354981F29865800A93726 /* CompanyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompanyViewController.m; sourceTree = "<group>"; };
-		2D2354991F29865800A93726 /* CompanyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CompanyViewController.xib; sourceTree = "<group>"; };
 		2D23549C1F29866900A93726 /* JoinusViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JoinusViewController.h; sourceTree = "<group>"; };
 		2D23549D1F29866900A93726 /* JoinusViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JoinusViewController.m; sourceTree = "<group>"; };
 		2D23549E1F29866900A93726 /* JoinusViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JoinusViewController.xib; sourceTree = "<group>"; };
@@ -166,6 +165,8 @@
 		2D599F0D1F2B05DC00A9EF32 /* joinSubModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = joinSubModel.m; sourceTree = "<group>"; };
 		2D599F101F2B14F200A9EF32 /* searchModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = searchModel.h; sourceTree = "<group>"; };
 		2D599F111F2B14F200A9EF32 /* searchModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = searchModel.m; sourceTree = "<group>"; };
+		2D599F131F2B4D5B00A9EF32 /* subModel2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = subModel2.h; sourceTree = "<group>"; };
+		2D599F141F2B4D5B00A9EF32 /* subModel2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = subModel2.m; sourceTree = "<group>"; };
 		354F6A3AE6C4098B6C798064 /* Pods-HARMAY_PI_BRAND.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HARMAY_PI_BRAND.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HARMAY_PI_BRAND/Pods-HARMAY_PI_BRAND.debug.xcconfig"; sourceTree = "<group>"; };
 		603217041F28E9B1002FD61C /* UIView+ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ViewController.h"; sourceTree = "<group>"; };
 		603217051F28E9B1002FD61C /* UIView+ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ViewController.m"; sourceTree = "<group>"; };
@@ -277,7 +278,6 @@
 				92883DF11F2B337500FCA7BC /* SubCompanyViewController1.m */,
 				92883DF31F2B338D00FCA7BC /* SubCompanyViewController2.h */,
 				92883DF41F2B338D00FCA7BC /* SubCompanyViewController2.m */,
-				2D2354991F29865800A93726 /* CompanyViewController.xib */,
 				2D599EFE1F2AF6D900A9EF32 /* CompanyHeaderTableViewCell.h */,
 				2D599EFF1F2AF6D900A9EF32 /* CompanyHeaderTableViewCell.m */,
 				2D599F001F2AF6D900A9EF32 /* CompanyHeaderTableViewCell.xib */,
@@ -378,6 +378,8 @@
 				2D599EF41F2AEA3C00A9EF32 /* companyContentModel.m */,
 				2D599EF61F2AF32E00A9EF32 /* companyHeaderModel.h */,
 				2D599EF71F2AF32E00A9EF32 /* companyHeaderModel.m */,
+				2D599F131F2B4D5B00A9EF32 /* subModel2.h */,
+				2D599F141F2B4D5B00A9EF32 /* subModel2.m */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -696,7 +698,7 @@
 				TargetAttributes = {
 					60EF76E91F27931C005E3A6E = {
 						CreatedOnToolsVersion = 8.2;
-						DevelopmentTeam = UG6CKH24DA;
+						DevelopmentTeam = 723W44X739;
 						ProvisioningStyle = Automatic;
 					};
 					60EF77021F27931D005E3A6E = {
@@ -736,7 +738,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D23549B1F29865800A93726 /* CompanyViewController.xib in Resources */,
 				92883DEF1F2AD54D00FCA7BC /* Product3Cell.xib in Resources */,
 				2D23548E1F289AED00A93726 /* MenuTableViewCell.xib in Resources */,
 				2D599F021F2AF6D900A9EF32 /* CompanyHeaderTableViewCell.xib in Resources */,
@@ -872,6 +873,7 @@
 				2D2354CD1F29E9F300A93726 /* mainModle.m in Sources */,
 				2D599EEB1F2AC9D800A9EF32 /* NSData+extension.m in Sources */,
 				60EF772B1F279C3F005E3A6E /* MenuViewController.m in Sources */,
+				2D599F151F2B4D5B00A9EF32 /* subModel2.m in Sources */,
 				92883DEE1F2AD54D00FCA7BC /* Product3Cell.m in Sources */,
 				2D2354C91F29DA9A00A93726 /* HTTPRequest.m in Sources */,
 				2D599EF51F2AEA3C00A9EF32 /* companyContentModel.m in Sources */,
@@ -1027,11 +1029,11 @@
 			baseConfigurationReference = 354F6A3AE6C4098B6C798064 /* Pods-HARMAY_PI_BRAND.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = UG6CKH24DA;
+				DEVELOPMENT_TEAM = 723W44X739;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/HARMAY_PI_BRAND/PrefixHeader.pch";
 				INFOPLIST_FILE = HARMAY_PI_BRAND/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "pi-brand.HARMAY-PI-BRAND";
+				PRODUCT_BUNDLE_IDENTIFIER = "pi-brand.HARMAY";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -1041,11 +1043,11 @@
 			baseConfigurationReference = 2A57B0F5FE8BB46D3DD57982 /* Pods-HARMAY_PI_BRAND.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = UG6CKH24DA;
+				DEVELOPMENT_TEAM = 723W44X739;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/HARMAY_PI_BRAND/PrefixHeader.pch";
 				INFOPLIST_FILE = HARMAY_PI_BRAND/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "pi-brand.HARMAY-PI-BRAND";
+				PRODUCT_BUNDLE_IDENTIFIER = "pi-brand.HARMAY";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
