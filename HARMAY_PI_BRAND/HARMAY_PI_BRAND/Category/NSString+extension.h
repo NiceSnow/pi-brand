@@ -131,5 +131,5 @@ typedef NS_ENUM(NSInteger,widthORheight) {
 /**
  urlString 安全检测
  */
--(NSString*)safeUrlString;
+-(NSURL*)safeUrlString;
 @end

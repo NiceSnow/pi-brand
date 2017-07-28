@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "mainModle.h"
 
 @interface MainTableViewCell : UITableViewCell
 + (instancetype)createCellWithTableView:(UITableView *)tableView;
+-(void)addDataWithModel:(mainModle*)model;
 @end

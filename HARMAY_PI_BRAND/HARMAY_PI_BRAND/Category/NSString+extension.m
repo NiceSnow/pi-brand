@@ -242,12 +242,12 @@
     return result;
 }
 
--(NSString*)safeUrlString;{
+-(NSURL*)safeUrlString;{
 //    return  (NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault, (CFStringRef)self, nil, nil, kCFStringEncodingUTF8));
     
      NSMutableCharacterSet * allowedCharacterSet = [[NSCharacterSet URLQueryAllowedCharacterSet] mutableCopy];
     NSString *encodedUrl = [self stringByAddingPercentEncodingWithAllowedCharacters:allowedCharacterSet];
     
-    return  encodedUrl;
+    return  [NSURL URLWithString:encodedUrl];
 }
 @end

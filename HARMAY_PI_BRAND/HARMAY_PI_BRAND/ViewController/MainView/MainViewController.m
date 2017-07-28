@@ -47,10 +47,10 @@
     }];
     [self.view addSubview:self.tableView];
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.width.mas_equalTo(screenWidth*9/10);
         make.top.offset(64);
         make.bottom.offset(0);
-        make.left.offset(25);
-        make.right.offset(-25);
+        make.centerX.equalTo(self.view);
     }];
     [self getdata];
     // Do any additional setup after loading the view from its nib.
@@ -62,13 +62,14 @@
         if (succeed) {
             NSDictionary* data = [responseObject objectForKey:@"data"];
             NSString* urlString = [[data objectForKey:@"back_img"] objectForKey:@"bg_img"];
-            NSString * encodedString = [urlString safeUrlString];
-            
-            [_backImageView sd_setImageWithURL:[NSURL URLWithString:encodedString]];
+            [_backImageView sd_setImageWithURL:[urlString safeUrlString]];
             [mainModle mj_setupReplacedKeyFromPropertyName:^NSDictionary *{
                 return @{@"ID" : @"id"};
             }];
-            self.dataArray = (NSMutableArray*)[mainModle mj_objectWithKeyValues:[data objectForKey:@"res"]];
+            self.dataArray = (NSMutableArray*)[mainModle mj_objectArrayWithKeyValuesArray:[data objectForKey:@"res"]];
+            if (self.dataArray.count) {
+                [self.tableView reloadData];
+            }
         }
     } failed:^(NSURLSessionDataTask *task, NSError *error) {
         
@@ -81,22 +82,12 @@
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 3;
+    return self.dataArray.count;
 }
-
-//-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-//    if (indexPath.section == 3) {
-//        return screenWidth/5;
-//    }
-//    return UITableViewAutomaticDimension;
-//}
-
-//-(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
-//    return 25;
-//}
 
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     MainTableViewCell* cell = [MainTableViewCell createCellWithTableView:tableView];
+    [cell addDataWithModel:self.dataArray[indexPath.section]];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
     return cell;
