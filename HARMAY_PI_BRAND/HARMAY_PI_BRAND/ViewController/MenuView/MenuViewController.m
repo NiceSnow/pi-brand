@@ -62,6 +62,7 @@
         {
             CompanyViewController* companyVC = [ChildViewController instance].companyVC;
             companyVC.title = [NSString stringWithFormat:@"点击了地 %ld cell",indexPath.row];
+            companyVC.leftCount = 1;
             [self.sideMenuViewController setContentViewController:[ChildViewController instance].companyNavgation animated:YES];
         }
             break;

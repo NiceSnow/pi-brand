@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface CompanyViewController : UIViewController
-
+@property (nonatomic, assign) NSInteger leftCount;
 @end
