@@ -76,6 +76,7 @@
         {
             JoinusViewController* joinVC = [ChildViewController instance].joinVC;
             joinVC.title = [NSString stringWithFormat:@"点击了地 %ld cell",indexPath.row];
+            joinVC.leftCount = 1;
             [self.sideMenuViewController setContentViewController:[ChildViewController instance].joinNavgation animated:YES];
         }
             break;
@@ -102,7 +103,7 @@
             make.left.offset(15);
             make.bottom.offset(-15);
         }];
-        UIImageView* logoimageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"main_logo"]];
+        UIImageView* logoimageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"logo_wite"]];
         [_headerView addSubview:logoimageView];
         [logoimageView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(imageView.mas_right).offset(10);

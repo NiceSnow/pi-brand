@@ -22,15 +22,26 @@
 
 @implementation JoinusViewController
 
+-(void)setLeftCount:(NSInteger)leftCount{
+    UIButton* leftBtn = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 35, 35)];
+    [leftBtn setImage:[UIImage imageNamed:@"icon_nav"] forState:normal];
+    [leftBtn addTarget:self action:@selector(presentLeftMenuViewController:) forControlEvents:UIControlEventTouchUpInside];
+    UIButton* leftBtn2 = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 35, 35)];
+    leftBtn2.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
+    [leftBtn2 setImage:[UIImage imageNamed:@"back"] forState:normal];
+    [leftBtn2 addTarget:self action:@selector(leftPress) forControlEvents:UIControlEventTouchUpInside];
+    
+    if (leftCount == 1) {
+        self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:leftBtn];
+    }else{
+        self.navigationItem.leftBarButtonItems = @[[[UIBarButtonItem alloc]initWithCustomView:leftBtn],[[UIBarButtonItem alloc]initWithCustomView:leftBtn2]];
+    }
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    UIButton* leftBtn = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 45, 45)];
-    [leftBtn setImage:[UIImage imageNamed:@"icon_nav"] forState:normal];
-    [leftBtn addTarget:self action:@selector(presentLeftMenuViewController:) forControlEvents:UIControlEventTouchUpInside];
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:leftBtn];
-    
-    UIButton* rightBtn = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 45, 45)];
+    UIButton* rightBtn = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 35, 35)];
     [rightBtn setImage:[UIImage imageNamed:@"icon_product"] forState:normal];
     [rightBtn addTarget:self action:@selector(search1:) forControlEvents:UIControlEventTouchUpInside];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:rightBtn];
@@ -90,6 +101,10 @@
     } netWork:^(BOOL netWork) {
         
     }];
+}
+
+-(void)leftPress{
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)search1:(UIButton *)btn
