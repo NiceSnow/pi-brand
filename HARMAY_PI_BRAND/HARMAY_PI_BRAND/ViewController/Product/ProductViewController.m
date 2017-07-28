@@ -24,6 +24,9 @@
 @property (nonatomic,weak) UIImageView *header;
 @property (nonatomic,weak) XLSegmentBar *bar;
 @property (nonatomic, strong)UIPageControl* pageControl;
+@property (nonatomic, strong) UIImageView* backImageView;
+
+@property (nonatomic, strong)NSMutableArray* backImageArray;
 
 @end
 
@@ -71,13 +74,31 @@
     // 选中第0个VC
     [self selectedIndex:0];
     self.view.backgroundColor =[UIColor clearColor];
+    _backImageView = [UIImageView new];
+    [self.view insertSubview:_backImageView atIndex:0];
+    [_backImageView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.bottom.left.right.offset(0);
+    }];
+    
+    _backImageArray = [NSMutableArray array];
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(getImageURl:) name:kGetImageURLKey object:nil];
 }
 - (void)search:(UIButton *)btn
 {
     
 }
-
-
+- (void)getImageURl:(NSNotification *)not
+{
+    
+    NSString * imageURL = [not.userInfo objectForKey:kGetImageURLKey];
+    if (_backImageArray.count<=3) {
+        [_backImageArray addObject:imageURL];
+    }
+    [_backImageView sd_setImageWithURL:[imageURL safeUrlString]];
+}
+- (void)dealloc{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
 #pragma mark - private
 /** 添加子控制器*/
 - (void)addChilds {
@@ -108,6 +129,9 @@
     [self selectedIndex:i];
     self.bar.changeIndex = i;
     _pageControl.currentPage = i;
+    if (_backImageArray.count>i) {
+        [_backImageView sd_setImageWithURL:[_backImageArray[i] safeUrlString]];
+    }
 }
 #pragma mark - XLSegmentBarDelegate
 - (void)segmentBar:(XLSegmentBar *)segmentBar tapIndex:(NSInteger)index {
@@ -143,6 +167,7 @@
     }
     
 }
+
 #pragma mark - lazy
 - (XLScrollView *)contentView {
     if (!_contentView) {

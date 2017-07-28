@@ -33,6 +33,9 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         self = [[[NSBundle mainBundle]loadNibNamed:@"Product1Cell" owner:self options:nil]lastObject];
+         [_contentLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+             make.width.mas_equalTo(screenWidth-100);
+         }];
     }
     return self;
 }

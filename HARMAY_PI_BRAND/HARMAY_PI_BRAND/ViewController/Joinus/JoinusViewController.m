@@ -18,6 +18,7 @@
 @property (weak, nonatomic) IBOutlet UITableView *tableview;
 @property (nonatomic, strong) UIImageView* backImageView;
 @property (nonatomic, strong)NSMutableArray * dataArray;
+@property (nonatomic, strong)NSDictionary * jobDict;
 
 @end
 
@@ -79,6 +80,9 @@
             [_dataArray addObject:@[model,mainModel]];
             NSArray* sub = [joinSubModel mj_objectArrayWithKeyValuesArray:[data objectForKey:@"sub"]];
             [_dataArray addObject:sub];
+            
+            joinSubModel * model1 = _dataArray[1][0];
+            [self getmessageWithJobID:model1.m_id];
             [_tableview reloadData];
             
         }
@@ -87,19 +91,17 @@
     } netWork:^(BOOL netWork) {
         
     }];
-    [self getmessage];
 }
 
-//-(void)getmessageWithJobID:(NSString *)jobID
--(void)getmessage
+-(void)getmessageWithJobID:(NSString *)jobID
 {
 //    招聘职位信息  下面加载webview
-    [[HTTPRequest instance]PostRequestWithURL:@"http://www.pi-brand.cn/index.php/home/api/recruit_type" Parameter:nil succeed:^(NSURLSessionDataTask *task, id responseObject) {
+    [[HTTPRequest instance]PostRequestWithURL:@"http://www.pi-brand.cn/index.php/home/api/recruit_type" Parameter:@{@"id":jobID} succeed:^(NSURLSessionDataTask *task, id responseObject) {
         BOOL succeed = [[responseObject objectForKey:@"status"]boolValue];
         if (succeed) {
-            NSDictionary* data = [responseObject objectForKey:@"data"];
-            NSString* title = [data objectForKey:@"title"];
-            NSString* webstring = [data objectForKey:@"content"];
+            
+            _jobDict = [responseObject objectForKey:@"data"];
+            [self.tableview reloadData];
             
         }
     } failed:^(NSURLSessionDataTask *task, NSError *error) {
@@ -128,9 +130,14 @@
         return cell;
     }else{
         JoinusViewCell * cell = [JoinusViewCell createCellWithTableView:tableView];
-        if (_dataArray.count) {
-            cell.dataArray = _dataArray[indexPath.row];
+        if (_jobDict    ) {
+            cell.dict = _jobDict;
         }
+        __weak typeof(self)weakSelf = self;
+        cell.block = ^(NSInteger index) {
+            joinSubModel *model = weakSelf.dataArray[1][index];
+            [weakSelf getmessageWithJobID:model.m_id];
+        };
         return cell;
     }
 }

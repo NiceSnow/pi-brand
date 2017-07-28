@@ -41,5 +41,10 @@
     }
     return self;
 }
+- (void)setDict:(NSDictionary *)dict{
+    _dict = dict;
+    [_backImageView sd_setImageWithURL:[dict[@"store_img"] safeUrlString]];
+    _titleLabel.text = dict[@"store_name"];
+}
 
 @end

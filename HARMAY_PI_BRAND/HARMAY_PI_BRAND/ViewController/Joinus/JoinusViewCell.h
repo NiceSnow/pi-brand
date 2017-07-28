@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+
+typedef void(^tapButtonBlock)(NSInteger index);
 @interface JoinusViewCell : UITableViewCell
 + (instancetype)createCellWithTableView:(UITableView *)tableView;
-@property (nonatomic, strong)NSArray * dataArray;
+@property (nonatomic, strong)NSDictionary * dict;
+@property (nonatomic, copy)tapButtonBlock  block;
 
 @end

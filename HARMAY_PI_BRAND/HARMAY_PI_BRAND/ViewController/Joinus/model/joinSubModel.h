@@ -12,5 +12,5 @@
 @property (nonatomic, copy) NSString* substance;
 @property (nonatomic, copy) NSString* title;
 @property (nonatomic, copy) NSString* img;
-@property (nonatomic, assign) NSInteger m_id;
+@property (nonatomic, copy) NSString* m_id;
 @end

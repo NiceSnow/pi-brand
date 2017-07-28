@@ -19,6 +19,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *contentLabel;
 
+
+
 @end
 @implementation JoinusViewCellCell
 
@@ -50,9 +52,11 @@
         }];
         
         [_mainImageView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.width.mas_offset(screenWidth*620/750);
-            make.height.mas_offset((screenWidth*620/750)*407/620);
+            make.width.mas_offset(screenWidth*600/750);
+            make.height.mas_offset((screenWidth*600/750)*407/600);
         }];
+        
+        
     }
     return self;
 }
