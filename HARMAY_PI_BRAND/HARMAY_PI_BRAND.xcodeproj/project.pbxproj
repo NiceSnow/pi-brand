@@ -48,6 +48,20 @@
 		927CDED41F29C64300399AA6 /* JoinusViewCellCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 927CDED21F29C64300399AA6 /* JoinusViewCellCell.xib */; };
 		927CDED81F29DF9F00399AA6 /* JoinusViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 927CDED61F29DF9F00399AA6 /* JoinusViewCell.m */; };
 		927CDED91F29DF9F00399AA6 /* JoinusViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 927CDED71F29DF9F00399AA6 /* JoinusViewCell.xib */; };
+		92883DCC1F2AC2C000FCA7BC /* NSString+XLSegmentModelPrtol.m in Sources */ = {isa = PBXBuildFile; fileRef = 92883DC41F2AC2C000FCA7BC /* NSString+XLSegmentModelPrtol.m */; };
+		92883DCD1F2AC2C000FCA7BC /* XLSegmentBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 92883DC61F2AC2C000FCA7BC /* XLSegmentBar.m */; };
+		92883DCE1F2AC2C000FCA7BC /* XLConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 92883DC91F2AC2C000FCA7BC /* XLConst.m */; };
+		92883DCF1F2AC2C000FCA7BC /* XLScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 92883DCB1F2AC2C000FCA7BC /* XLScrollView.m */; };
+		92883DD21F2AC3A200FCA7BC /* UIViewController+XLScroll.m in Sources */ = {isa = PBXBuildFile; fileRef = 92883DD11F2AC3A200FCA7BC /* UIViewController+XLScroll.m */; };
+		92883DDA1F2AC3E700FCA7BC /* Product1TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92883DD91F2AC3E700FCA7BC /* Product1TableViewController.m */; };
+		92883DDD1F2AC3F300FCA7BC /* Product2TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92883DDC1F2AC3F300FCA7BC /* Product2TableViewController.m */; };
+		92883DE01F2AC3FA00FCA7BC /* Product3TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92883DDF1F2AC3FA00FCA7BC /* Product3TableViewController.m */; };
+		92883DE41F2AD52300FCA7BC /* Product1Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = 92883DE21F2AD52300FCA7BC /* Product1Cell.m */; };
+		92883DE51F2AD52300FCA7BC /* Product1Cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92883DE31F2AD52300FCA7BC /* Product1Cell.xib */; };
+		92883DE91F2AD53700FCA7BC /* Product2Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = 92883DE71F2AD53700FCA7BC /* Product2Cell.m */; };
+		92883DEA1F2AD53700FCA7BC /* Product2Cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92883DE81F2AD53700FCA7BC /* Product2Cell.xib */; };
+		92883DEE1F2AD54D00FCA7BC /* Product3Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = 92883DEC1F2AD54D00FCA7BC /* Product3Cell.m */; };
+		92883DEF1F2AD54D00FCA7BC /* Product3Cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92883DED1F2AD54D00FCA7BC /* Product3Cell.xib */; };
 		B07A01F0967781E9A1B7AA41 /* libPods-HARMAY_PI_BRAND.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9256868CD00094289173861A /* libPods-HARMAY_PI_BRAND.a */; };
 /* End PBXBuildFile section */
 
@@ -144,6 +158,32 @@
 		927CDED51F29DF9F00399AA6 /* JoinusViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JoinusViewCell.h; sourceTree = "<group>"; };
 		927CDED61F29DF9F00399AA6 /* JoinusViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JoinusViewCell.m; sourceTree = "<group>"; };
 		927CDED71F29DF9F00399AA6 /* JoinusViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JoinusViewCell.xib; sourceTree = "<group>"; };
+		92883DC31F2AC2C000FCA7BC /* NSString+XLSegmentModelPrtol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+XLSegmentModelPrtol.h"; sourceTree = "<group>"; };
+		92883DC41F2AC2C000FCA7BC /* NSString+XLSegmentModelPrtol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+XLSegmentModelPrtol.m"; sourceTree = "<group>"; };
+		92883DC51F2AC2C000FCA7BC /* XLSegmentBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLSegmentBar.h; sourceTree = "<group>"; };
+		92883DC61F2AC2C000FCA7BC /* XLSegmentBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLSegmentBar.m; sourceTree = "<group>"; };
+		92883DC71F2AC2C000FCA7BC /* XLSegmentModelProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLSegmentModelProtocol.h; sourceTree = "<group>"; };
+		92883DC81F2AC2C000FCA7BC /* XLConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLConst.h; sourceTree = "<group>"; };
+		92883DC91F2AC2C000FCA7BC /* XLConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLConst.m; sourceTree = "<group>"; };
+		92883DCA1F2AC2C000FCA7BC /* XLScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLScrollView.h; sourceTree = "<group>"; };
+		92883DCB1F2AC2C000FCA7BC /* XLScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLScrollView.m; sourceTree = "<group>"; };
+		92883DD01F2AC3A200FCA7BC /* UIViewController+XLScroll.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+XLScroll.h"; sourceTree = "<group>"; };
+		92883DD11F2AC3A200FCA7BC /* UIViewController+XLScroll.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+XLScroll.m"; sourceTree = "<group>"; };
+		92883DD81F2AC3E700FCA7BC /* Product1TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Product1TableViewController.h; sourceTree = "<group>"; };
+		92883DD91F2AC3E700FCA7BC /* Product1TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Product1TableViewController.m; sourceTree = "<group>"; };
+		92883DDB1F2AC3F300FCA7BC /* Product2TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Product2TableViewController.h; sourceTree = "<group>"; };
+		92883DDC1F2AC3F300FCA7BC /* Product2TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Product2TableViewController.m; sourceTree = "<group>"; };
+		92883DDE1F2AC3FA00FCA7BC /* Product3TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Product3TableViewController.h; sourceTree = "<group>"; };
+		92883DDF1F2AC3FA00FCA7BC /* Product3TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Product3TableViewController.m; sourceTree = "<group>"; };
+		92883DE11F2AD52300FCA7BC /* Product1Cell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Product1Cell.h; sourceTree = "<group>"; };
+		92883DE21F2AD52300FCA7BC /* Product1Cell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Product1Cell.m; sourceTree = "<group>"; };
+		92883DE31F2AD52300FCA7BC /* Product1Cell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Product1Cell.xib; sourceTree = "<group>"; };
+		92883DE61F2AD53700FCA7BC /* Product2Cell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Product2Cell.h; sourceTree = "<group>"; };
+		92883DE71F2AD53700FCA7BC /* Product2Cell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Product2Cell.m; sourceTree = "<group>"; };
+		92883DE81F2AD53700FCA7BC /* Product2Cell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Product2Cell.xib; sourceTree = "<group>"; };
+		92883DEB1F2AD54D00FCA7BC /* Product3Cell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Product3Cell.h; sourceTree = "<group>"; };
+		92883DEC1F2AD54D00FCA7BC /* Product3Cell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Product3Cell.m; sourceTree = "<group>"; };
+		92883DED1F2AD54D00FCA7BC /* Product3Cell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Product3Cell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,6 +243,21 @@
 			children = (
 				2D2354A11F29867700A93726 /* ProductViewController.h */,
 				2D2354A21F29867700A93726 /* ProductViewController.m */,
+				92883DD81F2AC3E700FCA7BC /* Product1TableViewController.h */,
+				92883DD91F2AC3E700FCA7BC /* Product1TableViewController.m */,
+				92883DE11F2AD52300FCA7BC /* Product1Cell.h */,
+				92883DE21F2AD52300FCA7BC /* Product1Cell.m */,
+				92883DE31F2AD52300FCA7BC /* Product1Cell.xib */,
+				92883DDB1F2AC3F300FCA7BC /* Product2TableViewController.h */,
+				92883DDC1F2AC3F300FCA7BC /* Product2TableViewController.m */,
+				92883DE61F2AD53700FCA7BC /* Product2Cell.h */,
+				92883DE71F2AD53700FCA7BC /* Product2Cell.m */,
+				92883DE81F2AD53700FCA7BC /* Product2Cell.xib */,
+				92883DDE1F2AC3FA00FCA7BC /* Product3TableViewController.h */,
+				92883DDF1F2AC3FA00FCA7BC /* Product3TableViewController.m */,
+				92883DEB1F2AD54D00FCA7BC /* Product3Cell.h */,
+				92883DEC1F2AD54D00FCA7BC /* Product3Cell.m */,
+				92883DED1F2AD54D00FCA7BC /* Product3Cell.xib */,
 			);
 			path = Product;
 			sourceTree = "<group>";
@@ -299,6 +354,7 @@
 		60EF76EC1F27931D005E3A6E /* HARMAY_PI_BRAND */ = {
 			isa = PBXGroup;
 			children = (
+				92883DC01F2AC2C000FCA7BC /* Library */,
 				2D2354C61F29DA8A00A93726 /* httpRequest */,
 				603217071F28ED49002FD61C /* Tools */,
 				603217031F28E9B1002FD61C /* Category */,
@@ -410,6 +466,40 @@
 				60EF77401F28E340005E3A6E /* WebViewController.m */,
 			);
 			path = WebView;
+			sourceTree = "<group>";
+		};
+		92883DC01F2AC2C000FCA7BC /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				92883DC11F2AC2C000FCA7BC /* LinkageView */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		92883DC11F2AC2C000FCA7BC /* LinkageView */ = {
+			isa = PBXGroup;
+			children = (
+				92883DD01F2AC3A200FCA7BC /* UIViewController+XLScroll.h */,
+				92883DD11F2AC3A200FCA7BC /* UIViewController+XLScroll.m */,
+				92883DC21F2AC2C000FCA7BC /* SegmentBar */,
+				92883DC81F2AC2C000FCA7BC /* XLConst.h */,
+				92883DC91F2AC2C000FCA7BC /* XLConst.m */,
+				92883DCA1F2AC2C000FCA7BC /* XLScrollView.h */,
+				92883DCB1F2AC2C000FCA7BC /* XLScrollView.m */,
+			);
+			path = LinkageView;
+			sourceTree = "<group>";
+		};
+		92883DC21F2AC2C000FCA7BC /* SegmentBar */ = {
+			isa = PBXGroup;
+			children = (
+				92883DC31F2AC2C000FCA7BC /* NSString+XLSegmentModelPrtol.h */,
+				92883DC41F2AC2C000FCA7BC /* NSString+XLSegmentModelPrtol.m */,
+				92883DC51F2AC2C000FCA7BC /* XLSegmentBar.h */,
+				92883DC61F2AC2C000FCA7BC /* XLSegmentBar.m */,
+				92883DC71F2AC2C000FCA7BC /* XLSegmentModelProtocol.h */,
+			);
+			path = SegmentBar;
 			sourceTree = "<group>";
 		};
 		A1E5EF40C13CB28ADF635EC9 /* Pods */ = {
@@ -532,8 +622,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D23549B1F29865800A93726 /* CompanyViewController.xib in Resources */,
+				92883DEF1F2AD54D00FCA7BC /* Product3Cell.xib in Resources */,
 				2D23548E1F289AED00A93726 /* MenuTableViewCell.xib in Resources */,
 				2D2354C01F29D22C00A93726 /* SearchViewController.xib in Resources */,
+				92883DE51F2AD52300FCA7BC /* Product1Cell.xib in Resources */,
 				2D2354931F289EDA00A93726 /* MenuTableViewCell2.xib in Resources */,
 				2D2354A01F29866900A93726 /* JoinusViewController.xib in Resources */,
 				60EF76FD1F27931D005E3A6E /* LaunchScreen.storyboard in Resources */,
@@ -542,6 +634,7 @@
 				2D2354B11F29C1E300A93726 /* MainTableViewCell.xib in Resources */,
 				60EF772C1F279C3F005E3A6E /* MenuViewController.xib in Resources */,
 				60EF76F81F27931D005E3A6E /* Main.storyboard in Resources */,
+				92883DEA1F2AD53700FCA7BC /* Product2Cell.xib in Resources */,
 				2D2354AC1F298ECB00A93726 /* shopViewController.xib in Resources */,
 				927CDED91F29DF9F00399AA6 /* JoinusViewCell.xib in Resources */,
 				60EF77271F279C2E005E3A6E /* MainViewController.xib in Resources */,
@@ -625,21 +718,32 @@
 				60EF77361F279D77005E3A6E /* BaseViewController.m in Sources */,
 				60EF77411F28E340005E3A6E /* WebViewController.m in Sources */,
 				2D2354BF1F29D22C00A93726 /* SearchViewController.m in Sources */,
+				92883DCE1F2AC2C000FCA7BC /* XLConst.m in Sources */,
 				2D2354AB1F298ECB00A93726 /* shopViewController.m in Sources */,
 				2D23549F1F29866900A93726 /* JoinusViewController.m in Sources */,
 				2D2354C41F29D47E00A93726 /* SearchTableViewCell.m in Sources */,
 				60EF77351F279D77005E3A6E /* BaseTabBarController.m in Sources */,
 				60EF76F21F27931D005E3A6E /* AppDelegate.m in Sources */,
+				92883DDA1F2AC3E700FCA7BC /* Product1TableViewController.m in Sources */,
 				60EF77341F279D77005E3A6E /* BaseNavigationController.m in Sources */,
 				60EF76EF1F27931D005E3A6E /* main.m in Sources */,
+				92883DE91F2AD53700FCA7BC /* Product2Cell.m in Sources */,
 				2D2354B01F29C1E300A93726 /* MainTableViewCell.m in Sources */,
 				60EF77261F279C2E005E3A6E /* MainViewController.m in Sources */,
 				2D23548D1F289AED00A93726 /* MenuTableViewCell.m in Sources */,
+				92883DE01F2AC3FA00FCA7BC /* Product3TableViewController.m in Sources */,
+				92883DE41F2AD52300FCA7BC /* Product1Cell.m in Sources */,
+				92883DCD1F2AC2C000FCA7BC /* XLSegmentBar.m in Sources */,
+				92883DDD1F2AC3F300FCA7BC /* Product2TableViewController.m in Sources */,
+				92883DCF1F2AC2C000FCA7BC /* XLScrollView.m in Sources */,
 				927CDED31F29C64300399AA6 /* JoinusViewCellCell.m in Sources */,
+				92883DD21F2AC3A200FCA7BC /* UIViewController+XLScroll.m in Sources */,
 				927CDED81F29DF9F00399AA6 /* JoinusViewCell.m in Sources */,
 				603217061F28E9B1002FD61C /* UIView+ViewController.m in Sources */,
+				92883DCC1F2AC2C000FCA7BC /* NSString+XLSegmentModelPrtol.m in Sources */,
 				2D2354CD1F29E9F300A93726 /* mainModle.m in Sources */,
 				60EF772B1F279C3F005E3A6E /* MenuViewController.m in Sources */,
+				92883DEE1F2AD54D00FCA7BC /* Product3Cell.m in Sources */,
 				2D2354C91F29DA9A00A93726 /* HTTPRequest.m in Sources */,
 				2D2354921F289EDA00A93726 /* MenuTableViewCell2.m in Sources */,
 			);
