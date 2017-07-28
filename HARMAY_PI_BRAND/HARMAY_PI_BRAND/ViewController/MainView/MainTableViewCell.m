@@ -8,7 +8,22 @@
 
 #import "MainTableViewCell.h"
 
+@interface MainTableViewCell ()
+@property (weak, nonatomic) IBOutlet UIImageView *titleImage;
+@property (weak, nonatomic) IBOutlet UIImageView *mainImage;
+@property (weak, nonatomic) IBOutlet UILabel *mainTitle;
+@property (weak, nonatomic) IBOutlet UILabel *secTitle;
+
+@end
+
 @implementation MainTableViewCell
+
+-(void)addDataWithModel:(mainModle*)model;{
+    [_titleImage sd_setImageWithURL:[model.vice_img safeUrlString]  placeholderImage:[UIImage imageNamed:@"recruitment_11"]];
+    [_mainImage sd_setImageWithURL:[model.img safeUrlString]  placeholderImage:[UIImage imageNamed:@"recruitment_backimage"]];
+    _mainTitle.text = model.title;
+    _secTitle.text = model.vice_heading;
+}
 
 + (instancetype)createCellWithTableView:(UITableView *)tableView
 {
@@ -24,6 +39,14 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         self = [[[NSBundle mainBundle]loadNibNamed:@"MainTableViewCell" owner:self options:nil]lastObject];
+        [_titleImage mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.width.mas_equalTo(screenWidth/2);
+            make.height.mas_equalTo(screenWidth/2*163/381);
+        }];
+        [_mainImage mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.width.mas_equalTo(screenWidth*3/4);
+            make.height.mas_equalTo(screenWidth*3/4*332/628);
+        }];
     }
     return self;
 }

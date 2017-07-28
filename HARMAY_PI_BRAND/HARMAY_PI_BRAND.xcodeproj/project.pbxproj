@@ -531,7 +531,7 @@
 				TargetAttributes = {
 					60EF76E91F27931C005E3A6E = {
 						CreatedOnToolsVersion = 8.2;
-						DevelopmentTeam = UG6CKH24DA;
+						DevelopmentTeam = 723W44X739;
 						ProvisioningStyle = Automatic;
 					};
 					60EF77021F27931D005E3A6E = {
@@ -837,7 +837,7 @@
 			baseConfigurationReference = 354F6A3AE6C4098B6C798064 /* Pods-HARMAY_PI_BRAND.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = UG6CKH24DA;
+				DEVELOPMENT_TEAM = 723W44X739;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/HARMAY_PI_BRAND/PrefixHeader.pch";
 				INFOPLIST_FILE = HARMAY_PI_BRAND/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -851,7 +851,7 @@
 			baseConfigurationReference = 2A57B0F5FE8BB46D3DD57982 /* Pods-HARMAY_PI_BRAND.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = UG6CKH24DA;
+				DEVELOPMENT_TEAM = 723W44X739;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/HARMAY_PI_BRAND/PrefixHeader.pch";
 				INFOPLIST_FILE = HARMAY_PI_BRAND/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
