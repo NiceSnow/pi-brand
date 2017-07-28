@@ -107,9 +107,12 @@
             break;
         case 2:
         {
-            JoinusViewController* joinVC = [ChildViewController instance].joinVC;
-            joinVC.title = [NSString stringWithFormat:@"点击了地 %ld cell",indexPath.row];
-            [self.sideMenuViewController setContentViewController:[ChildViewController instance].joinNavgation animated:YES];
+//            JoinusViewController* joinVC = [ChildViewController instance].joinVC;
+//            joinVC.title = [NSString stringWithFormat:@"点击了地 %ld cell",indexPath.row];
+//            [self.sideMenuViewController setContentViewController:[ChildViewController instance].joinNavgation animated:YES];
+            JoinusViewController* joinVC = [[JoinusViewController alloc]init];
+            joinVC.title = [NSString stringWithFormat:@"点击了地 %ld cell",indexPath.section];
+            [self.navigationController pushViewController:joinVC animated:YES];
         }
             break;
             

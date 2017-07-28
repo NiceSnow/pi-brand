@@ -8,23 +8,56 @@
 
 #import "SearchViewController.h"
 #import "SearchTableViewCell.h"
+#import "searchModel.h"
 
-@interface SearchViewController ()<UITableViewDelegate,UITableViewDataSource>
+@interface SearchViewController ()<UITableViewDelegate,UITableViewDataSource,UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UITextField *search;
+@property (nonatomic, strong) NSMutableArray* dataArray;
 
 @end
 
 @implementation SearchViewController
+- (IBAction)searchPress:(id)sender {
+    if (_search.text.length<=0) {
+        return;
+    }
+    [[HTTPRequest instance]PostRequestWithURL:@"http://www.pi-brand.cn/index.php/home/api/search_list" Parameter:@{@"search":@"水润质地"} succeed:^(NSURLSessionDataTask *task, id responseObject) {
+        BOOL succeed = [[responseObject objectForKey:@"status"]boolValue];
+        if (succeed) {
+            NSArray* dataArr = [responseObject objectForKey:@"data"];
+            [searchModel mj_setupReplacedKeyFromPropertyName:^NSDictionary *{
+                return @{@"ID" : @"id"};
+            }];
+            self.dataArray = [searchModel mj_objectArrayWithKeyValuesArray:dataArr];
+            if (self.dataArray) {
+                [self.tableView reloadData];
+            }
+        }
+    } failed:^(NSURLSessionDataTask *task, NSError *error) {
+        
+    } netWork:^(BOOL netWork) {
+        
+    }];
+}
 - (IBAction)canclePress:(UIButton *)sender {
     [self.navigationController popViewControllerAnimated:NO];
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 10;
+    return self.dataArray.count;
 }
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     SearchTableViewCell* cell = [SearchTableViewCell createCellWithTableView:tableView];
+    [cell addDataWithModel:self.dataArray[indexPath.row]];
     return cell;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    searchModel* modle = self.dataArray[indexPath.row];
+    WebViewController* webVC = [[WebViewController alloc]init];
+    webVC.MYURL = [modle.url safeUrlString];
+    [self.navigationController pushViewController:webVC animated:YES];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -40,6 +73,7 @@
     [super viewDidLoad];
     _tableView.estimatedRowHeight = 5;
     _tableView.rowHeight = UITableViewAutomaticDimension;
+    self.view.backgroundColor = [UIColor lightGrayColor];
     // Do any additional setup after loading the view from its nib.
 }
 

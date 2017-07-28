@@ -42,6 +42,7 @@
 		2D599F071F2AF8CA00A9EF32 /* companyContentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D599F051F2AF8CA00A9EF32 /* companyContentTableViewCell.xib */; };
 		2D599F0B1F2B02CB00A9EF32 /* joinMainModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D599F0A1F2B02CB00A9EF32 /* joinMainModel.m */; };
 		2D599F0E1F2B05DC00A9EF32 /* joinSubModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D599F0D1F2B05DC00A9EF32 /* joinSubModel.m */; };
+		2D599F121F2B14F200A9EF32 /* searchModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D599F111F2B14F200A9EF32 /* searchModel.m */; };
 		603217061F28E9B1002FD61C /* UIView+ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 603217051F28E9B1002FD61C /* UIView+ViewController.m */; };
 		6032170A1F28ED97002FD61C /* ChildViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 603217091F28ED97002FD61C /* ChildViewController.m */; };
 		60EF76EF1F27931D005E3A6E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 60EF76EE1F27931D005E3A6E /* main.m */; };
@@ -147,6 +148,8 @@
 		2D599F0A1F2B02CB00A9EF32 /* joinMainModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = joinMainModel.m; sourceTree = "<group>"; };
 		2D599F0C1F2B05DC00A9EF32 /* joinSubModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = joinSubModel.h; sourceTree = "<group>"; };
 		2D599F0D1F2B05DC00A9EF32 /* joinSubModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = joinSubModel.m; sourceTree = "<group>"; };
+		2D599F101F2B14F200A9EF32 /* searchModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = searchModel.h; sourceTree = "<group>"; };
+		2D599F111F2B14F200A9EF32 /* searchModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = searchModel.m; sourceTree = "<group>"; };
 		354F6A3AE6C4098B6C798064 /* Pods-HARMAY_PI_BRAND.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HARMAY_PI_BRAND.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HARMAY_PI_BRAND/Pods-HARMAY_PI_BRAND.debug.xcconfig"; sourceTree = "<group>"; };
 		603217041F28E9B1002FD61C /* UIView+ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ViewController.h"; sourceTree = "<group>"; };
 		603217051F28E9B1002FD61C /* UIView+ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ViewController.m"; sourceTree = "<group>"; };
@@ -274,6 +277,7 @@
 		2D2354BB1F29D22C00A93726 /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				2D599F0F1F2B14E500A9EF32 /* model */,
 				2D2354BC1F29D22C00A93726 /* SearchViewController.h */,
 				2D2354BD1F29D22C00A93726 /* SearchViewController.m */,
 				2D2354BE1F29D22C00A93726 /* SearchViewController.xib */,
@@ -320,6 +324,15 @@
 				2D599F0A1F2B02CB00A9EF32 /* joinMainModel.m */,
 				2D599F0C1F2B05DC00A9EF32 /* joinSubModel.h */,
 				2D599F0D1F2B05DC00A9EF32 /* joinSubModel.m */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		2D599F0F1F2B14E500A9EF32 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				2D599F101F2B14F200A9EF32 /* searchModel.h */,
+				2D599F111F2B14F200A9EF32 /* searchModel.m */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -739,6 +752,7 @@
 				2D599EF11F2AC9D800A9EF32 /* UILabel+extension.m in Sources */,
 				2D23548D1F289AED00A93726 /* MenuTableViewCell.m in Sources */,
 				927CDED31F29C64300399AA6 /* JoinusViewCellCell.m in Sources */,
+				2D599F121F2B14F200A9EF32 /* searchModel.m in Sources */,
 				927CDED81F29DF9F00399AA6 /* JoinusViewCell.m in Sources */,
 				603217061F28E9B1002FD61C /* UIView+ViewController.m in Sources */,
 				2D2354CD1F29E9F300A93726 /* mainModle.m in Sources */,

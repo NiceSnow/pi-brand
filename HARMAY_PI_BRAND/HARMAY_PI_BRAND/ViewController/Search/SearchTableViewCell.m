@@ -8,7 +8,20 @@
 
 #import "SearchTableViewCell.h"
 
+@interface SearchTableViewCell ()
+@property (weak, nonatomic) IBOutlet UIImageView *headerImage;
+@property (weak, nonatomic) IBOutlet UILabel *mainTitle;
+@property (weak, nonatomic) IBOutlet UILabel *secTitle;
+
+@end
+
 @implementation SearchTableViewCell
+
+-(void)addDataWithModel:(searchModel*)modle;{
+    [_headerImage sd_setImageWithURL:[modle.img safeUrlString] placeholderImage:nil];
+    _mainTitle.text = modle.title;
+    _secTitle.text = modle.vice_heading;
+}
 
 + (instancetype)createCellWithTableView:(UITableView *)tableView
 {
