@@ -23,11 +23,11 @@
     //去掉UINavigationBar的阴影
     [navBar setShadowImage:[[UIImage alloc] init]];
     
-    navBar.tintColor = [UIColor greenColor];
+    navBar.tintColor = [UIColor blackColor];
     [navBar setBarTintColor:[UIColor whiteColor]];
     
     [navBar setTitleTextAttributes:@{
-                                     NSForegroundColorAttributeName : [UIColor greenColor],
+                                     NSForegroundColorAttributeName : [UIColor blackColor],
                                      NSFontAttributeName : [UIFont systemFontOfSize:18]
                                      }];
     [barItem setTitleTextAttributes:@{

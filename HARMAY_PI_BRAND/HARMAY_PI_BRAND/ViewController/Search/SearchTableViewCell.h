@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "searchModel.h"
 
 @interface SearchTableViewCell : UITableViewCell
 + (instancetype)createCellWithTableView:(UITableView *)tableView;
+-(void)addDataWithModel:(searchModel*)modle;
 @end

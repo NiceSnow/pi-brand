@@ -15,14 +15,20 @@
 @implementation WebViewController
 
 
--(void)setMYURL:(NSString *)MYURL{
-    _MYURL = MYURL;
-    DebugLog(@"%@",MYURL);
+-(void)setMYURL:(id)MYURL{
+    if ([MYURL isKindOfClass:[NSURL class]]) {
+        [self.webView loadRequest:[NSURLRequest requestWithURL:MYURL]];
+    }else
     [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:MYURL]]];
 }
 
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType{
     return YES;
+}
+
+- (void)webViewDidFinishLoad:(UIWebView *)webView
+{
+    self.title = [self.webView stringByEvaluatingJavaScriptFromString:@"document.title"];
 }
 
 -(UIWebView *)webView{

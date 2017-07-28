@@ -93,6 +93,34 @@
     return cell;
 }
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    switch (indexPath.section) {
+        case 0:
+        {
+            
+        }
+            break;
+        case 1:
+        {
+            
+        }
+            break;
+        case 2:
+        {
+//            JoinusViewController* joinVC = [ChildViewController instance].joinVC;
+//            joinVC.title = [NSString stringWithFormat:@"点击了地 %ld cell",indexPath.row];
+//            [self.sideMenuViewController setContentViewController:[ChildViewController instance].joinNavgation animated:YES];
+            JoinusViewController* joinVC = [[JoinusViewController alloc]init];
+            joinVC.title = [NSString stringWithFormat:@"点击了地 %ld cell",indexPath.section];
+            [self.navigationController pushViewController:joinVC animated:YES];
+        }
+            break;
+            
+        default:
+            break;
+    }
+}
+
 -(UITableView *)tableView{
     if (!_tableView) {
         
