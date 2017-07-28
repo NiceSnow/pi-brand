@@ -40,7 +40,7 @@
     
     self.navigationItem.titleView = self.titleView;
     
-    _backImageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:nil]];
+    _backImageView = [UIImageView new];
     [self.view addSubview:_backImageView];
     [_backImageView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.bottom.left.right.offset(0);
@@ -62,7 +62,7 @@
         if (succeed) {
             NSDictionary* data = [responseObject objectForKey:@"data"];
             NSString* urlString = [[data objectForKey:@"back_img"] objectForKey:@"bg_img"];
-            NSString * encodedString = (NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault, (CFStringRef)urlString, nil, nil, kCFStringEncodingUTF8));
+            NSString * encodedString = [urlString safeUrlString];
             
             [_backImageView sd_setImageWithURL:[NSURL URLWithString:encodedString]];
             [mainModle mj_setupReplacedKeyFromPropertyName:^NSDictionary *{

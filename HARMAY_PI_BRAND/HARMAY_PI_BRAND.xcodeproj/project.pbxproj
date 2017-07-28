@@ -26,6 +26,14 @@
 		2D2354C51F29D47E00A93726 /* SearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D2354C31F29D47E00A93726 /* SearchTableViewCell.xib */; };
 		2D2354C91F29DA9A00A93726 /* HTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D2354C81F29DA9A00A93726 /* HTTPRequest.m */; };
 		2D2354CD1F29E9F300A93726 /* mainModle.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D2354CC1F29E9F300A93726 /* mainModle.m */; };
+		2D599EEA1F2AC9D800A9EF32 /* NSArray+extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D599EDB1F2AC9D800A9EF32 /* NSArray+extension.m */; };
+		2D599EEB1F2AC9D800A9EF32 /* NSData+extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D599EDD1F2AC9D800A9EF32 /* NSData+extension.m */; };
+		2D599EEC1F2AC9D800A9EF32 /* NSDate+extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D599EDF1F2AC9D800A9EF32 /* NSDate+extension.m */; };
+		2D599EED1F2AC9D800A9EF32 /* NSDictionary+extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D599EE11F2AC9D800A9EF32 /* NSDictionary+extension.m */; };
+		2D599EEE1F2AC9D800A9EF32 /* NSString+extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D599EE31F2AC9D800A9EF32 /* NSString+extension.m */; };
+		2D599EEF1F2AC9D800A9EF32 /* UIButton+extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D599EE51F2AC9D800A9EF32 /* UIButton+extension.m */; };
+		2D599EF01F2AC9D800A9EF32 /* UIImage+extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D599EE71F2AC9D800A9EF32 /* UIImage+extension.m */; };
+		2D599EF11F2AC9D800A9EF32 /* UILabel+extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D599EE91F2AC9D800A9EF32 /* UILabel+extension.m */; };
 		603217061F28E9B1002FD61C /* UIView+ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 603217051F28E9B1002FD61C /* UIView+ViewController.m */; };
 		6032170A1F28ED97002FD61C /* ChildViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 603217091F28ED97002FD61C /* ChildViewController.m */; };
 		60EF76EF1F27931D005E3A6E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 60EF76EE1F27931D005E3A6E /* main.m */; };
@@ -115,6 +123,22 @@
 		2D2354C81F29DA9A00A93726 /* HTTPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPRequest.m; sourceTree = "<group>"; };
 		2D2354CB1F29E9F300A93726 /* mainModle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mainModle.h; sourceTree = "<group>"; };
 		2D2354CC1F29E9F300A93726 /* mainModle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mainModle.m; sourceTree = "<group>"; };
+		2D599EDA1F2AC9D800A9EF32 /* NSArray+extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+extension.h"; sourceTree = "<group>"; };
+		2D599EDB1F2AC9D800A9EF32 /* NSArray+extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+extension.m"; sourceTree = "<group>"; };
+		2D599EDC1F2AC9D800A9EF32 /* NSData+extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+extension.h"; sourceTree = "<group>"; };
+		2D599EDD1F2AC9D800A9EF32 /* NSData+extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+extension.m"; sourceTree = "<group>"; };
+		2D599EDE1F2AC9D800A9EF32 /* NSDate+extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+extension.h"; sourceTree = "<group>"; };
+		2D599EDF1F2AC9D800A9EF32 /* NSDate+extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+extension.m"; sourceTree = "<group>"; };
+		2D599EE01F2AC9D800A9EF32 /* NSDictionary+extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+extension.h"; sourceTree = "<group>"; };
+		2D599EE11F2AC9D800A9EF32 /* NSDictionary+extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+extension.m"; sourceTree = "<group>"; };
+		2D599EE21F2AC9D800A9EF32 /* NSString+extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+extension.h"; sourceTree = "<group>"; };
+		2D599EE31F2AC9D800A9EF32 /* NSString+extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+extension.m"; sourceTree = "<group>"; };
+		2D599EE41F2AC9D800A9EF32 /* UIButton+extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+extension.h"; sourceTree = "<group>"; };
+		2D599EE51F2AC9D800A9EF32 /* UIButton+extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+extension.m"; sourceTree = "<group>"; };
+		2D599EE61F2AC9D800A9EF32 /* UIImage+extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+extension.h"; sourceTree = "<group>"; };
+		2D599EE71F2AC9D800A9EF32 /* UIImage+extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+extension.m"; sourceTree = "<group>"; };
+		2D599EE81F2AC9D800A9EF32 /* UILabel+extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+extension.h"; sourceTree = "<group>"; };
+		2D599EE91F2AC9D800A9EF32 /* UILabel+extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+extension.m"; sourceTree = "<group>"; };
 		354F6A3AE6C4098B6C798064 /* Pods-HARMAY_PI_BRAND.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HARMAY_PI_BRAND.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HARMAY_PI_BRAND/Pods-HARMAY_PI_BRAND.debug.xcconfig"; sourceTree = "<group>"; };
 		603217041F28E9B1002FD61C /* UIView+ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ViewController.h"; sourceTree = "<group>"; };
 		603217051F28E9B1002FD61C /* UIView+ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ViewController.m"; sourceTree = "<group>"; };
@@ -314,6 +338,22 @@
 		603217031F28E9B1002FD61C /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				2D599EDA1F2AC9D800A9EF32 /* NSArray+extension.h */,
+				2D599EDB1F2AC9D800A9EF32 /* NSArray+extension.m */,
+				2D599EDC1F2AC9D800A9EF32 /* NSData+extension.h */,
+				2D599EDD1F2AC9D800A9EF32 /* NSData+extension.m */,
+				2D599EDE1F2AC9D800A9EF32 /* NSDate+extension.h */,
+				2D599EDF1F2AC9D800A9EF32 /* NSDate+extension.m */,
+				2D599EE01F2AC9D800A9EF32 /* NSDictionary+extension.h */,
+				2D599EE11F2AC9D800A9EF32 /* NSDictionary+extension.m */,
+				2D599EE21F2AC9D800A9EF32 /* NSString+extension.h */,
+				2D599EE31F2AC9D800A9EF32 /* NSString+extension.m */,
+				2D599EE41F2AC9D800A9EF32 /* UIButton+extension.h */,
+				2D599EE51F2AC9D800A9EF32 /* UIButton+extension.m */,
+				2D599EE61F2AC9D800A9EF32 /* UIImage+extension.h */,
+				2D599EE71F2AC9D800A9EF32 /* UIImage+extension.m */,
+				2D599EE81F2AC9D800A9EF32 /* UILabel+extension.h */,
+				2D599EE91F2AC9D800A9EF32 /* UILabel+extension.m */,
 				603217041F28E9B1002FD61C /* UIView+ViewController.h */,
 				603217051F28E9B1002FD61C /* UIView+ViewController.m */,
 			);
@@ -720,6 +760,7 @@
 				2D2354BF1F29D22C00A93726 /* SearchViewController.m in Sources */,
 				92883DCE1F2AC2C000FCA7BC /* XLConst.m in Sources */,
 				2D2354AB1F298ECB00A93726 /* shopViewController.m in Sources */,
+				2D599EEE1F2AC9D800A9EF32 /* NSString+extension.m in Sources */,
 				2D23549F1F29866900A93726 /* JoinusViewController.m in Sources */,
 				2D2354C41F29D47E00A93726 /* SearchTableViewCell.m in Sources */,
 				60EF77351F279D77005E3A6E /* BaseTabBarController.m in Sources */,
@@ -727,9 +768,16 @@
 				92883DDA1F2AC3E700FCA7BC /* Product1TableViewController.m in Sources */,
 				60EF77341F279D77005E3A6E /* BaseNavigationController.m in Sources */,
 				60EF76EF1F27931D005E3A6E /* main.m in Sources */,
+
 				92883DE91F2AD53700FCA7BC /* Product2Cell.m in Sources */,
+
+				2D599EED1F2AC9D800A9EF32 /* NSDictionary+extension.m in Sources */,
+				2D599EEC1F2AC9D800A9EF32 /* NSDate+extension.m in Sources */,
+
 				2D2354B01F29C1E300A93726 /* MainTableViewCell.m in Sources */,
+				2D599EEA1F2AC9D800A9EF32 /* NSArray+extension.m in Sources */,
 				60EF77261F279C2E005E3A6E /* MainViewController.m in Sources */,
+				2D599EF11F2AC9D800A9EF32 /* UILabel+extension.m in Sources */,
 				2D23548D1F289AED00A93726 /* MenuTableViewCell.m in Sources */,
 				92883DE01F2AC3FA00FCA7BC /* Product3TableViewController.m in Sources */,
 				92883DE41F2AD52300FCA7BC /* Product1Cell.m in Sources */,
@@ -742,10 +790,13 @@
 				603217061F28E9B1002FD61C /* UIView+ViewController.m in Sources */,
 				92883DCC1F2AC2C000FCA7BC /* NSString+XLSegmentModelPrtol.m in Sources */,
 				2D2354CD1F29E9F300A93726 /* mainModle.m in Sources */,
+				2D599EEB1F2AC9D800A9EF32 /* NSData+extension.m in Sources */,
 				60EF772B1F279C3F005E3A6E /* MenuViewController.m in Sources */,
 				92883DEE1F2AD54D00FCA7BC /* Product3Cell.m in Sources */,
 				2D2354C91F29DA9A00A93726 /* HTTPRequest.m in Sources */,
 				2D2354921F289EDA00A93726 /* MenuTableViewCell2.m in Sources */,
+				2D599EEF1F2AC9D800A9EF32 /* UIButton+extension.m in Sources */,
+				2D599EF01F2AC9D800A9EF32 /* UIImage+extension.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
