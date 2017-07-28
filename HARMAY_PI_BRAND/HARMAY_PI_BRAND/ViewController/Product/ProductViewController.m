@@ -177,11 +177,7 @@
     }
     return _header;
 }
-//- (void)pageTurn:(UIPageControl*)sender
-//{
-//    [self selectedIndex:sender.currentPage];
-//
-//}
+
 - (XLSegmentBar *)bar {
     if (!_bar) {
         NSArray *titles = [self.childViewControllers valueForKey:@"title"];

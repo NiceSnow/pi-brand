@@ -84,9 +84,13 @@
             break;
         case 4:
         {
-            shopViewController* shopVC = [ChildViewController instance].shopVC;
-            shopVC.title = [NSString stringWithFormat:@"点击了地 %ld cell",indexPath.row];
-            [self.sideMenuViewController setContentViewController:[ChildViewController instance].shopNavgation animated:YES];
+//            shopViewController* shopVC = [ChildViewController instance].shopVC;
+//            shopVC.title = [NSString stringWithFormat:@"点击了地 %ld cell",indexPath.row];
+//            [self.sideMenuViewController setContentViewController:[ChildViewController instance].shopNavgation animated:YES];
+            ProductViewController* productVC = [ChildViewController instance].productVC;
+            productVC.title = [NSString stringWithFormat:@"点击了地 %ld cell",indexPath.row];
+            [self.sideMenuViewController setContentViewController:[ChildViewController instance].productNavgation animated:YES];
+
         }
             break;
             
