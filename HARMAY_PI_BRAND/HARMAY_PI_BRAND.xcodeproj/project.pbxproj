@@ -79,6 +79,8 @@
 		92883DEA1F2AD53700FCA7BC /* Product2Cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92883DE81F2AD53700FCA7BC /* Product2Cell.xib */; };
 		92883DEE1F2AD54D00FCA7BC /* Product3Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = 92883DEC1F2AD54D00FCA7BC /* Product3Cell.m */; };
 		92883DEF1F2AD54D00FCA7BC /* Product3Cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92883DED1F2AD54D00FCA7BC /* Product3Cell.xib */; };
+		92883DF21F2B337500FCA7BC /* SubCompanyViewController1.m in Sources */ = {isa = PBXBuildFile; fileRef = 92883DF11F2B337500FCA7BC /* SubCompanyViewController1.m */; };
+		92883DF51F2B338D00FCA7BC /* SubCompanyViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = 92883DF41F2B338D00FCA7BC /* SubCompanyViewController2.m */; };
 		B07A01F0967781E9A1B7AA41 /* libPods-HARMAY_PI_BRAND.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9256868CD00094289173861A /* libPods-HARMAY_PI_BRAND.a */; };
 /* End PBXBuildFile section */
 
@@ -233,6 +235,10 @@
 		92883DEB1F2AD54D00FCA7BC /* Product3Cell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Product3Cell.h; sourceTree = "<group>"; };
 		92883DEC1F2AD54D00FCA7BC /* Product3Cell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Product3Cell.m; sourceTree = "<group>"; };
 		92883DED1F2AD54D00FCA7BC /* Product3Cell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Product3Cell.xib; sourceTree = "<group>"; };
+		92883DF01F2B337500FCA7BC /* SubCompanyViewController1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubCompanyViewController1.h; sourceTree = "<group>"; };
+		92883DF11F2B337500FCA7BC /* SubCompanyViewController1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubCompanyViewController1.m; sourceTree = "<group>"; };
+		92883DF31F2B338D00FCA7BC /* SubCompanyViewController2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubCompanyViewController2.h; sourceTree = "<group>"; };
+		92883DF41F2B338D00FCA7BC /* SubCompanyViewController2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubCompanyViewController2.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -267,6 +273,10 @@
 				2D599EF21F2AEA2600A9EF32 /* model */,
 				2D2354971F29865800A93726 /* CompanyViewController.h */,
 				2D2354981F29865800A93726 /* CompanyViewController.m */,
+				92883DF01F2B337500FCA7BC /* SubCompanyViewController1.h */,
+				92883DF11F2B337500FCA7BC /* SubCompanyViewController1.m */,
+				92883DF31F2B338D00FCA7BC /* SubCompanyViewController2.h */,
+				92883DF41F2B338D00FCA7BC /* SubCompanyViewController2.m */,
 				2D2354991F29865800A93726 /* CompanyViewController.xib */,
 				2D599EFE1F2AF6D900A9EF32 /* CompanyHeaderTableViewCell.h */,
 				2D599EFF1F2AF6D900A9EF32 /* CompanyHeaderTableViewCell.m */,
@@ -842,6 +852,7 @@
 				2D599EEC1F2AC9D800A9EF32 /* NSDate+extension.m in Sources */,
 				2D2354B01F29C1E300A93726 /* MainTableViewCell.m in Sources */,
 				2D599F0B1F2B02CB00A9EF32 /* joinMainModel.m in Sources */,
+				92883DF51F2B338D00FCA7BC /* SubCompanyViewController2.m in Sources */,
 				2D599EEA1F2AC9D800A9EF32 /* NSArray+extension.m in Sources */,
 				2D599F0E1F2B05DC00A9EF32 /* joinSubModel.m in Sources */,
 				60EF77261F279C2E005E3A6E /* MainViewController.m in Sources */,
@@ -864,6 +875,7 @@
 				92883DEE1F2AD54D00FCA7BC /* Product3Cell.m in Sources */,
 				2D2354C91F29DA9A00A93726 /* HTTPRequest.m in Sources */,
 				2D599EF51F2AEA3C00A9EF32 /* companyContentModel.m in Sources */,
+				92883DF21F2B337500FCA7BC /* SubCompanyViewController1.m in Sources */,
 				2D2354921F289EDA00A93726 /* MenuTableViewCell2.m in Sources */,
 				2D599F061F2AF8CA00A9EF32 /* companyContentTableViewCell.m in Sources */,
 				2D599EEF1F2AC9D800A9EF32 /* UIButton+extension.m in Sources */,
