@@ -38,11 +38,13 @@
 }
 - (void)setImageString:(NSString *)imageString
 {
-    self.iconImanegView.image = [UIImage imageNamed:imageString];
+    _imageString = imageString;
+    _iconImanegView.image = [UIImage imageNamed:imageString];
 }
 - (void)setContentString:(NSString *)contentString
 {
-    self.contentLabel.text = contentString;
+    _contentString = contentString;
+    _contentLabel.text = contentString;
 }
 
 @end

@@ -621,7 +621,7 @@
 				TargetAttributes = {
 					60EF76E91F27931C005E3A6E = {
 						CreatedOnToolsVersion = 8.2;
-						DevelopmentTeam = 723W44X739;
+						DevelopmentTeam = UG6CKH24DA;
 						ProvisioningStyle = Automatic;
 					};
 					60EF77021F27931D005E3A6E = {
@@ -768,12 +768,9 @@
 				92883DDA1F2AC3E700FCA7BC /* Product1TableViewController.m in Sources */,
 				60EF77341F279D77005E3A6E /* BaseNavigationController.m in Sources */,
 				60EF76EF1F27931D005E3A6E /* main.m in Sources */,
-
 				92883DE91F2AD53700FCA7BC /* Product2Cell.m in Sources */,
-
 				2D599EED1F2AC9D800A9EF32 /* NSDictionary+extension.m in Sources */,
 				2D599EEC1F2AC9D800A9EF32 /* NSDate+extension.m in Sources */,
-
 				2D2354B01F29C1E300A93726 /* MainTableViewCell.m in Sources */,
 				2D599EEA1F2AC9D800A9EF32 /* NSArray+extension.m in Sources */,
 				60EF77261F279C2E005E3A6E /* MainViewController.m in Sources */,
@@ -944,7 +941,7 @@
 			baseConfigurationReference = 354F6A3AE6C4098B6C798064 /* Pods-HARMAY_PI_BRAND.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 723W44X739;
+				DEVELOPMENT_TEAM = UG6CKH24DA;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/HARMAY_PI_BRAND/PrefixHeader.pch";
 				INFOPLIST_FILE = HARMAY_PI_BRAND/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -958,7 +955,7 @@
 			baseConfigurationReference = 2A57B0F5FE8BB46D3DD57982 /* Pods-HARMAY_PI_BRAND.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 723W44X739;
+				DEVELOPMENT_TEAM = UG6CKH24DA;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/HARMAY_PI_BRAND/PrefixHeader.pch";
 				INFOPLIST_FILE = HARMAY_PI_BRAND/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

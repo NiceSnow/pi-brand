@@ -8,6 +8,13 @@
 
 #import "Product3Cell.h"
 
+
+@interface Product3Cell ()
+@property (weak, nonatomic) IBOutlet UIImageView *backImageView;
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *contentLabel;
+
+@end
 @implementation Product3Cell
 
 + (instancetype)createCellWithTableView:(UITableView *)tableView
@@ -27,6 +34,10 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         self = [[[NSBundle mainBundle]loadNibNamed:@"Product3Cell" owner:self options:nil]lastObject];
+        [_backImageView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.width.mas_equalTo(screenWidth-20-40);
+            make.height.mas_equalTo((screenWidth-20-40)*405/629);
+        }];
     }
     return self;
 }

@@ -52,7 +52,7 @@
     
     // 选中第0个VC
     [self selectedIndex:0];
-//    self.view.backgroundColor =[UIColor clearColor];
+    self.view.backgroundColor =[UIColor clearColor];
 }
 - (void)search:(UIButton *)btn
 {

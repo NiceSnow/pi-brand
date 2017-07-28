@@ -8,6 +8,12 @@
 
 #import "Product2Cell.h"
 
+
+@interface Product2Cell ()
+@property (weak, nonatomic) IBOutlet UIImageView *backImageView;
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+
+@end
 @implementation Product2Cell
 
 
@@ -28,6 +34,10 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         self = [[[NSBundle mainBundle]loadNibNamed:@"Product2Cell" owner:self options:nil]lastObject];
+        [_backImageView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.width.mas_equalTo(screenWidth-20-40);
+            make.height.mas_equalTo((screenWidth-20-40)*346/631);
+        }];
     }
     return self;
 }
