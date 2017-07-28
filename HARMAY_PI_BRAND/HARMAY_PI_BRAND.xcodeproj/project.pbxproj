@@ -34,6 +34,14 @@
 		2D599EEF1F2AC9D800A9EF32 /* UIButton+extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D599EE51F2AC9D800A9EF32 /* UIButton+extension.m */; };
 		2D599EF01F2AC9D800A9EF32 /* UIImage+extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D599EE71F2AC9D800A9EF32 /* UIImage+extension.m */; };
 		2D599EF11F2AC9D800A9EF32 /* UILabel+extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D599EE91F2AC9D800A9EF32 /* UILabel+extension.m */; };
+		2D599EF51F2AEA3C00A9EF32 /* companyContentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D599EF41F2AEA3C00A9EF32 /* companyContentModel.m */; };
+		2D599EF81F2AF32E00A9EF32 /* companyHeaderModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D599EF71F2AF32E00A9EF32 /* companyHeaderModel.m */; };
+		2D599F011F2AF6D900A9EF32 /* CompanyHeaderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D599EFF1F2AF6D900A9EF32 /* CompanyHeaderTableViewCell.m */; };
+		2D599F021F2AF6D900A9EF32 /* CompanyHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D599F001F2AF6D900A9EF32 /* CompanyHeaderTableViewCell.xib */; };
+		2D599F061F2AF8CA00A9EF32 /* companyContentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D599F041F2AF8CA00A9EF32 /* companyContentTableViewCell.m */; };
+		2D599F071F2AF8CA00A9EF32 /* companyContentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D599F051F2AF8CA00A9EF32 /* companyContentTableViewCell.xib */; };
+		2D599F0B1F2B02CB00A9EF32 /* joinMainModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D599F0A1F2B02CB00A9EF32 /* joinMainModel.m */; };
+		2D599F0E1F2B05DC00A9EF32 /* joinSubModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D599F0D1F2B05DC00A9EF32 /* joinSubModel.m */; };
 		603217061F28E9B1002FD61C /* UIView+ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 603217051F28E9B1002FD61C /* UIView+ViewController.m */; };
 		6032170A1F28ED97002FD61C /* ChildViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 603217091F28ED97002FD61C /* ChildViewController.m */; };
 		60EF76EF1F27931D005E3A6E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 60EF76EE1F27931D005E3A6E /* main.m */; };
@@ -125,6 +133,20 @@
 		2D599EE71F2AC9D800A9EF32 /* UIImage+extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+extension.m"; sourceTree = "<group>"; };
 		2D599EE81F2AC9D800A9EF32 /* UILabel+extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+extension.h"; sourceTree = "<group>"; };
 		2D599EE91F2AC9D800A9EF32 /* UILabel+extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+extension.m"; sourceTree = "<group>"; };
+		2D599EF31F2AEA3C00A9EF32 /* companyContentModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = companyContentModel.h; sourceTree = "<group>"; };
+		2D599EF41F2AEA3C00A9EF32 /* companyContentModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = companyContentModel.m; sourceTree = "<group>"; };
+		2D599EF61F2AF32E00A9EF32 /* companyHeaderModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = companyHeaderModel.h; sourceTree = "<group>"; };
+		2D599EF71F2AF32E00A9EF32 /* companyHeaderModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = companyHeaderModel.m; sourceTree = "<group>"; };
+		2D599EFE1F2AF6D900A9EF32 /* CompanyHeaderTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompanyHeaderTableViewCell.h; sourceTree = "<group>"; };
+		2D599EFF1F2AF6D900A9EF32 /* CompanyHeaderTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompanyHeaderTableViewCell.m; sourceTree = "<group>"; };
+		2D599F001F2AF6D900A9EF32 /* CompanyHeaderTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CompanyHeaderTableViewCell.xib; sourceTree = "<group>"; };
+		2D599F031F2AF8CA00A9EF32 /* companyContentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = companyContentTableViewCell.h; sourceTree = "<group>"; };
+		2D599F041F2AF8CA00A9EF32 /* companyContentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = companyContentTableViewCell.m; sourceTree = "<group>"; };
+		2D599F051F2AF8CA00A9EF32 /* companyContentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = companyContentTableViewCell.xib; sourceTree = "<group>"; };
+		2D599F091F2B02CB00A9EF32 /* joinMainModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = joinMainModel.h; sourceTree = "<group>"; };
+		2D599F0A1F2B02CB00A9EF32 /* joinMainModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = joinMainModel.m; sourceTree = "<group>"; };
+		2D599F0C1F2B05DC00A9EF32 /* joinSubModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = joinSubModel.h; sourceTree = "<group>"; };
+		2D599F0D1F2B05DC00A9EF32 /* joinSubModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = joinSubModel.m; sourceTree = "<group>"; };
 		354F6A3AE6C4098B6C798064 /* Pods-HARMAY_PI_BRAND.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HARMAY_PI_BRAND.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HARMAY_PI_BRAND/Pods-HARMAY_PI_BRAND.debug.xcconfig"; sourceTree = "<group>"; };
 		603217041F28E9B1002FD61C /* UIView+ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ViewController.h"; sourceTree = "<group>"; };
 		603217051F28E9B1002FD61C /* UIView+ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ViewController.m"; sourceTree = "<group>"; };
@@ -199,9 +221,16 @@
 		2D2354941F29863C00A93726 /* Company */ = {
 			isa = PBXGroup;
 			children = (
+				2D599EF21F2AEA2600A9EF32 /* model */,
 				2D2354971F29865800A93726 /* CompanyViewController.h */,
 				2D2354981F29865800A93726 /* CompanyViewController.m */,
 				2D2354991F29865800A93726 /* CompanyViewController.xib */,
+				2D599EFE1F2AF6D900A9EF32 /* CompanyHeaderTableViewCell.h */,
+				2D599EFF1F2AF6D900A9EF32 /* CompanyHeaderTableViewCell.m */,
+				2D599F001F2AF6D900A9EF32 /* CompanyHeaderTableViewCell.xib */,
+				2D599F031F2AF8CA00A9EF32 /* companyContentTableViewCell.h */,
+				2D599F041F2AF8CA00A9EF32 /* companyContentTableViewCell.m */,
+				2D599F051F2AF8CA00A9EF32 /* companyContentTableViewCell.xib */,
 			);
 			path = Company;
 			sourceTree = "<group>";
@@ -209,6 +238,7 @@
 		2D2354951F29863C00A93726 /* Joinus */ = {
 			isa = PBXGroup;
 			children = (
+				2D599F081F2B02B700A9EF32 /* model */,
 				2D23549C1F29866900A93726 /* JoinusViewController.h */,
 				2D23549D1F29866900A93726 /* JoinusViewController.m */,
 				2D23549E1F29866900A93726 /* JoinusViewController.xib */,
@@ -268,6 +298,28 @@
 			children = (
 				2D2354CB1F29E9F300A93726 /* mainModle.h */,
 				2D2354CC1F29E9F300A93726 /* mainModle.m */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		2D599EF21F2AEA2600A9EF32 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				2D599EF31F2AEA3C00A9EF32 /* companyContentModel.h */,
+				2D599EF41F2AEA3C00A9EF32 /* companyContentModel.m */,
+				2D599EF61F2AF32E00A9EF32 /* companyHeaderModel.h */,
+				2D599EF71F2AF32E00A9EF32 /* companyHeaderModel.m */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		2D599F081F2B02B700A9EF32 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				2D599F091F2B02CB00A9EF32 /* joinMainModel.h */,
+				2D599F0A1F2B02CB00A9EF32 /* joinMainModel.m */,
+				2D599F0C1F2B05DC00A9EF32 /* joinSubModel.h */,
+				2D599F0D1F2B05DC00A9EF32 /* joinSubModel.m */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -573,11 +625,13 @@
 			files = (
 				2D23549B1F29865800A93726 /* CompanyViewController.xib in Resources */,
 				2D23548E1F289AED00A93726 /* MenuTableViewCell.xib in Resources */,
+				2D599F021F2AF6D900A9EF32 /* CompanyHeaderTableViewCell.xib in Resources */,
 				2D2354C01F29D22C00A93726 /* SearchViewController.xib in Resources */,
 				2D2354931F289EDA00A93726 /* MenuTableViewCell2.xib in Resources */,
 				2D2354A01F29866900A93726 /* JoinusViewController.xib in Resources */,
 				60EF76FD1F27931D005E3A6E /* LaunchScreen.storyboard in Resources */,
 				927CDED41F29C64300399AA6 /* JoinusViewCellCell.xib in Resources */,
+				2D599F071F2AF8CA00A9EF32 /* companyContentTableViewCell.xib in Resources */,
 				60EF76FA1F27931D005E3A6E /* Assets.xcassets in Resources */,
 				2D2354B11F29C1E300A93726 /* MainTableViewCell.xib in Resources */,
 				60EF772C1F279C3F005E3A6E /* MenuViewController.xib in Resources */,
@@ -668,15 +722,19 @@
 				2D2354AB1F298ECB00A93726 /* shopViewController.m in Sources */,
 				2D599EEE1F2AC9D800A9EF32 /* NSString+extension.m in Sources */,
 				2D23549F1F29866900A93726 /* JoinusViewController.m in Sources */,
+				2D599EF81F2AF32E00A9EF32 /* companyHeaderModel.m in Sources */,
 				2D2354C41F29D47E00A93726 /* SearchTableViewCell.m in Sources */,
 				60EF77351F279D77005E3A6E /* BaseTabBarController.m in Sources */,
 				60EF76F21F27931D005E3A6E /* AppDelegate.m in Sources */,
 				60EF77341F279D77005E3A6E /* BaseNavigationController.m in Sources */,
 				60EF76EF1F27931D005E3A6E /* main.m in Sources */,
 				2D599EED1F2AC9D800A9EF32 /* NSDictionary+extension.m in Sources */,
+				2D599F011F2AF6D900A9EF32 /* CompanyHeaderTableViewCell.m in Sources */,
 				2D599EEC1F2AC9D800A9EF32 /* NSDate+extension.m in Sources */,
 				2D2354B01F29C1E300A93726 /* MainTableViewCell.m in Sources */,
+				2D599F0B1F2B02CB00A9EF32 /* joinMainModel.m in Sources */,
 				2D599EEA1F2AC9D800A9EF32 /* NSArray+extension.m in Sources */,
+				2D599F0E1F2B05DC00A9EF32 /* joinSubModel.m in Sources */,
 				60EF77261F279C2E005E3A6E /* MainViewController.m in Sources */,
 				2D599EF11F2AC9D800A9EF32 /* UILabel+extension.m in Sources */,
 				2D23548D1F289AED00A93726 /* MenuTableViewCell.m in Sources */,
@@ -687,7 +745,9 @@
 				2D599EEB1F2AC9D800A9EF32 /* NSData+extension.m in Sources */,
 				60EF772B1F279C3F005E3A6E /* MenuViewController.m in Sources */,
 				2D2354C91F29DA9A00A93726 /* HTTPRequest.m in Sources */,
+				2D599EF51F2AEA3C00A9EF32 /* companyContentModel.m in Sources */,
 				2D2354921F289EDA00A93726 /* MenuTableViewCell2.m in Sources */,
+				2D599F061F2AF8CA00A9EF32 /* companyContentTableViewCell.m in Sources */,
 				2D599EEF1F2AC9D800A9EF32 /* UIButton+extension.m in Sources */,
 				2D599EF01F2AC9D800A9EF32 /* UIImage+extension.m in Sources */,
 			);
