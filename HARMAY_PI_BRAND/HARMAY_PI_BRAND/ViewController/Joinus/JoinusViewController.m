@@ -17,6 +17,7 @@
 
 @property (weak, nonatomic) IBOutlet UITableView *tableview;
 @property (nonatomic, strong) UIImageView* backImageView;
+@property (nonatomic, strong)NSMutableArray * dataArray;
 
 @end
 
@@ -51,7 +52,7 @@
     [_backImageView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.bottom.left.right.offset(0);
     }];
-    
+    _dataArray = [NSMutableArray array];
     UIView * headerView = [UIView new];
     headerView.backgroundColor = [UIColor clearColor];
     headerView.frame = CGRectMake(0, 0, screenWidth, screenHeight/3.0);
@@ -73,10 +74,13 @@
                 return @{@"ID" : @"id"};
             }];
             companyHeaderModel* model = [companyHeaderModel mj_objectWithKeyValues:[data objectForKey:@"head"]];
+            
             joinMainModel* mainModel = [joinMainModel mj_objectWithKeyValues:[data objectForKey:@"main"]];
+            [_dataArray addObject:@[model,mainModel]];
             NSArray* sub = [joinSubModel mj_objectArrayWithKeyValuesArray:[data objectForKey:@"sub"]];
-            NSLog(@"123");
-
+            [_dataArray addObject:sub];
+            [_tableview reloadData];
+            
         }
     } failed:^(NSURLSessionDataTask *task, NSError *error) {
         
@@ -86,7 +90,9 @@
     [self getmessage];
 }
 
--(void)getmessage{
+//-(void)getmessageWithJobID:(NSString *)jobID
+-(void)getmessage
+{
 //    招聘职位信息  下面加载webview
     [[HTTPRequest instance]PostRequestWithURL:@"http://www.pi-brand.cn/index.php/home/api/recruit_type" Parameter:nil succeed:^(NSURLSessionDataTask *task, id responseObject) {
         BOOL succeed = [[responseObject objectForKey:@"status"]boolValue];
@@ -113,11 +119,18 @@
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+
     if (indexPath.row==0) {
         JoinusViewCellCell * cell = [JoinusViewCellCell createCellWithTableView:tableView];
+        if (_dataArray.count) {
+            cell.dataArray = _dataArray[indexPath.row];
+        }
         return cell;
     }else{
         JoinusViewCell * cell = [JoinusViewCell createCellWithTableView:tableView];
+        if (_dataArray.count) {
+            cell.dataArray = _dataArray[indexPath.row];
+        }
         return cell;
     }
 }

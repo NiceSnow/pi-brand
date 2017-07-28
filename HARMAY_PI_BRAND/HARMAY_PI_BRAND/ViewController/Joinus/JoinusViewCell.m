@@ -7,6 +7,7 @@
 //
 
 #import "JoinusViewCell.h"
+#import "joinSubModel.h"
 
 @implementation JoinusViewCell
 
@@ -29,5 +30,9 @@
         self = [[[NSBundle mainBundle]loadNibNamed:@"JoinusViewCell" owner:self options:nil]lastObject];
     }
     return self;
+}
+- (void)setDataArray:(NSArray *)dataArray
+{
+    _dataArray =dataArray;
 }
 @end
