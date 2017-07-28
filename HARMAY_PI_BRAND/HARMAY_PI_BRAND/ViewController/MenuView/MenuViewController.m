@@ -70,6 +70,7 @@
         {
             ProductViewController* productVC = [ChildViewController instance].productVC;
             productVC.title = [NSString stringWithFormat:@"点击了地 %ld cell",indexPath.row];
+            productVC.leftCount = 1;
             [self.sideMenuViewController setContentViewController:[ChildViewController instance].productNavgation animated:YES];
         }
             break;
