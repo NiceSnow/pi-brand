@@ -12,7 +12,17 @@
 #import "BaseNavigationController.h"
 #import "RESideMenu.h"
 
-@interface AppDelegate ()
+#import "UMSocial.h"
+#import "UMSocialWechatHandler.h"
+#import "UMSocialQQHandler.h"
+#import <TencentOpenAPI/TencentApiInterface.h>
+#import <TencentOpenAPI/TencentOAuth.h>
+#import <TencentOpenAPI/TencentOAuthObject.h>
+#import <TencentOpenAPI/TencentMessageObject.h>
+#import "WXApiObject.h"
+#import "WXApi.h"
+
+@interface AppDelegate ()<WXApiDelegate>
 
 @end
 
@@ -20,6 +30,8 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    [self umengTrack];
     // Override point for customization after application launch.
     MenuViewController *leftMenuViewController = [[MenuViewController alloc] init];
     RESideMenu *sideMenuViewController = [[RESideMenu alloc] initWithContentViewController:[ChildViewController instance].MainNavgation
@@ -36,6 +48,21 @@
     sideMenuViewController.animationDuration = 0.2;
     self.window.rootViewController = sideMenuViewController;
     return YES;
+}
+//597c88d6717c197398001368 申请好的 友盟AppKey
+- (void)umengTrack {
+    [MobClick setAppVersion:XcodeAppVersion];
+    UMConfigInstance.appKey = UMAppKey;
+    UMConfigInstance.channelId = @"App Store";
+    [MobClick startWithConfigure:UMConfigInstance];
+    
+    //设置友盟社会化组件appkey
+    [UMSocialData setAppKey:UMAppKey];
+    
+    //设置微信AppId、appSecret，分享url
+    [UMSocialWechatHandler setWXAppId:WXAppId appSecret:WXAppSecret url:@"http://www.umeng.com/social"];
+    //分享到QQ好友
+    [UMSocialQQHandler setQQWithAppId:QQAppId appKey:QQAppKey url:@"http://www.umeng.com/social"];
 }
 
 

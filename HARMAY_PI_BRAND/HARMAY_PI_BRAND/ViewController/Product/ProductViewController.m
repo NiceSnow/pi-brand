@@ -193,6 +193,7 @@
 //        [_pageControl addTarget:self action:@selector(pageTurn:) forControlEvents:UIControlEventValueChanged];
         [_pageControl setValue:[UIImage imageNamed:@"11_07SEL"] forKeyPath:@"_currentPageImage"];
         [_pageControl setValue:[UIImage imageNamed:@"11_07"] forKeyPath:@"_pageImage"];
+        _pageControl.userInteractionEnabled = NO;
         [_header addSubview:_pageControl];
         [_pageControl mas_makeConstraints:^(MASConstraintMaker *make) {
             make.centerX.equalTo(_header);

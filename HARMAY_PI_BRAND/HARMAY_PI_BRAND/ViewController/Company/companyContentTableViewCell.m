@@ -7,16 +7,23 @@
 //
 
 #import "companyContentTableViewCell.h"
+#import "ShareView.h"
 
 @interface companyContentTableViewCell ()
 @property (weak, nonatomic) IBOutlet UILabel *maintitle;
 @property (weak, nonatomic) IBOutlet UILabel *secTitle;
 @property (weak, nonatomic) IBOutlet UILabel *timeLabel;
 
+@property (nonatomic, strong)ShareView               * shareView;
+
 @end
 
 @implementation companyContentTableViewCell
 - (IBAction)share:(UIButton *)sender {
+    self.shareView.sharetype = @"course";
+    self.shareView.shareTitle = @"title";
+    self.shareView.shareDes = @"title";
+    self.shareView.shareURL = @"title";
 }
 
 -(void)addDataWith:(companyContentModel*)headerModle;{
@@ -64,6 +71,15 @@
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
+}
+
+- (ShareView *)shareView
+{
+    if (!_shareView) {
+        _shareView  = [[ShareView alloc]init];
+        
+    }
+    return _shareView;
 }
 
 @end

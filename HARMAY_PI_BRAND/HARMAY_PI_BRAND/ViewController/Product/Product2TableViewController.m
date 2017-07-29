@@ -9,10 +9,14 @@
 #import "Product2TableViewController.h"
 #import "UIViewController+XLScroll.h"
 #import "Product2Cell.h"
+#import "PickerView.h"
+#import "ShareView.h"
 
-@interface Product2TableViewController ()
+@interface Product2TableViewController ()<PickerViewDelegte>
 @property (nonatomic, strong)UILabel * titleLabel;
 @property (nonatomic, strong)NSDictionary *dict;
+@property (nonatomic, strong)PickerView * pickView;
+@property (nonatomic, strong)ShareView               * shareView;
 
 @end
 
@@ -163,7 +167,7 @@
 
 - (void)storeAction
 {
-    
+    self.pickView.dataArray = @[@"第一条",@"第二条",@"第三条"];
 }
 - (void)dateButtonAction:(UIButton *)btn
 {
@@ -171,6 +175,29 @@
 }
 - (void)shareAction
 {
-    
+    self.shareView.sharetype = @"course";
+    self.shareView.shareTitle = @"title";
+    self.shareView.shareDes = @"title";
+    self.shareView.shareURL = @"title";
+}
+- (PickerView *)pickView
+{
+    if (!_pickView) {
+        _pickView = [[PickerView alloc]init];
+        _pickView.delegate = self;
+    }
+    return _pickView;
+}
+- (void)pickerView:(PickerView *)pickerView index:(NSInteger)index{
+    DebugLog(@"%@",@(index));
+}
+- (ShareView *)shareView
+{
+    if (!_shareView) {
+        _shareView  = [[ShareView alloc]init];
+        
+    }
+    return _shareView;
 }
 @end
+

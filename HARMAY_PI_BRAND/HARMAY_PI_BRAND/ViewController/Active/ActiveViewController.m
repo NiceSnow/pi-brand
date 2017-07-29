@@ -61,12 +61,10 @@
     UIButton* leftBtn = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 35, 35)];
     [leftBtn setImage:[UIImage imageNamed:@"icon_nav"] forState:normal];
     [leftBtn addTarget:self action:@selector(presentLeftMenuViewController:) forControlEvents:UIControlEventTouchUpInside];
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:leftBtn];
-    
-    UIButton* rightBtn = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 35, 35)];
-    [rightBtn setImage:[UIImage imageNamed:@"icon_product"] forState:normal];
-    [rightBtn addTarget:self action:@selector(search) forControlEvents:UIControlEventTouchUpInside];
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:rightBtn];
+    UIButton* leftBtn2 = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 35, 35)];
+    leftBtn2.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
+    [leftBtn2 setImage:[UIImage imageNamed:@"back"] forState:normal];
+    [leftBtn2 addTarget:self action:@selector(leftPress) forControlEvents:UIControlEventTouchUpInside];
     
     _backImageView = [UIImageView new];
     [self.view addSubview:_backImageView];
@@ -82,6 +80,10 @@
         make.centerX.equalTo(self.view);
     }];
     // Do any additional setup after loading the view from its nib.
+}
+
+-(void)leftPress{
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{

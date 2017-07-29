@@ -45,6 +45,15 @@
 		2D599F151F2B4D5B00A9EF32 /* subModel2.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D599F141F2B4D5B00A9EF32 /* subModel2.m */; };
 		603217061F28E9B1002FD61C /* UIView+ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 603217051F28E9B1002FD61C /* UIView+ViewController.m */; };
 		6032170A1F28ED97002FD61C /* ChildViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 603217091F28ED97002FD61C /* ChildViewController.m */; };
+		6078A5821F2C922F005FFCF6 /* ShareView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6078A5811F2C922F005FFCF6 /* ShareView.m */; };
+		6078A5841F2C9711005FFCF6 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6078A5831F2C9711005FFCF6 /* libsqlite3.tbd */; };
+		6078A5861F2C971B005FFCF6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6078A5851F2C971B005FFCF6 /* CoreGraphics.framework */; };
+		6078A5881F2C972D005FFCF6 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6078A5871F2C972D005FFCF6 /* SystemConfiguration.framework */; };
+		6078A58A1F2C9736005FFCF6 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6078A5891F2C9736005FFCF6 /* CoreTelephony.framework */; };
+		6078A58C1F2C9763005FFCF6 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6078A58B1F2C9763005FFCF6 /* libc++.tbd */; };
+		6078A58E1F2C9B2E005FFCF6 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6078A58D1F2C9B2E005FFCF6 /* libz.tbd */; };
+		6078A5901F2C9B54005FFCF6 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6078A58F1F2C9B54005FFCF6 /* CoreData.framework */; };
+		60AD8BCB1F2CC57C002644E7 /* PickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60AD8BCA1F2CC57C002644E7 /* PickerView.m */; };
 		60C5324A1F2C59D600E4138B /* ActiveTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C532481F2C59D600E4138B /* ActiveTableViewCell.m */; };
 		60C5324B1F2C59D600E4138B /* ActiveTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60C532491F2C59D600E4138B /* ActiveTableViewCell.xib */; };
 		60C532501F2C702200E4138B /* ActiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C5324E1F2C702200E4138B /* ActiveViewController.m */; };
@@ -176,6 +185,17 @@
 		603217051F28E9B1002FD61C /* UIView+ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ViewController.m"; sourceTree = "<group>"; };
 		603217081F28ED97002FD61C /* ChildViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChildViewController.h; sourceTree = "<group>"; };
 		603217091F28ED97002FD61C /* ChildViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChildViewController.m; sourceTree = "<group>"; };
+		6078A5801F2C922F005FFCF6 /* ShareView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareView.h; sourceTree = "<group>"; };
+		6078A5811F2C922F005FFCF6 /* ShareView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareView.m; sourceTree = "<group>"; };
+		6078A5831F2C9711005FFCF6 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		6078A5851F2C971B005FFCF6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		6078A5871F2C972D005FFCF6 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		6078A5891F2C9736005FFCF6 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		6078A58B1F2C9763005FFCF6 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		6078A58D1F2C9B2E005FFCF6 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		6078A58F1F2C9B54005FFCF6 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		60AD8BC91F2CC57C002644E7 /* PickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PickerView.h; sourceTree = "<group>"; };
+		60AD8BCA1F2CC57C002644E7 /* PickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PickerView.m; sourceTree = "<group>"; };
 		60C532471F2C59D600E4138B /* ActiveTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActiveTableViewCell.h; sourceTree = "<group>"; };
 		60C532481F2C59D600E4138B /* ActiveTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActiveTableViewCell.m; sourceTree = "<group>"; };
 		60C532491F2C59D600E4138B /* ActiveTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActiveTableViewCell.xib; sourceTree = "<group>"; };
@@ -257,6 +277,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6078A5901F2C9B54005FFCF6 /* CoreData.framework in Frameworks */,
+				6078A58E1F2C9B2E005FFCF6 /* libz.tbd in Frameworks */,
+				6078A58C1F2C9763005FFCF6 /* libc++.tbd in Frameworks */,
+				6078A58A1F2C9736005FFCF6 /* CoreTelephony.framework in Frameworks */,
+				6078A5881F2C972D005FFCF6 /* SystemConfiguration.framework in Frameworks */,
+				6078A5861F2C971B005FFCF6 /* CoreGraphics.framework in Frameworks */,
+				6078A5841F2C9711005FFCF6 /* libsqlite3.tbd in Frameworks */,
 				B07A01F0967781E9A1B7AA41 /* libPods-HARMAY_PI_BRAND.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -420,6 +447,13 @@
 		4DE278866E7998AD4C7DFBE0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6078A58F1F2C9B54005FFCF6 /* CoreData.framework */,
+				6078A58D1F2C9B2E005FFCF6 /* libz.tbd */,
+				6078A58B1F2C9763005FFCF6 /* libc++.tbd */,
+				6078A5891F2C9736005FFCF6 /* CoreTelephony.framework */,
+				6078A5871F2C972D005FFCF6 /* SystemConfiguration.framework */,
+				6078A5851F2C971B005FFCF6 /* CoreGraphics.framework */,
+				6078A5831F2C9711005FFCF6 /* libsqlite3.tbd */,
 				9256868CD00094289173861A /* libPods-HARMAY_PI_BRAND.a */,
 			);
 			name = Frameworks;
@@ -459,6 +493,15 @@
 			path = Tools;
 			sourceTree = "<group>";
 		};
+		6078A57F1F2C922F005FFCF6 /* shareView */ = {
+			isa = PBXGroup;
+			children = (
+				6078A5801F2C922F005FFCF6 /* ShareView.h */,
+				6078A5811F2C922F005FFCF6 /* ShareView.m */,
+			);
+			path = shareView;
+			sourceTree = "<group>";
+		};
 		60C5324C1F2C6FE300E4138B /* Active */ = {
 			isa = PBXGroup;
 			children = (
@@ -494,6 +537,7 @@
 		60EF76EC1F27931D005E3A6E /* HARMAY_PI_BRAND */ = {
 			isa = PBXGroup;
 			children = (
+				6078A57F1F2C922F005FFCF6 /* shareView */,
 				92883DC01F2AC2C000FCA7BC /* Library */,
 				2D2354C61F29DA8A00A93726 /* httpRequest */,
 				603217071F28ED49002FD61C /* Tools */,
@@ -612,6 +656,8 @@
 		92883DC01F2AC2C000FCA7BC /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				60AD8BC91F2CC57C002644E7 /* PickerView.h */,
+				60AD8BCA1F2CC57C002644E7 /* PickerView.m */,
 				92883DC11F2AC2C000FCA7BC /* LinkageView */,
 			);
 			path = Library;
@@ -830,7 +876,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		F262301650906AB3279D73A9 /* [CP] Embed Pods Frameworks */ = {
@@ -859,6 +905,7 @@
 				6032170A1F28ED97002FD61C /* ChildViewController.m in Sources */,
 				2D2354A31F29867700A93726 /* ProductViewController.m in Sources */,
 				2D23549A1F29865800A93726 /* CompanyViewController.m in Sources */,
+				6078A5821F2C922F005FFCF6 /* ShareView.m in Sources */,
 				60EF77361F279D77005E3A6E /* BaseViewController.m in Sources */,
 				60EF77411F28E340005E3A6E /* WebViewController.m in Sources */,
 				2D2354BF1F29D22C00A93726 /* SearchViewController.m in Sources */,
@@ -897,6 +944,7 @@
 				927CDED81F29DF9F00399AA6 /* JoinusViewCell.m in Sources */,
 				603217061F28E9B1002FD61C /* UIView+ViewController.m in Sources */,
 				92883DCC1F2AC2C000FCA7BC /* NSString+XLSegmentModelPrtol.m in Sources */,
+				60AD8BCB1F2CC57C002644E7 /* PickerView.m in Sources */,
 				2D2354CD1F29E9F300A93726 /* mainModle.m in Sources */,
 				2D599EEB1F2AC9D800A9EF32 /* NSData+extension.m in Sources */,
 				60EF772B1F279C3F005E3A6E /* MenuViewController.m in Sources */,
@@ -1062,7 +1110,7 @@
 				INFOPLIST_FILE = HARMAY_PI_BRAND/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "pi-brand-HARMAY";
+				PRODUCT_BUNDLE_IDENTIFIER = com.amed.Hospital;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -1077,7 +1125,7 @@
 				INFOPLIST_FILE = HARMAY_PI_BRAND/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "pi-brand-HARMAY";
+				PRODUCT_BUNDLE_IDENTIFIER = com.amed.Hospital;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

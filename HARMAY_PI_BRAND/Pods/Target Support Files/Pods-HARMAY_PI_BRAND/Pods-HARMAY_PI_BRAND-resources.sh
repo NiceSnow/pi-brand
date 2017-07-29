@@ -18,12 +18,6 @@ case "${TARGETED_DEVICE_FAMILY}" in
   2)
     TARGET_DEVICE_ARGS="--target-device ipad"
     ;;
-  3)
-    TARGET_DEVICE_ARGS="--target-device tv"
-    ;;
-  4)
-    TARGET_DEVICE_ARGS="--target-device watch"
-    ;;
   *)
     TARGET_DEVICE_ARGS="--target-device mac"
     ;;
@@ -81,9 +75,35 @@ EOM
 }
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_resource "IQKeyboardManager/IQKeyBoardManager/Resources/IQKeyboardManager.bundle"
+  install_resource "UMengSocial/Umeng_SDK_Social_iOS_ARM64_5.0/UMSocial_Sdk_5.0/UMSocialSDKResourcesNew.bundle"
+  install_resource "UMengSocial/Umeng_SDK_Social_iOS_ARM64_5.0/UMSocial_Sdk_Extra_Frameworks/TencentOpenAPI/TencentOpenApi_IOS_Bundle.bundle"
+  install_resource "UMengSocial/Umeng_SDK_Social_iOS_ARM64_5.0/UMSocial_Sdk_Extra_Frameworks/SinaSSO/WeiboSDK.bundle"
+  install_resource "UMengSocial/Umeng_SDK_Social_iOS_ARM64_5.0/UMSocial_Sdk_5.0/SocialSDKXib/UMSCommentDetailController.xib"
+  install_resource "UMengSocial/Umeng_SDK_Social_iOS_ARM64_5.0/UMSocial_Sdk_5.0/SocialSDKXib/UMSCommentInputController.xib"
+  install_resource "UMengSocial/Umeng_SDK_Social_iOS_ARM64_5.0/UMSocial_Sdk_5.0/SocialSDKXib/UMSCommentInputControlleriPad.xib"
+  install_resource "UMengSocial/Umeng_SDK_Social_iOS_ARM64_5.0/UMSocial_Sdk_5.0/SocialSDKXib/UMShareEditViewController.xib"
+  install_resource "UMengSocial/Umeng_SDK_Social_iOS_ARM64_5.0/UMSocial_Sdk_5.0/SocialSDKXib/UMShareEditViewControlleriPad.xib"
+  install_resource "UMengSocial/Umeng_SDK_Social_iOS_ARM64_5.0/UMSocial_Sdk_5.0/SocialSDKXib/UMSLoginViewController.xib"
+  install_resource "UMengSocial/Umeng_SDK_Social_iOS_ARM64_5.0/UMSocial_Sdk_5.0/SocialSDKXib/UMSnsAccountViewController.xib"
+  install_resource "UMengSocial/Umeng_SDK_Social_iOS_ARM64_5.0/UMSocial_Sdk_5.0/SocialSDKXib/UMSShareListController.xib"
+  install_resource "UMengSocial/Umeng_SDK_Social_iOS_ARM64_5.0/UMSocial_Sdk_5.0/en.lproj"
+  install_resource "UMengSocial/Umeng_SDK_Social_iOS_ARM64_5.0/UMSocial_Sdk_5.0/zh-Hans.lproj"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_resource "IQKeyboardManager/IQKeyBoardManager/Resources/IQKeyboardManager.bundle"
+  install_resource "UMengSocial/Umeng_SDK_Social_iOS_ARM64_5.0/UMSocial_Sdk_5.0/UMSocialSDKResourcesNew.bundle"
+  install_resource "UMengSocial/Umeng_SDK_Social_iOS_ARM64_5.0/UMSocial_Sdk_Extra_Frameworks/TencentOpenAPI/TencentOpenApi_IOS_Bundle.bundle"
+  install_resource "UMengSocial/Umeng_SDK_Social_iOS_ARM64_5.0/UMSocial_Sdk_Extra_Frameworks/SinaSSO/WeiboSDK.bundle"
+  install_resource "UMengSocial/Umeng_SDK_Social_iOS_ARM64_5.0/UMSocial_Sdk_5.0/SocialSDKXib/UMSCommentDetailController.xib"
+  install_resource "UMengSocial/Umeng_SDK_Social_iOS_ARM64_5.0/UMSocial_Sdk_5.0/SocialSDKXib/UMSCommentInputController.xib"
+  install_resource "UMengSocial/Umeng_SDK_Social_iOS_ARM64_5.0/UMSocial_Sdk_5.0/SocialSDKXib/UMSCommentInputControlleriPad.xib"
+  install_resource "UMengSocial/Umeng_SDK_Social_iOS_ARM64_5.0/UMSocial_Sdk_5.0/SocialSDKXib/UMShareEditViewController.xib"
+  install_resource "UMengSocial/Umeng_SDK_Social_iOS_ARM64_5.0/UMSocial_Sdk_5.0/SocialSDKXib/UMShareEditViewControlleriPad.xib"
+  install_resource "UMengSocial/Umeng_SDK_Social_iOS_ARM64_5.0/UMSocial_Sdk_5.0/SocialSDKXib/UMSLoginViewController.xib"
+  install_resource "UMengSocial/Umeng_SDK_Social_iOS_ARM64_5.0/UMSocial_Sdk_5.0/SocialSDKXib/UMSnsAccountViewController.xib"
+  install_resource "UMengSocial/Umeng_SDK_Social_iOS_ARM64_5.0/UMSocial_Sdk_5.0/SocialSDKXib/UMSShareListController.xib"
+  install_resource "UMengSocial/Umeng_SDK_Social_iOS_ARM64_5.0/UMSocial_Sdk_5.0/en.lproj"
+  install_resource "UMengSocial/Umeng_SDK_Social_iOS_ARM64_5.0/UMSocial_Sdk_5.0/zh-Hans.lproj"
 fi
 
 mkdir -p "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"
