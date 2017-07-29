@@ -11,6 +11,7 @@
 @interface companyContentTableViewCell ()
 @property (weak, nonatomic) IBOutlet UILabel *maintitle;
 @property (weak, nonatomic) IBOutlet UILabel *secTitle;
+@property (weak, nonatomic) IBOutlet UILabel *timeLabel;
 
 @end
 
@@ -24,7 +25,12 @@
     }
     self.maintitle.text = headerModle.title;
     self.secTitle.text = headerModle.vice_heading;
-    
+}
+
+-(void)ActiveaddDataWith:(companyContentModel*)headerModle;{
+    self.maintitle.text = headerModle.title;
+    self.secTitle.text = headerModle.add_time;
+    self.timeLabel.text = headerModle.vice_heading;
 }
 
 

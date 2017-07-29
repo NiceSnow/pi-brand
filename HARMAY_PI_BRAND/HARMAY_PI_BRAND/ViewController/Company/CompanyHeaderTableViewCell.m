@@ -40,6 +40,10 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         self = [[[NSBundle mainBundle]loadNibNamed:@"CompanyHeaderTableViewCell" owner:self options:nil]lastObject];
+            [_img mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.width.mas_equalTo(screenWidth*3/4);
+            make.height.mas_equalTo(screenWidth*3/4*332/628);
+        }];
     }
     return self;
 }

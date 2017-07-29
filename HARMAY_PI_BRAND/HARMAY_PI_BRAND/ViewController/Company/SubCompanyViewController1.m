@@ -30,7 +30,7 @@
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView
 {
-    CGFloat documentHeight = [[webView stringByEvaluatingJavaScriptFromString:@"document.body.offsetHeight"] floatValue];
+    CGFloat documentHeight = [[webView stringByEvaluatingJavaScriptFromString:@"document.body.scrollHeight"] floatValue];
     
     self.webView.frame = CGRectMake(10, -1, screenWidth - 20, documentHeight);
     self.footerView.frame = CGRectMake(0, 0, screenWidth, documentHeight+screenWidth/10);
@@ -64,6 +64,8 @@
 -(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
     return 0.00001;
 }
+
+
 
 -(UIView*)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
     UIView* view = [UIView new];
@@ -99,13 +101,16 @@
     if (_headModel.icon.length>0&&_headModel.title.length>0&&_headModel.hid>0&&_headModel.image.length>0) {
         if (indexPath.row == 0) {
             CompanyHeaderTableViewCell* cell = [CompanyHeaderTableViewCell createCellWithTableView:tableView];
+            [cell addDataWith:_headModel];
             cell.backgroundColor = [UIColor clearColor];
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
             return cell;
         }
     }
     companyContentTableViewCell* cell = [companyContentTableViewCell createCellWithTableView:tableView];
     [cell addDataWith:self.contentModel];
     cell.backgroundColor = [UIColor clearColor];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }
 

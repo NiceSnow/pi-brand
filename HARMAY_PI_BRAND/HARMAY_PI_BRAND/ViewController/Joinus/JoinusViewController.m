@@ -42,7 +42,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.view.backgroundColor = [UIColor whiteColor];
     UIButton* rightBtn = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 35, 35)];
     [rightBtn setImage:[UIImage imageNamed:@"icon_product"] forState:normal];
     [rightBtn addTarget:self action:@selector(search1:) forControlEvents:UIControlEventTouchUpInside];

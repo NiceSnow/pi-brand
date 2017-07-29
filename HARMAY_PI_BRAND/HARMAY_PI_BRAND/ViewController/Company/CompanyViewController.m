@@ -62,7 +62,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.view.backgroundColor = [UIColor whiteColor];
     UIButton* rightBtn = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 35, 35)];
     [rightBtn setImage:[UIImage imageNamed:@"icon_product"] forState:normal];
     [rightBtn addTarget:self action:@selector(search) forControlEvents:UIControlEventTouchUpInside];
@@ -237,9 +237,10 @@
             [self.imageArray addObject:[urlString safeUrlString]];
             self.sub2.headModel = [companyHeaderModel mj_objectWithKeyValues:[data objectForKey:@"head"]];
             [subModel2 mj_setupReplacedKeyFromPropertyName:^NSDictionary *{
-                return @{@"ID" : @"id"};
+                return @{@"ID" : @"id",
+                         };
             }];
-            self.sub2.res = [companyContentModel mj_objectArrayWithKeyValuesArray:[data objectForKey:@"res"]];
+            self.sub2.res = [subModel2 mj_objectArrayWithKeyValuesArray:[data objectForKey:@"res"]];
             
         }
     } failed:^(NSURLSessionDataTask *task, NSError *error) {
