@@ -229,7 +229,10 @@
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
 {
-    return 0.01;
+    if (section<[_dict[@"pro"] count]-1) {
+        return 0.01;
+    }
+    return 38;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
@@ -250,6 +253,11 @@
         
     }
     cell.imageString = self.imageArray[indexPath.row];
+    if (indexPath.section == [_dict[@"pro"] count]-1) {
+        cell.lineView.hidden = YES;
+    }else{
+        cell.lineView.hidden = NO;
+    }
     return cell;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath

@@ -54,7 +54,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor whiteColor];
     UIButton* rightBtn = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 35, 35)];
     [rightBtn setImage:[UIImage imageNamed:@"icon_product"] forState:normal];
     [rightBtn addTarget:self action:@selector(search:) forControlEvents:UIControlEventTouchUpInside];
@@ -73,7 +72,6 @@
     
     // 选中第0个VC
     [self selectedIndex:0];
-    self.view.backgroundColor =[UIColor clearColor];
     _backImageView = [UIImageView new];
     [self.view insertSubview:_backImageView atIndex:0];
     [_backImageView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -132,7 +130,10 @@
     if (_backImageArray.count>i) {
         [_backImageView sd_setImageWithURL:[_backImageArray[i] safeUrlString]];
     }
+    
 }
+
+
 #pragma mark - XLSegmentBarDelegate
 - (void)segmentBar:(XLSegmentBar *)segmentBar tapIndex:(NSInteger)index {
     [self selectedIndex:index];
@@ -165,7 +166,16 @@
             }
         }];
     }
-    
+    CGFloat offset = scroll.contentOffset.y;
+    if (offset>=35) {
+        [UIView animateWithDuration:0.5 animations:^{
+            _backImageView.frame = CGRectMake(-80, -80, screenWidth + 160, screenHeight + 160) ;
+        }];
+    }else{
+        [UIView animateWithDuration:0.5 animations:^{
+            _backImageView.frame = CGRectMake(0, 0, screenWidth, screenHeight);
+        }];
+    }
 }
 
 #pragma mark - lazy

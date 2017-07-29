@@ -10,6 +10,7 @@
 #import "MainTableViewCell.h"
 #import "SearchViewController.h"
 #import "mainModle.h"
+#import "HUDView.h"
 
 @interface MainViewController ()<UIScrollViewDelegate,UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic, strong) UIView* titleView;
@@ -17,6 +18,7 @@
 @property (nonatomic, strong) UIView* headerView;
 @property (nonatomic, strong) UIImageView* backImageView;
 @property (nonatomic, strong) NSMutableArray* dataArray;
+@property(nonatomic,strong) HUDView* HUD;
 @end
 
 @implementation MainViewController
@@ -54,6 +56,10 @@
         make.bottom.offset(0);
         make.centerX.equalTo(self.view);
     }];
+    [self.view addSubview:self.HUD];
+    [self.HUD mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.left.right.bottom.offset(0);
+    }];
     [self getdata];
     // Do any additional setup after loading the view from its nib.
 }
@@ -71,6 +77,7 @@
             self.dataArray = (NSMutableArray*)[mainModle mj_objectArrayWithKeyValuesArray:[data objectForKey:@"res"]];
             if (self.dataArray.count) {
                 [self.tableView reloadData];
+                [self.HUD removeFromSuperview];
             }
         }
     } failed:^(NSURLSessionDataTask *task, NSError *error) {
@@ -99,19 +106,22 @@
     switch (indexPath.section) {
         case 0:
         {
-            
+            CompanyViewController* joinVC = [[CompanyViewController alloc]init];
+            joinVC.title = [NSString stringWithFormat:@"点击了地 %ld cell",indexPath.section];
+            joinVC.leftCount = 2;
+            [self.navigationController pushViewController:joinVC animated:YES];
         }
             break;
         case 1:
         {
-            
+            ProductViewController* joinVC = [[ProductViewController alloc]init];
+            joinVC.title = [NSString stringWithFormat:@"点击了地 %ld cell",indexPath.section];
+            joinVC.leftCount = 2;
+            [self.navigationController pushViewController:joinVC animated:YES];
         }
             break;
         case 2:
         {
-//            JoinusViewController* joinVC = [ChildViewController instance].joinVC;
-//            joinVC.title = [NSString stringWithFormat:@"点击了地 %ld cell",indexPath.row];
-//            [self.sideMenuViewController setContentViewController:[ChildViewController instance].joinNavgation animated:YES];
             JoinusViewController* joinVC = [[JoinusViewController alloc]init];
             joinVC.title = [NSString stringWithFormat:@"点击了地 %ld cell",indexPath.section];
             joinVC.leftCount = 2;
@@ -147,7 +157,16 @@
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView;{
-    
+    CGFloat offset = scrollView.contentOffset.y;
+    if (offset>=35) {
+        [UIView animateWithDuration:0.5 animations:^{
+            _backImageView.frame = CGRectMake(-80, -80, screenWidth + 160, screenHeight + 160) ;
+        }];
+    }else{
+        [UIView animateWithDuration:0.5 animations:^{
+            _backImageView.frame = CGRectMake(0, 0, screenWidth, screenHeight);
+        }];
+    }
 }
 
 -(UIView *)titleView{
@@ -172,6 +191,14 @@
         _headerView.backgroundColor = [UIColor clearColor];
     }
     return _headerView;
+}
+
+-(HUDView *)HUD{
+    if (!_HUD) {
+        _HUD = [HUDView new];
+        
+    }
+    return _HUD;
 }
 
 

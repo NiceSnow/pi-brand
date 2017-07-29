@@ -10,7 +10,6 @@
 
 @interface Product1Cell ()
 @property (weak, nonatomic) IBOutlet UIImageView *iconImanegView;
-
 @property (weak, nonatomic) IBOutlet UILabel *contentLabel;
 @end
 @implementation Product1Cell

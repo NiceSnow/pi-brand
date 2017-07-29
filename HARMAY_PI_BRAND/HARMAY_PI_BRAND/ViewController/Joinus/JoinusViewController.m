@@ -60,8 +60,22 @@
     _tableview.tableHeaderView = headerView;
     _tableview.tableFooterView = [UIView new];
     _tableview.estimatedRowHeight = 5;
+    _tableview.backgroundColor = [UIColor clearColor];
     _tableview.rowHeight = UITableViewAutomaticDimension;
     [self getdata];
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView;{
+    CGFloat offset = scrollView.contentOffset.y;
+    if (offset>=35) {
+        [UIView animateWithDuration:0.5 animations:^{
+            _backImageView.frame = CGRectMake(-80, -80, screenWidth + 160, screenHeight + 160) ;
+        }];
+    }else{
+        [UIView animateWithDuration:0.5 animations:^{
+            _backImageView.frame = CGRectMake(0, 0, screenWidth, screenHeight);
+        }];
+    }
 }
 
 -(void)getdata{

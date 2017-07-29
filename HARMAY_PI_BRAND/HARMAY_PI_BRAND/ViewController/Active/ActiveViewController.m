@@ -55,6 +55,19 @@
     }];
 }
 
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView;{
+    CGFloat offset = scrollView.contentOffset.y;
+    if (offset>=35) {
+        [UIView animateWithDuration:0.5 animations:^{
+            _backImageView.frame = CGRectMake(-80, -80, screenWidth + 160, screenHeight + 160) ;
+        }];
+    }else{
+        [UIView animateWithDuration:0.5 animations:^{
+            _backImageView.frame = CGRectMake(0, 0, screenWidth, screenHeight);
+        }];
+    }
+}
+
 - (void)viewDidLoad {
     self.view.backgroundColor = [UIColor whiteColor];
     [super viewDidLoad];

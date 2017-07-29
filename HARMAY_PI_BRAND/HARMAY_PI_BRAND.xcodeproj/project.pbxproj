@@ -54,6 +54,7 @@
 		6078A58E1F2C9B2E005FFCF6 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6078A58D1F2C9B2E005FFCF6 /* libz.tbd */; };
 		6078A5901F2C9B54005FFCF6 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6078A58F1F2C9B54005FFCF6 /* CoreData.framework */; };
 		60AD8BCB1F2CC57C002644E7 /* PickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60AD8BCA1F2CC57C002644E7 /* PickerView.m */; };
+		60AD8BCE1F2CE6E2002644E7 /* HUDView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60AD8BCD1F2CE6E2002644E7 /* HUDView.m */; };
 		60C5324A1F2C59D600E4138B /* ActiveTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C532481F2C59D600E4138B /* ActiveTableViewCell.m */; };
 		60C5324B1F2C59D600E4138B /* ActiveTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60C532491F2C59D600E4138B /* ActiveTableViewCell.xib */; };
 		60C532501F2C702200E4138B /* ActiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C5324E1F2C702200E4138B /* ActiveViewController.m */; };
@@ -196,6 +197,8 @@
 		6078A58F1F2C9B54005FFCF6 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		60AD8BC91F2CC57C002644E7 /* PickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PickerView.h; sourceTree = "<group>"; };
 		60AD8BCA1F2CC57C002644E7 /* PickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PickerView.m; sourceTree = "<group>"; };
+		60AD8BCC1F2CE6E2002644E7 /* HUDView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUDView.h; sourceTree = "<group>"; };
+		60AD8BCD1F2CE6E2002644E7 /* HUDView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HUDView.m; sourceTree = "<group>"; };
 		60C532471F2C59D600E4138B /* ActiveTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActiveTableViewCell.h; sourceTree = "<group>"; };
 		60C532481F2C59D600E4138B /* ActiveTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActiveTableViewCell.m; sourceTree = "<group>"; };
 		60C532491F2C59D600E4138B /* ActiveTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActiveTableViewCell.xib; sourceTree = "<group>"; };
@@ -659,6 +662,8 @@
 				60AD8BC91F2CC57C002644E7 /* PickerView.h */,
 				60AD8BCA1F2CC57C002644E7 /* PickerView.m */,
 				92883DC11F2AC2C000FCA7BC /* LinkageView */,
+				60AD8BCC1F2CE6E2002644E7 /* HUDView.h */,
+				60AD8BCD1F2CE6E2002644E7 /* HUDView.m */,
 			);
 			path = Library;
 			sourceTree = "<group>";
@@ -925,6 +930,7 @@
 				2D599EED1F2AC9D800A9EF32 /* NSDictionary+extension.m in Sources */,
 				2D599F011F2AF6D900A9EF32 /* CompanyHeaderTableViewCell.m in Sources */,
 				2D599EEC1F2AC9D800A9EF32 /* NSDate+extension.m in Sources */,
+				60AD8BCE1F2CE6E2002644E7 /* HUDView.m in Sources */,
 				2D2354B01F29C1E300A93726 /* MainTableViewCell.m in Sources */,
 				2D599F0B1F2B02CB00A9EF32 /* joinMainModel.m in Sources */,
 				92883DF51F2B338D00FCA7BC /* SubCompanyViewController2.m in Sources */,
