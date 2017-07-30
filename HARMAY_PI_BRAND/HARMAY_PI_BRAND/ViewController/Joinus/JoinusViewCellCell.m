@@ -47,13 +47,14 @@
         }];
         
         [_iconImageView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.width.mas_offset(screenWidth*388/750);
-            make.height.mas_offset((screenWidth*388/750)*165/388);
+        make.width.mas_equalTo((screenWidth-40)*4/5);
+        make.height.mas_equalTo((screenWidth-40)*4/5*110/232);
         }];
-        
+    
         [_mainImageView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.width.mas_offset(screenWidth*600/750);
-            make.height.mas_offset((screenWidth*600/750)*407/600);
+            make.left.offset(10);
+            make.right.offset(-10);
+            make.height.mas_equalTo((screenWidth-20)*9/10*187/291);
         }];
         
         

@@ -35,8 +35,9 @@
     if (self) {
         self = [[[NSBundle mainBundle]loadNibNamed:@"Product3Cell" owner:self options:nil]lastObject];
         [_backImageView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.width.mas_equalTo(screenWidth-20-40);
-            make.height.mas_equalTo((screenWidth-20-40)*405/629);
+            make.left.offset(10);
+            make.right.offset(-10);
+            make.height.mas_equalTo((screenWidth-20)*9/10*187/291);
         }];
         _contentLabel.numberOfLines = 2;
     }

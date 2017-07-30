@@ -10,12 +10,16 @@
 #import "MenuTableViewCell.h"
 #import "MenuTableViewCell2.h"
 #import "WebViewController.h"
+#import "linkModel.h"
+#import "lsitModel.h"
 
 
 @interface MenuViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property(nonatomic,strong) UITableView* tableView;
 @property (nonatomic, strong) UIView* headerView;
 @property (nonatomic, strong) UIView* footerView;
+@property(nonatomic,strong) NSArray* listArray;
+@property(nonatomic,strong) NSArray* linkArray;
 @end
 
 @implementation MenuViewController
@@ -24,6 +28,26 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.view addSubview:self.tableView];
+    [[HTTPRequest instance]PostRequestWithURL:@"http://www.pi-brand.cn/index.php/home/api/menu_list" Parameter:nil succeed:^(NSURLSessionDataTask *task, id responseObject) {
+        BOOL succeed = [[responseObject objectForKey:@"status"]boolValue];
+        if (succeed) {
+            NSDictionary* data = [responseObject objectForKey:@"data"];
+            [lsitModel mj_setupReplacedKeyFromPropertyName:^NSDictionary *{
+                return @{@"ID" : @"id"};
+            }];
+            [linkModel mj_setupReplacedKeyFromPropertyName:^NSDictionary *{
+                return @{@"ID" : @"id"};
+            }];
+            self.listArray = [lsitModel mj_objectArrayWithKeyValuesArray:[data objectForKey:@"nav"]];
+            self.linkArray = [linkModel mj_objectArrayWithKeyValuesArray:[data objectForKey:@"link"]];
+            [self.tableView reloadData];
+            
+        }
+    } failed:^(NSURLSessionDataTask *task, NSError *error) {
+        
+    } netWork:^(BOOL netWork) {
+        
+    }];
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -39,14 +63,35 @@
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.row == 5) {
         MenuTableViewCell2* cell = [MenuTableViewCell2 createCellWithTableView:tableView];
+        [cell addDataWithArray:self.linkArray];
         cell.backgroundColor = [UIColor clearColor];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         return cell;
+    }else{
+        if (indexPath.row == 0) {
+            MenuTableViewCell* cell = [MenuTableViewCell createCellWithTableView:tableView];
+            [cell addDataWithUrlString:nil imageNamed:@"list_1"];
+            cell.backgroundColor = [UIColor clearColor];
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
+            return cell;
+        }else{
+            if (indexPath.row != 4) {
+                MenuTableViewCell* cell = [MenuTableViewCell createCellWithTableView:tableView];
+                [cell addDataWithUrlString:self.listArray[indexPath.row - 1] imageNamed:nil];
+                cell.backgroundColor = [UIColor clearColor];
+                cell.selectionStyle = UITableViewCellSelectionStyleNone;
+                return cell;
+            }else{
+                MenuTableViewCell* cell = [MenuTableViewCell createCellWithTableView:tableView];
+                [cell addDataWithUrlString:nil imageNamed:@"list_5"];
+                cell.backgroundColor = [UIColor clearColor];
+                cell.selectionStyle = UITableViewCellSelectionStyleNone;
+                return cell;
+            }
+            
+        }
     }
-    MenuTableViewCell* cell = [MenuTableViewCell createCellWithTableView:tableView];
-    cell.backgroundColor = [UIColor clearColor];
-    cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    return cell;
+    
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{

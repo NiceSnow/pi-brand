@@ -20,6 +20,7 @@
 {
     NSInteger _currentIndex;
 }
+@property (nonatomic, strong) UIView* titleView;
 @property (nonatomic,strong) XLScrollView *contentView;
 @property (nonatomic,weak) UIImageView *header;
 @property (nonatomic,weak) XLSegmentBar *bar;
@@ -80,6 +81,7 @@
     
     _backImageArray = [NSMutableArray array];
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(getImageURl:) name:kGetImageURLKey object:nil];
+    self.navigationItem.titleView = self.titleView;
 }
 - (void)search:(UIButton *)btn
 {
@@ -226,6 +228,20 @@
     return _bar;
 }
 
-
+-(UIView *)titleView{
+    if (!_titleView) {
+        _titleView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 127, 16)];
+        UIImageView* imageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"title_product"]];
+        [_titleView addSubview:imageView];
+        [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.center.equalTo(_titleView);
+            make.height.equalTo(@16);
+            make.width.equalTo(@127);
+        }];
+        
+        _titleView.alpha = 0;
+    }
+    return _titleView;
+}
 
 @end

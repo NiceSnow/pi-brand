@@ -81,10 +81,11 @@
         make.height.mas_offset((screenWidth*320/750)*40/320);
     }];
     
+    
     UILabel * titleLabel = [UILabel new];
     titleLabel.text = _dict[@"head"][@"title"];
-    titleLabel.font = [UIFont boldSystemFontOfSize:16];
-    titleLabel.textColor = UICOLOR_RGB_Alpha(0x2a2a2a, 1);
+    titleLabel.font = [UIFont boldSystemFontOfSize:18];
+    titleLabel.textColor = UICOLOR_RGB_Alpha(0x000000, 1);
     [backView addSubview:titleLabel];
     [titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(logoImageView);
@@ -97,13 +98,13 @@
     [storeButton addTarget:self action:@selector(storeAction) forControlEvents:UIControlEventTouchUpInside];
     [storeButton setTitle:@"所有店铺" forState:normal];
     [storeButton setTitleColor:UICOLOR_RGB_Alpha(0x000000, 1) forState:normal];
-    storeButton.titleLabel.font = [UIFont systemFontOfSize:14];
+    storeButton.titleLabel.font = [UIFont systemFontOfSize:12];
     storeButton.titleEdgeInsets = UIEdgeInsetsMake(0, -5, 0, 0);
     [backView addSubview:storeButton];
     [storeButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(15);
-        make.top.equalTo(titleLabel.mas_bottom).offset(25);
-        make.bottom.mas_equalTo(-80);
+        make.top.equalTo(titleLabel.mas_bottom).offset(20);
+        make.bottom.mas_equalTo(-35);
     }];
     
     UIButton * dateButton = [UIButton new];
@@ -114,7 +115,7 @@
     [dateButton setTitle:@"上新时间" forState:UIControlStateSelected];
     [dateButton setTitleColor:UICOLOR_RGB_Alpha(0x000000, 1) forState:normal];
     [dateButton setTitleColor:UICOLOR_RGB_Alpha(0x000000, 1) forState:UIControlStateSelected];
-    dateButton.titleLabel.font = [UIFont systemFontOfSize:14];
+    dateButton.titleLabel.font = [UIFont systemFontOfSize:12];
     dateButton.titleEdgeInsets = UIEdgeInsetsMake(0, -5, 0, 0);
     [backView addSubview:dateButton];
     [dateButton mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -124,13 +125,12 @@
     
     
     UIButton * shareButton = [UIButton new];
-    shareButton.backgroundColor = [UIColor redColor];
+    [shareButton setImage:[UIImage imageNamed:@"share"] forState:normal];
     [shareButton addTarget:self action:@selector(shareAction) forControlEvents:UIControlEventTouchUpInside];
     [backView addSubview:shareButton];
     [shareButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.right.mas_equalTo(-15);
         make.centerY.equalTo(dateButton);
-        make.width.height.mas_equalTo(30);
     }];
     
     [view addSubview:backView];
@@ -150,7 +150,7 @@
 //    if (section<[_dict[@"pro"] count]-1) {
 //        return 0.01;
 //    }
-    return 38;
+    return 10;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {

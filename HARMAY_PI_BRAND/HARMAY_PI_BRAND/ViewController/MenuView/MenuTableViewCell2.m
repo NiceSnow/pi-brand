@@ -8,8 +8,34 @@
 
 #import "MenuTableViewCell2.h"
 
+@interface MenuTableViewCell2 (){
+    UIButton* lastBtn;
+}
+
+@end
+
 
 @implementation MenuTableViewCell2
+
+-(void)addDataWithArray:(NSArray*)arr;{
+    if (arr.count<=0) {
+        return;
+    }
+    CGFloat with = (screenWidth*4/5 - 100)/3;
+    for (int i = 0; i < arr.count; i++) {
+        UIButton* btn = [[UIButton alloc]initWithFrame:CGRectMake(100 + with*(i%3), 100 + 45*i/3 , with, 25)];
+        btn.backgroundColor = [UIColor redColor];
+        btn.tag = i;
+        [self addSubview:btn];
+        if (i == arr.count - 1) {
+            lastBtn = btn;
+        }
+    }
+    [lastBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.bottom.offset(-20);
+    }];
+}
+
 - (IBAction)jumpToWebView:(UIButton *)sender {
     DebugLog(@"%ld",sender.tag);
     WebViewController* VC = [ChildViewController instance].webVC;

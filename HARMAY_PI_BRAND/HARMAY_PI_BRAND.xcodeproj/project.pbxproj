@@ -55,6 +55,8 @@
 		6078A5901F2C9B54005FFCF6 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6078A58F1F2C9B54005FFCF6 /* CoreData.framework */; };
 		60AD8BCB1F2CC57C002644E7 /* PickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60AD8BCA1F2CC57C002644E7 /* PickerView.m */; };
 		60AD8BCE1F2CE6E2002644E7 /* HUDView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60AD8BCD1F2CE6E2002644E7 /* HUDView.m */; };
+		60AD8BD21F2D84EE002644E7 /* lsitModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 60AD8BD11F2D84EE002644E7 /* lsitModel.m */; };
+		60AD8BD51F2D850D002644E7 /* linkModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 60AD8BD41F2D850D002644E7 /* linkModel.m */; };
 		60C5324A1F2C59D600E4138B /* ActiveTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C532481F2C59D600E4138B /* ActiveTableViewCell.m */; };
 		60C5324B1F2C59D600E4138B /* ActiveTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60C532491F2C59D600E4138B /* ActiveTableViewCell.xib */; };
 		60C532501F2C702200E4138B /* ActiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C5324E1F2C702200E4138B /* ActiveViewController.m */; };
@@ -199,6 +201,10 @@
 		60AD8BCA1F2CC57C002644E7 /* PickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PickerView.m; sourceTree = "<group>"; };
 		60AD8BCC1F2CE6E2002644E7 /* HUDView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUDView.h; sourceTree = "<group>"; };
 		60AD8BCD1F2CE6E2002644E7 /* HUDView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HUDView.m; sourceTree = "<group>"; };
+		60AD8BD01F2D84EE002644E7 /* lsitModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lsitModel.h; sourceTree = "<group>"; };
+		60AD8BD11F2D84EE002644E7 /* lsitModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = lsitModel.m; sourceTree = "<group>"; };
+		60AD8BD31F2D850D002644E7 /* linkModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = linkModel.h; sourceTree = "<group>"; };
+		60AD8BD41F2D850D002644E7 /* linkModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = linkModel.m; sourceTree = "<group>"; };
 		60C532471F2C59D600E4138B /* ActiveTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActiveTableViewCell.h; sourceTree = "<group>"; };
 		60C532481F2C59D600E4138B /* ActiveTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActiveTableViewCell.m; sourceTree = "<group>"; };
 		60C532491F2C59D600E4138B /* ActiveTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActiveTableViewCell.xib; sourceTree = "<group>"; };
@@ -505,6 +511,17 @@
 			path = shareView;
 			sourceTree = "<group>";
 		};
+		60AD8BCF1F2D84A7002644E7 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				60AD8BD01F2D84EE002644E7 /* lsitModel.h */,
+				60AD8BD11F2D84EE002644E7 /* lsitModel.m */,
+				60AD8BD31F2D850D002644E7 /* linkModel.h */,
+				60AD8BD41F2D850D002644E7 /* linkModel.m */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
 		60C5324C1F2C6FE300E4138B /* Active */ = {
 			isa = PBXGroup;
 			children = (
@@ -621,6 +638,7 @@
 		60EF77221F279C14005E3A6E /* MenuView */ = {
 			isa = PBXGroup;
 			children = (
+				60AD8BCF1F2D84A7002644E7 /* model */,
 				60EF77281F279C3F005E3A6E /* MenuViewController.h */,
 				60EF77291F279C3F005E3A6E /* MenuViewController.m */,
 				60EF772A1F279C3F005E3A6E /* MenuViewController.xib */,
@@ -773,7 +791,7 @@
 				TargetAttributes = {
 					60EF76E91F27931C005E3A6E = {
 						CreatedOnToolsVersion = 8.2;
-						DevelopmentTeam = UKUF674K5K;
+						DevelopmentTeam = TAM944NG3L;
 						ProvisioningStyle = Automatic;
 					};
 					60EF77021F27931D005E3A6E = {
@@ -915,6 +933,7 @@
 				60EF77411F28E340005E3A6E /* WebViewController.m in Sources */,
 				2D2354BF1F29D22C00A93726 /* SearchViewController.m in Sources */,
 				92883DCE1F2AC2C000FCA7BC /* XLConst.m in Sources */,
+				60AD8BD51F2D850D002644E7 /* linkModel.m in Sources */,
 				2D2354AB1F298ECB00A93726 /* shopViewController.m in Sources */,
 				60C532501F2C702200E4138B /* ActiveViewController.m in Sources */,
 				2D599EEE1F2AC9D800A9EF32 /* NSString+extension.m in Sources */,
@@ -923,6 +942,7 @@
 				2D2354C41F29D47E00A93726 /* SearchTableViewCell.m in Sources */,
 				60EF77351F279D77005E3A6E /* BaseTabBarController.m in Sources */,
 				60EF76F21F27931D005E3A6E /* AppDelegate.m in Sources */,
+				60AD8BD21F2D84EE002644E7 /* lsitModel.m in Sources */,
 				92883DDA1F2AC3E700FCA7BC /* Product1TableViewController.m in Sources */,
 				60EF77341F279D77005E3A6E /* BaseNavigationController.m in Sources */,
 				60EF76EF1F27931D005E3A6E /* main.m in Sources */,
@@ -1111,12 +1131,82 @@
 			baseConfigurationReference = 354F6A3AE6C4098B6C798064 /* Pods-HARMAY_PI_BRAND.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = UKUF674K5K;
+				DEVELOPMENT_TEAM = TAM944NG3L;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/HARMAY_PI_BRAND/PrefixHeader.pch";
 				INFOPLIST_FILE = HARMAY_PI_BRAND/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.amed.Hospital;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-l\"AFNetworking\"",
+					"-l\"APOpenSdk\"",
+					"-l\"IQKeyboardManager\"",
+					"-l\"LWApiSDK\"",
+					"-l\"MJExtension\"",
+					"-l\"Masonry\"",
+					"-l\"RESideMenu\"",
+					"-l\"SDWebImage\"",
+					"-l\"SocialAlipayShare\"",
+					"-l\"SocialFacebook\"",
+					"-l\"SocialInstagram\"",
+					"-l\"SocialLaiWang\"",
+					"-l\"SocialLine\"",
+					"-l\"SocialQQ\"",
+					"-l\"SocialSinaSSO\"",
+					"-l\"SocialTumblr\"",
+					"-l\"SocialTwitter\"",
+					"-l\"SocialWechat\"",
+					"-l\"SocialWhatsapp\"",
+					"-l\"UMSocial_Sdk_5.0\"",
+					"-l\"UMSocial_Sdk_Comment_5.0\"",
+					"-l\"WeChatSDK\"",
+					"-l\"WeiboSDK\"",
+					"-l\"iconv\"",
+					"-l\"sqlite3\"",
+					"-l\"stdc++\"",
+					"-l\"z\"",
+					"-framework",
+					"\"Accounts\"",
+					"-framework",
+					"\"CoreData\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"FBSDKCoreKit\"",
+					"-framework",
+					"\"FBSDKLoginKit\"",
+					"-framework",
+					"\"FBSDKShareKit\"",
+					"-framework",
+					"\"Fabric\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"Social\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"TencentOpenAPI\"",
+					"-framework",
+					"\"TwitterCore\"",
+					"-framework",
+					"\"TwitterKit\"",
+					"-framework",
+					"\"UIKit\"",
+					"-framework",
+					"\"UMMobClick\"",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.harmay.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -1126,12 +1216,82 @@
 			baseConfigurationReference = 2A57B0F5FE8BB46D3DD57982 /* Pods-HARMAY_PI_BRAND.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = UKUF674K5K;
+				DEVELOPMENT_TEAM = TAM944NG3L;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/HARMAY_PI_BRAND/PrefixHeader.pch";
 				INFOPLIST_FILE = HARMAY_PI_BRAND/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.amed.Hospital;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-l\"AFNetworking\"",
+					"-l\"APOpenSdk\"",
+					"-l\"IQKeyboardManager\"",
+					"-l\"LWApiSDK\"",
+					"-l\"MJExtension\"",
+					"-l\"Masonry\"",
+					"-l\"RESideMenu\"",
+					"-l\"SDWebImage\"",
+					"-l\"SocialAlipayShare\"",
+					"-l\"SocialFacebook\"",
+					"-l\"SocialInstagram\"",
+					"-l\"SocialLaiWang\"",
+					"-l\"SocialLine\"",
+					"-l\"SocialQQ\"",
+					"-l\"SocialSinaSSO\"",
+					"-l\"SocialTumblr\"",
+					"-l\"SocialTwitter\"",
+					"-l\"SocialWechat\"",
+					"-l\"SocialWhatsapp\"",
+					"-l\"UMSocial_Sdk_5.0\"",
+					"-l\"UMSocial_Sdk_Comment_5.0\"",
+					"-l\"WeChatSDK\"",
+					"-l\"WeiboSDK\"",
+					"-l\"iconv\"",
+					"-l\"sqlite3\"",
+					"-l\"stdc++\"",
+					"-l\"z\"",
+					"-framework",
+					"\"Accounts\"",
+					"-framework",
+					"\"CoreData\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"FBSDKCoreKit\"",
+					"-framework",
+					"\"FBSDKLoginKit\"",
+					"-framework",
+					"\"FBSDKShareKit\"",
+					"-framework",
+					"\"Fabric\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"Social\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"TencentOpenAPI\"",
+					"-framework",
+					"\"TwitterCore\"",
+					"-framework",
+					"\"TwitterKit\"",
+					"-framework",
+					"\"UIKit\"",
+					"-framework",
+					"\"UMMobClick\"",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.harmay.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

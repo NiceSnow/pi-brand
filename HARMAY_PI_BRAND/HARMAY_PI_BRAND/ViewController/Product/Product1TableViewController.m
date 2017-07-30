@@ -109,15 +109,16 @@
         [logoImageView sd_setImageWithURL:[_dict[@"head"][@"icon"] safeUrlString]];
         [backView addSubview:logoImageView];
         [logoImageView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.top.mas_equalTo(15);
+            make.top.mas_equalTo(15);
+            make.left.offset(20);
             make.width.mas_offset(screenWidth*320/750);
-            make.height.mas_offset((screenWidth*320/750)*40/320);
+            make.height.mas_offset((screenWidth*320/750)*35/320);
         }];
         
         UILabel * titleLabel = [UILabel new];
         titleLabel.text = _dict[@"head"][@"title"];
-        titleLabel.font = [UIFont boldSystemFontOfSize:16];
-        titleLabel.textColor = UICOLOR_RGB_Alpha(0x2a2a2a, 1);
+        titleLabel.font = [UIFont boldSystemFontOfSize:18];
+        titleLabel.textColor = UICOLOR_RGB_Alpha(0x000000, 1);
         [backView addSubview:titleLabel];
         [titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(logoImageView);
@@ -138,13 +139,12 @@
         
         
         UIButton * shareButton = [UIButton new];
-        shareButton.backgroundColor = [UIColor redColor];
+        [shareButton setImage:[UIImage imageNamed:@"share"] forState:normal];
         [shareButton addTarget:self action:@selector(shareAction) forControlEvents:UIControlEventTouchUpInside];
         [backView addSubview:shareButton];
         [shareButton mas_makeConstraints:^(MASConstraintMaker *make) {
             make.right.mas_equalTo(-15);
             make.centerY.equalTo(_subTitleLabel);
-            make.width.height.mas_equalTo(30);
         }];
         
         [backView layoutIfNeeded];
@@ -196,26 +196,33 @@
     
     UILabel * label = [UILabel new];
     label.text = proArray[section][@"city_name"];
-    label.font = [UIFont systemFontOfSize:12];
+    label.font = [UIFont systemFontOfSize:14];
     label.textAlignment = NSTextAlignmentCenter;
     label.textColor = UICOLOR_RGB_Alpha(0xe52c4e, 1);
     [backView addSubview:label];
     [label mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.equalTo(backView);
-        make.top.equalTo(imageView.mas_bottom).offset(10);
+        make.top.equalTo(imageView.mas_bottom).offset(15);
     }];
     _locationLabel = label;
     
     UILabel * nameLabel = [UILabel new];
     nameLabel.text = proArray[section][@"summary"];
-    nameLabel.font = [UIFont systemFontOfSize:12];
+    nameLabel.font = [UIFont systemFontOfSize:16];
+    nameLabel.textColor = UICOLOR_RGB_Alpha(0x313131, 1);
     nameLabel.textAlignment = NSTextAlignmentCenter;
-    nameLabel.textColor = UICOLOR_RGB_Alpha(0x111111, 1);
+    NSMutableAttributedString *AttributedStr = [[NSMutableAttributedString alloc]initWithString:nameLabel.text];
+    [AttributedStr addAttribute:NSForegroundColorAttributeName
+     
+                          value:[UIColor blackColor]
+     
+                          range:NSMakeRange(nameLabel.text.length-6, 6)];
+    nameLabel.attributedText = AttributedStr;
     [backView addSubview:nameLabel];
     [nameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.equalTo(backView);
-        make.top.equalTo(label.mas_bottom).offset(10);
-        make.bottom.mas_equalTo(0);
+        make.top.equalTo(label.mas_bottom).offset(6);
+        make.bottom.mas_equalTo(-30);
     }];
     _nameLabel = nameLabel;
     [view addSubview:backView];
@@ -232,7 +239,7 @@
     if (section<[_dict[@"pro"] count]-1) {
         return 0.01;
     }
-    return 38;
+    return 10;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {

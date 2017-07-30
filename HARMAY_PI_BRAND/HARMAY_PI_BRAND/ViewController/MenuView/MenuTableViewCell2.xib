@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,7 +16,7 @@
             <rect key="frame" x="0.0" y="0.0" width="395" height="153"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="395" height="152"/>
+                <rect key="frame" x="0.0" y="0.0" width="395" height="152.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vCo-a5-CYY">
@@ -29,60 +29,20 @@
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="recruit_08" translatesAutoresizingMaskIntoConstraints="NO" id="w2r-l8-05v">
                         <rect key="frame" x="23" y="32" width="34" height="33"/>
                     </imageView>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zbd-U6-OcW">
-                        <rect key="frame" x="77" y="37" width="23" height="23"/>
-                        <state key="normal" image="nav_14"/>
-                        <connections>
-                            <action selector="jumpToWebView:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="duc-Xc-bH0"/>
-                        </connections>
-                    </button>
-                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JRX-Tk-5zr">
-                        <rect key="frame" x="120" y="37" width="56" height="23"/>
-                        <state key="normal" image="nav_15"/>
-                        <connections>
-                            <action selector="jumpToWebView:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="J9y-n9-9yC"/>
-                        </connections>
-                    </button>
-                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zTK-Mr-xfz">
-                        <rect key="frame" x="196" y="37" width="58" height="23"/>
-                        <state key="normal" image="nav_16"/>
-                        <connections>
-                            <action selector="jumpToWebView:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="SKW-Jt-KjE"/>
-                        </connections>
-                    </button>
-                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5aU-dA-L41">
-                        <rect key="frame" x="77" y="75" width="77" height="49.5"/>
-                        <state key="normal" image="nav_17"/>
-                        <connections>
-                            <action selector="jumpToWebView:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Oe7-Or-XbT"/>
-                        </connections>
-                    </button>
                 </subviews>
+                <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                 <constraints>
-                    <constraint firstItem="JRX-Tk-5zr" firstAttribute="centerY" secondItem="w2r-l8-05v" secondAttribute="centerY" id="0J9-dQ-HJH"/>
                     <constraint firstItem="w2r-l8-05v" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="15" id="C5f-lC-ZPd"/>
                     <constraint firstItem="vCo-a5-CYY" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="3" id="HnL-43-JgU"/>
-                    <constraint firstItem="5aU-dA-L41" firstAttribute="top" secondItem="JRX-Tk-5zr" secondAttribute="bottom" constant="15" id="JMm-Ox-W0d"/>
-                    <constraint firstItem="zTK-Mr-xfz" firstAttribute="centerY" secondItem="w2r-l8-05v" secondAttribute="centerY" id="L67-g3-tV5"/>
                     <constraint firstAttribute="trailingMargin" secondItem="vCo-a5-CYY" secondAttribute="trailing" constant="25" id="SqX-NC-sGr"/>
                     <constraint firstItem="w2r-l8-05v" firstAttribute="top" secondItem="vCo-a5-CYY" secondAttribute="bottom" constant="20" id="Uwg-t8-Sep"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="5aU-dA-L41" secondAttribute="bottom" constant="20" id="V9t-J4-kdL"/>
                     <constraint firstItem="vCo-a5-CYY" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="25" id="ZIt-6b-iE7"/>
-                    <constraint firstItem="JRX-Tk-5zr" firstAttribute="leading" secondItem="Zbd-U6-OcW" secondAttribute="trailing" constant="20" id="aw1-TN-pvA"/>
-                    <constraint firstItem="Zbd-U6-OcW" firstAttribute="leading" secondItem="w2r-l8-05v" secondAttribute="trailing" constant="20" id="dOm-7t-QCv"/>
-                    <constraint firstItem="Zbd-U6-OcW" firstAttribute="centerY" secondItem="w2r-l8-05v" secondAttribute="centerY" id="dcM-7i-lJF"/>
-                    <constraint firstItem="5aU-dA-L41" firstAttribute="leading" secondItem="Zbd-U6-OcW" secondAttribute="leading" id="hFp-nT-hPH"/>
-                    <constraint firstItem="zTK-Mr-xfz" firstAttribute="leading" secondItem="JRX-Tk-5zr" secondAttribute="trailing" constant="20" id="kFn-QL-O6k"/>
                 </constraints>
             </tableViewCellContentView>
             <point key="canvasLocation" x="43" y="89"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="nav_14" width="23" height="23"/>
-        <image name="nav_15" width="56" height="23"/>
-        <image name="nav_16" width="58" height="23"/>
-        <image name="nav_17" width="77" height="21"/>
         <image name="recruit_08" width="34" height="33"/>
     </resources>
 </document>

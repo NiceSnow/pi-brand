@@ -14,7 +14,7 @@
 #import "joinSubModel.h"
 
 @interface JoinusViewController ()<UITabBarDelegate,UITableViewDataSource>
-
+@property (nonatomic, strong) UIView* titleView;
 @property (weak, nonatomic) IBOutlet UITableView *tableview;
 @property (nonatomic, strong) UIImageView* backImageView;
 @property (nonatomic, strong)NSMutableArray * dataArray;
@@ -62,6 +62,7 @@
     _tableview.estimatedRowHeight = 5;
     _tableview.backgroundColor = [UIColor clearColor];
     _tableview.rowHeight = UITableViewAutomaticDimension;
+    self.navigationItem.titleView = self.titleView;
     [self getdata];
 }
 
@@ -159,4 +160,29 @@
 {
     return 2;
 }
+
+-(UIView *)titleView{
+    if (!_titleView) {
+        _titleView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 127, 16)];
+        UIImageView* imageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"title_recruitment"]];
+        [_titleView addSubview:imageView];
+        [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.center.equalTo(_titleView);
+            make.height.equalTo(@16);
+            make.width.equalTo(@127);
+        }];
+        
+        _titleView.alpha = 0;
+    }
+    return _titleView;
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
+{
+    return 10;
+}
+//- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+//{
+//    return 0.0001;
+//}
+
 @end

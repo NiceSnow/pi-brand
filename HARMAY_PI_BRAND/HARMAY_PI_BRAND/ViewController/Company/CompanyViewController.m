@@ -22,6 +22,7 @@
 {
     NSInteger _currentIndex;
 }
+@property (nonatomic, strong) UIView* titleView;
 @property (nonatomic,strong) XLScrollView *contentView;
 @property (nonatomic,weak) UIImageView *header;
 @property (nonatomic,weak) XLSegmentBar *bar;
@@ -85,6 +86,8 @@
     [_backImageView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.bottom.left.right.offset(0);
     }];
+    
+    self.navigationItem.titleView = self.titleView;
 
     [self getdata];
     [self getdata2];
@@ -285,6 +288,22 @@
         _imageArray = [NSMutableArray new];
     }
     return _imageArray;
+}
+
+-(UIView *)titleView{
+    if (!_titleView) {
+        _titleView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 127, 16)];
+        UIImageView* imageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"title_company"]];
+        [_titleView addSubview:imageView];
+        [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.center.equalTo(_titleView);
+            make.height.equalTo(@16);
+            make.width.equalTo(@127);
+        }];
+        
+        _titleView.alpha = 0;
+    }
+    return _titleView;
 }
 
 /*

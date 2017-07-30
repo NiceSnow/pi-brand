@@ -10,4 +10,5 @@
 
 @interface MenuTableViewCell2 : UITableViewCell
 + (instancetype)createCellWithTableView:(UITableView *)tableView;
+-(void)addDataWithArray:(NSArray*)arr;
 @end

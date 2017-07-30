@@ -79,6 +79,8 @@
     [leftBtn2 setImage:[UIImage imageNamed:@"back"] forState:normal];
     [leftBtn2 addTarget:self action:@selector(leftPress) forControlEvents:UIControlEventTouchUpInside];
     
+    self.navigationItem.leftBarButtonItems = @[[[UIBarButtonItem alloc]initWithCustomView:leftBtn],[[UIBarButtonItem alloc]initWithCustomView:leftBtn2]];
+    
     _backImageView = [UIImageView new];
     [self.view addSubview:_backImageView];
     [_backImageView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -202,7 +204,7 @@
 
 -(UIView *)headerView{
     if (!_headerView) {
-        _headerView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 320, 210)];
+        _headerView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 320, 130)];
         _headerView.backgroundColor = [UIColor clearColor];
     }
     return _headerView;

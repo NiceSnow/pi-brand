@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "lsitModel.h"
 
 @interface MenuTableViewCell : UITableViewCell
 + (instancetype)createCellWithTableView:(UITableView *)tableView;
+-(void)addDataWithUrlString:(lsitModel*)modle imageNamed:(NSString*)name;
 @end

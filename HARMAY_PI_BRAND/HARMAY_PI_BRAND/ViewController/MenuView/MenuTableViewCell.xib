@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,25 +15,31 @@
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="127" id="KGk-i7-Jjw" customClass="MenuTableViewCell">
             <rect key="frame" x="0.0" y="0.0" width="351" height="127"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="351" height="126.5"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="351" height="127"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_interactinve" translatesAutoresizingMaskIntoConstraints="NO" id="cIL-L5-Bmr">
-                        <rect key="frame" x="11" y="11" width="329" height="104.5"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="list_1" translatesAutoresizingMaskIntoConstraints="NO" id="cIL-L5-Bmr">
+                        <rect key="frame" x="11" y="11" width="265" height="104.5"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="3jg-Yq-CA9"/>
+                            <constraint firstAttribute="width" constant="180" id="BiB-EG-IO6"/>
+                        </constraints>
                     </imageView>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailingMargin" secondItem="cIL-L5-Bmr" secondAttribute="trailing" constant="3" id="KJn-Lc-Cgw"/>
-                    <constraint firstItem="cIL-L5-Bmr" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="3" id="Q9m-rq-m7T"/>
-                    <constraint firstItem="cIL-L5-Bmr" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="3" id="Wie-za-c3P"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="cIL-L5-Bmr" secondAttribute="bottom" constant="3" id="zMc-Y1-nh9"/>
+                    <constraint firstItem="cIL-L5-Bmr" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="3" id="iml-bf-bD7"/>
+                    <constraint firstItem="cIL-L5-Bmr" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="3" id="qO8-o1-ljf"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="cIL-L5-Bmr" secondAttribute="bottom" constant="3" id="qo8-xj-Jk3"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="headerImageView" destination="cIL-L5-Bmr" id="tmS-rx-FXu"/>
+            </connections>
             <point key="canvasLocation" x="-32.5" y="95.5"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="icon_interactinve" width="478" height="34"/>
+        <image name="list_1" width="265" height="30"/>
     </resources>
 </document>

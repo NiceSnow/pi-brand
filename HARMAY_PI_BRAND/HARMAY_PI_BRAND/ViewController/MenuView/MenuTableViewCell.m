@@ -8,7 +8,19 @@
 
 #import "MenuTableViewCell.h"
 
+@interface MenuTableViewCell ()
+@property (weak, nonatomic) IBOutlet UIImageView *headerImageView;
+
+@end
+
 @implementation MenuTableViewCell
+
+-(void)addDataWithUrlString:(lsitModel*)modle imageNamed:(NSString*)name;{
+    if (name) {
+        _headerImageView.image = [UIImage imageNamed:name];
+    }else
+        [_headerImageView sd_setImageWithURL:[modle.nav_img safeUrlString] placeholderImage:nil];
+}
 
 + (instancetype)createCellWithTableView:(UITableView *)tableView
 {

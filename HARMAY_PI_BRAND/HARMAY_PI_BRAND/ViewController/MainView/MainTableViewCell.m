@@ -40,12 +40,13 @@
     if (self) {
         self = [[[NSBundle mainBundle]loadNibNamed:@"MainTableViewCell" owner:self options:nil]lastObject];
         [_titleImage mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.width.mas_equalTo(screenWidth/2);
-            make.height.mas_equalTo(screenWidth/2*163/381);
+            make.width.mas_equalTo((screenWidth-40)*4/5);
+            make.height.mas_equalTo((screenWidth-40)*4/5*110/232);
         }];
         [_mainImage mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.width.mas_equalTo(screenWidth*3/4);
-            make.height.mas_equalTo(screenWidth*3/4*332/628);
+            make.left.offset(10);
+            make.right.offset(-10);
+            make.height.mas_equalTo((screenWidth-20)*9/10*187/291);
         }];
     }
     return self;

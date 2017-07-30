@@ -68,7 +68,7 @@
     [logoImageView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.top.mas_equalTo(15);
         make.width.mas_offset(screenWidth*320/750);
-        make.height.mas_offset((screenWidth*320/750)*40/320);
+        make.height.mas_offset((screenWidth*320/750)*35/320);
     }];
     
     UIImageView * backImageView = [[UIImageView alloc]init];
