@@ -56,9 +56,6 @@
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-//    if (indexPath.row == 5) {
-//        return 600;
-//    }
     return UITableViewAutomaticDimension;
 }
 
@@ -151,7 +148,7 @@
 
 -(UIView *)headerView{
     if (!_headerView) {
-        _headerView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, screenWidth*4/5, screenHeight/2)];
+        _headerView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, screenWidth*4/5, screenHeight/2.5)];
         UIImageView* imageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"nav_09"]];
         [_headerView addSubview:imageView];
         [imageView mas_makeConstraints:^(MASConstraintMaker *make) {

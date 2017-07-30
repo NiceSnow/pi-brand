@@ -12,6 +12,7 @@
 
 #import "CompanyHeaderTableViewCell.h"
 #import "companyContentTableViewCell.h"
+#import "SearchViewController.h"
 
 @interface ActiveViewController ()<UITableViewDelegate,UITableViewDataSource,UIWebViewDelegate>
 @property (nonatomic, strong) companyHeaderModel* headModle;
@@ -29,6 +30,7 @@
 @implementation ActiveViewController
 
 -(void)search{
+    [self.navigationController pushViewController:[[SearchViewController alloc]init] animated:NO];
 }
 
 -(void)setID:(NSString *)ID{

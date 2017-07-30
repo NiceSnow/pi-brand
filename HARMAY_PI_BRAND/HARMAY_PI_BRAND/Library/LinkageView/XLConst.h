@@ -10,11 +10,15 @@
 #import <UIKit/UIKit.h>
 
 
-/** 导航条高度*/
-UIKIT_EXTERN CGFloat const navBarH;
+///** 导航条高度*/
+//UIKIT_EXTERN CGFloat const navBarH;
+//
+///** header图片高度*/
+//UIKIT_EXTERN CGFloat const headerImgH;
+//
+///** 控制栏高度*/
+//UIKIT_EXTERN CGFloat const barH;
 
-/** header图片高度*/
-UIKIT_EXTERN CGFloat const headerImgH;
-
-/** 控制栏高度*/
-UIKIT_EXTERN CGFloat const barH;
+#define navBarH  64.0f
+#define headerImgH  screenHeight*2/7
+#define barH  0.0f

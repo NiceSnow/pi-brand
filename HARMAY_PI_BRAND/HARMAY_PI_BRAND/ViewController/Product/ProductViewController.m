@@ -15,6 +15,7 @@
 #import "Product1TableViewController.h"
 #import "Product2TableViewController.h"
 #import "Product3TableViewController.h"
+#import "SearchViewController.h"
 
 @interface ProductViewController ()<UIScrollViewDelegate,XLSegmentBarDelegate,XLStudyChildVCDelegate>
 {
@@ -90,7 +91,7 @@
 }
 - (void)search:(UIButton *)btn
 {
-    
+    [self.navigationController pushViewController:[[SearchViewController alloc]init] animated:NO];
 }
 - (void)getImageURl:(NSNotification *)not
 {

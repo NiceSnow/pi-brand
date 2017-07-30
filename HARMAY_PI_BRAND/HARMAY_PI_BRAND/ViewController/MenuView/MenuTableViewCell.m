@@ -36,6 +36,10 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         self = [[[NSBundle mainBundle]loadNibNamed:@"MenuTableViewCell" owner:self options:nil]lastObject];
+        [self.headerImageView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.width.mas_equalTo(screenWidth*3/5);
+            make.height.mas_equalTo((screenWidth*3/5)*21/180);
+        }];
     }
     return self;
 }

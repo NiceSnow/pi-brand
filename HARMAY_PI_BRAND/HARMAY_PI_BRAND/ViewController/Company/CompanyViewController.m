@@ -17,6 +17,7 @@
 
 #import "SubCompanyViewController1.h"
 #import "SubCompanyViewController2.h"
+#import "SearchViewController.h"
 
 @interface CompanyViewController ()<UIScrollViewDelegate,XLSegmentBarDelegate,XLStudyChildVCDelegate>
 {
@@ -60,7 +61,7 @@
 }
 
 -(void)search{
-    
+    [self.navigationController pushViewController:[[SearchViewController alloc]init] animated:NO];
 }
 
 - (void)viewDidLoad {

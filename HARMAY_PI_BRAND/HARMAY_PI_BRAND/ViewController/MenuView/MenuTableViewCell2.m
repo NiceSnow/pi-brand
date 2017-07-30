@@ -11,6 +11,7 @@
 
 @interface MenuTableViewCell2 (){
     UIButton* lastBtn;
+    NSArray* modleArray;
 }
 
 @end
@@ -19,6 +20,7 @@
 @implementation MenuTableViewCell2
 
 -(void)addDataWithArray:(NSArray*)arr;{
+    modleArray = arr;
     if (arr.count<=0) {
         return;
     }
@@ -36,10 +38,9 @@
 - (IBAction)jumpToWebView:(UIButton *)sender {
     DebugLog(@"%ld",sender.tag);
     WebViewController* VC = [ChildViewController instance].webVC;
-    if (sender.tag == 2) {
-        VC.MYURL = @"https://github.com";
-    }else
-    VC.MYURL = @"https://www.baidu.com";
+    NSInteger index = sender.tag - 1000;
+    linkModel* modle = modleArray[index];
+    VC.MYURL = [modle.url safeUrlString];
     [self.ViewController.sideMenuViewController setContentViewController:[ChildViewController instance].WebNavgation animated:YES];
     [self.ViewController.sideMenuViewController hideMenuViewController];
 }

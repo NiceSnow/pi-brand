@@ -37,6 +37,10 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         self = [[[NSBundle mainBundle]loadNibNamed:@"SearchTableViewCell" owner:self options:nil]lastObject];
+        [self.headerImage mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.width.mas_equalTo(screenWidth/3);
+            make.height.mas_equalTo(screenWidth/3*249/384);
+        }];
     }
     return self;
 }

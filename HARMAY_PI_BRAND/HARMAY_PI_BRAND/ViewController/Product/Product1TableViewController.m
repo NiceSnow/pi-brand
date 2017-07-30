@@ -10,6 +10,7 @@
 #import "UIViewController+XLScroll.h"
 #import "Product1Cell.h"
 #import <MapKit/MapKit.h>
+#import "ShareView.h"
 
 @interface Product1TableViewController ()
 {
@@ -23,7 +24,7 @@
 @property (nonatomic, strong)UILabel* locationLabel;
 @property (nonatomic, strong)UILabel* nameLabel;
 @property (nonatomic, strong)NSDictionary *dict;
-
+@property (nonatomic, strong)ShareView               * shareView;
 
 @end
 
@@ -112,7 +113,7 @@
             make.top.mas_equalTo(15);
             make.left.offset(20);
             make.width.mas_offset(screenWidth*320/750);
-            make.height.mas_offset((screenWidth*320/750)*35/320);
+            make.height.mas_offset((screenWidth*320/750)*40/320);
         }];
         
         UILabel * titleLabel = [UILabel new];
@@ -265,6 +266,7 @@
             cell.lineView.hidden = YES;
         }else{
             cell.lineView.hidden = NO;
+            
         }
     }else{
         cell.lineView.hidden = NO;
@@ -292,7 +294,10 @@
 }
 - (void)shareAction
 {
-    
+    self.shareView.sharetype = @"course";
+    self.shareView.shareTitle = @"title";
+    self.shareView.shareDes = @"title";
+    self.shareView.shareURL = @"title";
 }
 - (void)changeCityAction:(UIButton *)btn
 {
@@ -301,5 +306,14 @@
     btn.selected = YES;
     tempButton = btn;
     [self getdataWithCityID:btn.tag-100];
+}
+
+- (ShareView *)shareView
+{
+    if (!_shareView) {
+        _shareView  = [[ShareView alloc]init];
+        
+    }
+    return _shareView;
 }
 @end

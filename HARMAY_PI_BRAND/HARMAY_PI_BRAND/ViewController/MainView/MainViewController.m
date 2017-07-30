@@ -196,7 +196,7 @@
 
 -(UIView *)headerView{
     if (!_headerView) {
-        _headerView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 320, 210)];
+        _headerView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 320, screenHeight*2/7)];
         _headerView.backgroundColor = [UIColor clearColor];
     }
     return _headerView;

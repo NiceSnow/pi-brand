@@ -35,7 +35,7 @@
 {
     self.backgroundColor = [UIColor whiteColor];
     self.frame = CGRectMake(0, screenHeight, screenWidth, screenHeight * .25);
-    NSArray * titleArray = @[@"微信朋友圈",@"微信好友",@"QQ好友"];
+    NSArray * titleArray = @[@"朋友圈",@"好友"];
     NSArray * imageArray = @[@"WeChatFirend",@"WeChat",@"QQ"];
     
     for (NSInteger i = 0; i <titleArray.count; i++) {

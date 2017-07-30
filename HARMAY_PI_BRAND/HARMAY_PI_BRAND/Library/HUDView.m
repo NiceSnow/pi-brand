@@ -15,7 +15,7 @@
 -(instancetype)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];
     if (self) {
-        self.backgroundColor = [UICOLOR_RGB_Alpha(0xaeaeae,1) colorWithAlphaComponent:0.8];
+        self.backgroundColor = [UIColor whiteColor];
         NSString  *filePath = [[NSBundle bundleWithPath:[[NSBundle mainBundle] bundlePath]] pathForResource:@"loding.gif" ofType:nil];
         
         NSData  *imageData = [NSData dataWithContentsOfFile:filePath];
@@ -26,8 +26,20 @@
             make.center.equalTo(self);
             make.width.height.equalTo(@80);
         }];
+        
+        //双击
+        UITapGestureRecognizer *doubleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleDoubleTap:)];
+        
+        [doubleTap setNumberOfTapsRequired:2];
+        
+        [self addGestureRecognizer:doubleTap];
+//        [singleTap requireGestureRecognizerToFail:doubleTap];
     }
     return self;
+}
+
+-(void)handleDoubleTap:(id)sender{
+    [self removeFromSuperview];
 }
 
 /*

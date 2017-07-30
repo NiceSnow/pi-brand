@@ -12,6 +12,7 @@
 #import "companyHeaderModel.h"
 #import "joinMainModel.h"
 #import "joinSubModel.h"
+#import "SearchViewController.h"
 
 @interface JoinusViewController ()<UITabBarDelegate,UITableViewDataSource>
 @property (nonatomic, strong) UIView* titleView;
@@ -138,7 +139,7 @@
 
 - (void)search1:(UIButton *)btn
 {
-    
+    [self.navigationController pushViewController:[[SearchViewController alloc]init] animated:NO];
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {

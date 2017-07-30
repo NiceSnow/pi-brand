@@ -7,11 +7,11 @@
 //
 #import <UIKit/UIKit.h>
 
-/** 导航条高度*/
-CGFloat const navBarH = 64.0f;
-
-/** header图片高度*/
-CGFloat const headerImgH = 150.0f;
-
-/** 控制栏高度*/
-CGFloat const barH = 0.0f;
+///** 导航条高度*/
+//CGFloat const navBarH = 64.0f;
+//
+///** header图片高度*/
+//CGFloat const headerImgH = 150.0f;
+//
+///** 控制栏高度*/
+//CGFloat const barH = 0.0f;

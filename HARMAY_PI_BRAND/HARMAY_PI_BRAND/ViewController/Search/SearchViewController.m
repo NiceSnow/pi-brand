@@ -22,7 +22,7 @@
     if (_search.text.length<=0) {
         return;
     }
-    [[HTTPRequest instance]PostRequestWithURL:@"http://www.pi-brand.cn/index.php/home/api/search_list" Parameter:@{@"search":@"水润质地"} succeed:^(NSURLSessionDataTask *task, id responseObject) {
+    [[HTTPRequest instance]PostRequestWithURL:@"http://www.pi-brand.cn/index.php/home/api/search_list" Parameter:@{@"search":_search.text} succeed:^(NSURLSessionDataTask *task, id responseObject) {
         BOOL succeed = [[responseObject objectForKey:@"status"]boolValue];
         if (succeed) {
             NSArray* dataArr = [responseObject objectForKey:@"data"];
@@ -73,7 +73,8 @@
     [super viewDidLoad];
     _tableView.estimatedRowHeight = 5;
     _tableView.rowHeight = UITableViewAutomaticDimension;
-    self.view.backgroundColor = [UIColor lightGrayColor];
+    _tableView.tableFooterView = [UIView new];
+    _search.backgroundColor = [UIColor whiteColor];
     // Do any additional setup after loading the view from its nib.
 }
 
