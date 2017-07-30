@@ -10,12 +10,17 @@
 
 @interface WebViewController ()<UIWebViewDelegate>
 @property(nonatomic,strong) UIWebView* webView;
+@property(nonatomic,strong) HUDView* HUD;
 @end
 
 @implementation WebViewController
 
 
 -(void)setMYURL:(id)MYURL{
+    [self.view addSubview:self.HUD];
+    [self.HUD mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.left.right.bottom.offset(0);
+    }];
     if ([MYURL isKindOfClass:[NSURL class]]) {
         [self.webView loadRequest:[NSURLRequest requestWithURL:MYURL]];
     }else
@@ -29,6 +34,7 @@
 - (void)webViewDidFinishLoad:(UIWebView *)webView
 {
     self.title = [self.webView stringByEvaluatingJavaScriptFromString:@"document.title"];
+    [self.HUD removeFromSuperview];
 }
 
 -(UIWebView *)webView{
@@ -56,6 +62,14 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(HUDView *)HUD{
+    if (!_HUD) {
+        _HUD = [HUDView new];
+        
+    }
+    return _HUD;
 }
 
 /*

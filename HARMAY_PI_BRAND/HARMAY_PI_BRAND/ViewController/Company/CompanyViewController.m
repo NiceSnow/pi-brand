@@ -34,6 +34,8 @@
 
 @property (nonatomic, strong) SubCompanyViewController1* sub1;
 @property (nonatomic, strong) SubCompanyViewController2* sub2;
+
+@property(nonatomic,strong) HUDView* HUD;
 @end
 
 @implementation CompanyViewController
@@ -88,7 +90,11 @@
     }];
     
     self.navigationItem.titleView = self.titleView;
-
+    
+    [self.view addSubview:self.HUD];
+    [self.HUD mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.left.right.bottom.offset(0);
+    }];
     [self getdata];
     [self getdata2];
     
@@ -255,6 +261,7 @@
                          };
             }];
             self.sub2.res = [subModel2 mj_objectArrayWithKeyValuesArray:[data objectForKey:@"res"]];
+            [self.HUD removeFromSuperview];
             
         }
     } failed:^(NSURLSessionDataTask *task, NSError *error) {
@@ -306,6 +313,13 @@
     return _titleView;
 }
 
+-(HUDView *)HUD{
+    if (!_HUD) {
+        _HUD = [HUDView new];
+        
+    }
+    return _HUD;
+}
 /*
 #pragma mark - Navigation
 

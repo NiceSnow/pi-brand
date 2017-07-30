@@ -10,7 +10,7 @@
 #import "MainTableViewCell.h"
 #import "SearchViewController.h"
 #import "mainModle.h"
-#import "HUDView.h"
+
 
 @interface MainViewController ()<UIScrollViewDelegate,UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic, strong) UIView* titleView;

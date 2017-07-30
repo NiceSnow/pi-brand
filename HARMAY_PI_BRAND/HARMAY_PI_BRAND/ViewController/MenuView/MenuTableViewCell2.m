@@ -7,6 +7,7 @@
 //
 
 #import "MenuTableViewCell2.h"
+#import "linkModel.h"
 
 @interface MenuTableViewCell2 (){
     UIButton* lastBtn;
@@ -21,19 +22,15 @@
     if (arr.count<=0) {
         return;
     }
-    CGFloat with = (screenWidth*4/5 - 100)/3;
     for (int i = 0; i < arr.count; i++) {
-        UIButton* btn = [[UIButton alloc]initWithFrame:CGRectMake(100 + with*(i%3), 100 + 45*i/3 , with, 25)];
-        btn.backgroundColor = [UIColor redColor];
-        btn.tag = i;
-        [self addSubview:btn];
-        if (i == arr.count - 1) {
-            lastBtn = btn;
-        }
+        linkModel* modle = arr[i];
+        UIButton* btn = [self.contentView viewWithTag:1000+i];
+        [btn sd_setImageWithURL:[modle.img safeUrlString] forState:normal];
     }
-    [lastBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.bottom.offset(-20);
-    }];
+}
+
+-(void)btnPress:(UIButton*)btn{
+    DebugLog(@"%ld",btn.tag);
 }
 
 - (IBAction)jumpToWebView:(UIButton *)sender {

@@ -134,7 +134,7 @@
         [backView addSubview:_subTitleLabel];
         [_subTitleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.mas_equalTo(15);
-            make.top.equalTo(_titleLabel.mas_bottom).offset(25);
+            make.top.equalTo(_titleLabel.mas_bottom).offset(35);
         }];
         
         
@@ -168,7 +168,7 @@
             CGFloat Width_Space   =  10.0f;
             CGFloat Height_Space  =  10.0f;
             CGFloat x = 15;
-            CGFloat y = CGRectGetMaxY(_subTitleLabel.frame)+20;
+            CGFloat y = CGRectGetMaxY(_subTitleLabel.frame)+35;
             CGFloat width = (screenWidth-20-Width_Space*2-2*x)/3.0;
             CGFloat height = 30.0;
             btn.frame = CGRectMake(index * (width + Width_Space) + x, page  * (height + Height_Space)+y, width, height);
@@ -261,7 +261,11 @@
     }
     cell.imageString = self.imageArray[indexPath.row];
     if (indexPath.section == [_dict[@"pro"] count]-1) {
-        cell.lineView.hidden = YES;
+        if (indexPath.row == 2) {
+            cell.lineView.hidden = YES;
+        }else{
+            cell.lineView.hidden = NO;
+        }
     }else{
         cell.lineView.hidden = NO;
     }

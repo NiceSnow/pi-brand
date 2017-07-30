@@ -8,12 +8,24 @@
 
 #import "HUDView.h"
 
+#import "UIImage+GIF.h"
+
 @implementation HUDView
 
 -(instancetype)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];
     if (self) {
-        self.backgroundColor = [UIColor redColor];
+        self.backgroundColor = [UICOLOR_RGB_Alpha(0xaeaeae,1) colorWithAlphaComponent:0.8];
+        NSString  *filePath = [[NSBundle bundleWithPath:[[NSBundle mainBundle] bundlePath]] pathForResource:@"loding.gif" ofType:nil];
+        
+        NSData  *imageData = [NSData dataWithContentsOfFile:filePath];
+        UIImageView* imageView = [UIImageView new];
+        [self addSubview:imageView];
+        imageView.image =  [UIImage sd_animatedGIFWithData:imageData];
+        [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.center.equalTo(self);
+            make.width.height.equalTo(@80);
+        }];
     }
     return self;
 }

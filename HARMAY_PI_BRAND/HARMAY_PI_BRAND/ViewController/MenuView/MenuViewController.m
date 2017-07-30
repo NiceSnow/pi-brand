@@ -56,6 +56,9 @@
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+//    if (indexPath.row == 5) {
+//        return 600;
+//    }
     return UITableViewAutomaticDimension;
 }
 
@@ -180,6 +183,7 @@
     }
     return _tableView;
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

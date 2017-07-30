@@ -20,6 +20,7 @@
 {
     NSInteger _currentIndex;
 }
+@property(nonatomic,strong) HUDView* HUD;
 @property (nonatomic, strong) UIView* titleView;
 @property (nonatomic,strong) XLScrollView *contentView;
 @property (nonatomic,weak) UIImageView *header;
@@ -82,6 +83,10 @@
     _backImageArray = [NSMutableArray array];
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(getImageURl:) name:kGetImageURLKey object:nil];
     self.navigationItem.titleView = self.titleView;
+    [self.view addSubview:self.HUD];
+    [self.HUD mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.left.right.bottom.offset(0);
+    }];
 }
 - (void)search:(UIButton *)btn
 {
@@ -89,7 +94,7 @@
 }
 - (void)getImageURl:(NSNotification *)not
 {
-    
+    [self.HUD removeFromSuperview];
     NSString * imageURL = [not.userInfo objectForKey:kGetImageURLKey];
     if (_backImageArray.count<=3) {
         [_backImageArray addObject:imageURL];
@@ -242,6 +247,14 @@
         _titleView.alpha = 0;
     }
     return _titleView;
+}
+
+-(HUDView *)HUD{
+    if (!_HUD) {
+        _HUD = [HUDView new];
+        
+    }
+    return _HUD;
 }
 
 @end

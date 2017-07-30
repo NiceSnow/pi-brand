@@ -19,6 +19,7 @@
 @property (nonatomic, strong) UIImageView* backImageView;
 @property (nonatomic, strong)NSMutableArray * dataArray;
 @property (nonatomic, strong)NSDictionary * jobDict;
+@property(nonatomic,strong) HUDView* HUD;
 
 @end
 
@@ -63,6 +64,10 @@
     _tableview.backgroundColor = [UIColor clearColor];
     _tableview.rowHeight = UITableViewAutomaticDimension;
     self.navigationItem.titleView = self.titleView;
+    [self.view addSubview:self.HUD];
+    [self.HUD mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.left.right.bottom.offset(0);
+    }];
     [self getdata];
 }
 
@@ -99,6 +104,7 @@
             joinSubModel * model1 = _dataArray[1][0];
             [self getmessageWithJobID:model1.m_id];
             [_tableview reloadData];
+            [self.HUD removeFromSuperview];
             
         }
     } failed:^(NSURLSessionDataTask *task, NSError *error) {
@@ -179,6 +185,14 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
 {
     return 10;
+}
+
+-(HUDView *)HUD{
+    if (!_HUD) {
+        _HUD = [HUDView new];
+        
+    }
+    return _HUD;
 }
 //- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 //{

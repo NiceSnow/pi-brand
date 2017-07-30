@@ -21,6 +21,8 @@
 @property(nonatomic,strong)   UIWebView* webView;
 @property (nonatomic, strong) UIView* footerView;
 @property (nonatomic, strong) UIView* headerView;
+@property(nonatomic,strong) HUDView* HUD;
+@property (nonatomic, strong) UIView* titleView;
 
 @end
 
@@ -46,7 +48,7 @@
             _contentModel = [companyContentModel mj_objectWithKeyValues:[data objectForKey:@"res"]];
             [self.tableView reloadData];
             [self.webView loadHTMLString:_contentModel.Description baseURL:nil];
-            
+            [self.HUD removeFromSuperview];
         }
     } failed:^(NSURLSessionDataTask *task, NSError *error) {
         
@@ -71,6 +73,7 @@
 - (void)viewDidLoad {
     self.view.backgroundColor = [UIColor whiteColor];
     [super viewDidLoad];
+    self.navigationItem.titleView = self.titleView;
     UIButton* leftBtn = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 35, 35)];
     [leftBtn setImage:[UIImage imageNamed:@"icon_nav"] forState:normal];
     [leftBtn addTarget:self action:@selector(presentLeftMenuViewController:) forControlEvents:UIControlEventTouchUpInside];
@@ -93,6 +96,10 @@
         make.top.offset(64);
         make.bottom.offset(0);
         make.centerX.equalTo(self.view);
+    }];
+    [self.view addSubview:self.HUD];
+    [self.HUD mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.left.right.bottom.offset(0);
     }];
     // Do any additional setup after loading the view from its nib.
 }
@@ -204,7 +211,7 @@
 
 -(UIView *)headerView{
     if (!_headerView) {
-        _headerView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 320, 130)];
+        _headerView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 320, 150)];
         _headerView.backgroundColor = [UIColor clearColor];
     }
     return _headerView;
@@ -215,6 +222,29 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(HUDView *)HUD{
+    if (!_HUD) {
+        _HUD = [HUDView new];
+        
+    }
+    return _HUD;
+}
+
+-(UIView *)titleView{
+    if (!_titleView) {
+        _titleView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 127, 16)];
+        UIImageView* imageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"title_recruitment"]];
+        [_titleView addSubview:imageView];
+        [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.center.equalTo(_titleView);
+            make.height.equalTo(@16);
+            make.width.equalTo(@127);
+        }];
+        
+        _titleView.alpha = 0;
+    }
+    return _titleView;
+}
 /*
 #pragma mark - Navigation
 

@@ -43,6 +43,7 @@
 		2D599F0E1F2B05DC00A9EF32 /* joinSubModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D599F0D1F2B05DC00A9EF32 /* joinSubModel.m */; };
 		2D599F121F2B14F200A9EF32 /* searchModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D599F111F2B14F200A9EF32 /* searchModel.m */; };
 		2D599F151F2B4D5B00A9EF32 /* subModel2.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D599F141F2B4D5B00A9EF32 /* subModel2.m */; };
+		600222051F2E1FA40074AFCE /* loding.gif in Resources */ = {isa = PBXBuildFile; fileRef = 600222041F2E1FA40074AFCE /* loding.gif */; };
 		603217061F28E9B1002FD61C /* UIView+ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 603217051F28E9B1002FD61C /* UIView+ViewController.m */; };
 		6032170A1F28ED97002FD61C /* ChildViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 603217091F28ED97002FD61C /* ChildViewController.m */; };
 		6078A5821F2C922F005FFCF6 /* ShareView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6078A5811F2C922F005FFCF6 /* ShareView.m */; };
@@ -184,6 +185,7 @@
 		2D599F131F2B4D5B00A9EF32 /* subModel2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = subModel2.h; sourceTree = "<group>"; };
 		2D599F141F2B4D5B00A9EF32 /* subModel2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = subModel2.m; sourceTree = "<group>"; };
 		354F6A3AE6C4098B6C798064 /* Pods-HARMAY_PI_BRAND.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HARMAY_PI_BRAND.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HARMAY_PI_BRAND/Pods-HARMAY_PI_BRAND.debug.xcconfig"; sourceTree = "<group>"; };
+		600222041F2E1FA40074AFCE /* loding.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = loding.gif; sourceTree = "<group>"; };
 		603217041F28E9B1002FD61C /* UIView+ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ViewController.h"; sourceTree = "<group>"; };
 		603217051F28E9B1002FD61C /* UIView+ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ViewController.m"; sourceTree = "<group>"; };
 		603217081F28ED97002FD61C /* ChildViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChildViewController.h; sourceTree = "<group>"; };
@@ -557,6 +559,7 @@
 		60EF76EC1F27931D005E3A6E /* HARMAY_PI_BRAND */ = {
 			isa = PBXGroup;
 			children = (
+				600222041F2E1FA40074AFCE /* loding.gif */,
 				6078A57F1F2C922F005FFCF6 /* shareView */,
 				92883DC01F2AC2C000FCA7BC /* Library */,
 				2D2354C61F29DA8A00A93726 /* httpRequest */,
@@ -832,6 +835,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				92883DEF1F2AD54D00FCA7BC /* Product3Cell.xib in Resources */,
+				600222051F2E1FA40074AFCE /* loding.gif in Resources */,
 				2D23548E1F289AED00A93726 /* MenuTableViewCell.xib in Resources */,
 				2D599F021F2AF6D900A9EF32 /* CompanyHeaderTableViewCell.xib in Resources */,
 				2D2354C01F29D22C00A93726 /* SearchViewController.xib in Resources */,
@@ -874,7 +878,7 @@
 /* Begin PBXShellScriptBuildPhase section */
 		11276F7E09DF1A1007C0A75F /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 8;
 			files = (
 			);
 			inputPaths = (
@@ -882,14 +886,14 @@
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HARMAY_PI_BRAND/Pods-HARMAY_PI_BRAND-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		75A738CBB9433AFCDDB797B0 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			files = (
 			);
 			inputPaths = (

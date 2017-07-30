@@ -21,6 +21,7 @@
 #import "UIButton+WebCache.h"
 #import "NSString+extension.h"
 #import <UMMobClick/MobClick.h>
+#import "HUDView.h"
 
 
 static NSString *const kGetImageURLKey = @"kGetImageURLKey";
