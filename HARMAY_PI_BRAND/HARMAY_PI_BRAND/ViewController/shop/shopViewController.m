@@ -7,6 +7,7 @@
 //
 
 #import "shopViewController.h"
+#import "SearchViewController.h"
 
 @interface shopViewController ()
 
@@ -27,6 +28,10 @@
     [rightBtn addTarget:self action:@selector(search:) forControlEvents:UIControlEventTouchUpInside];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:rightBtn];
     // Do any additional setup after loading the view from its nib.
+}
+
+-(void)search:(UIButton*)search{
+    [self.navigationController pushViewController:[[SearchViewController alloc]init] animated:NO];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -36,7 +36,7 @@
     self.backgroundColor = [UIColor whiteColor];
     self.frame = CGRectMake(0, screenHeight, screenWidth, screenHeight * .25);
     NSArray * titleArray = @[@"朋友圈",@"好友"];
-    NSArray * imageArray = @[@"WeChatFirend",@"WeChat",@"QQ"];
+    NSArray * imageArray = @[@"WeChatFirend",@"WeChat"];
     
     for (NSInteger i = 0; i <titleArray.count; i++) {
         UIButton * btn = [UIButton buttonWithType:UIButtonTypeCustom];
